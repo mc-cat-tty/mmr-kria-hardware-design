@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date             : Thu Jun 20 10:45:55 2024
+| Date             : Thu Jun 20 11:07:51 2024
 | Host             : francesco-desktop running 64-bit Ubuntu 22.04.4 LTS
 | Command          : report_power -file pl_design_wrapper_power_routed.rpt -pb pl_design_wrapper_power_summary_routed.pb -rpx pl_design_wrapper_power_routed.rpx
 | Design           : pl_design_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.996        |
+| Total On-Chip Power (W)  | 2.936        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.671        |
-| Device Static (W)        | 0.325        |
+| Dynamic (W)              | 2.612        |
+| Device Static (W)        | 0.324        |
 | Effective TJA (C/W)      | 2.3          |
-| Max Ambient (C)          | 78.0         |
-| Junction Temperature (C) | 32.0         |
+| Max Ambient (C)          | 78.2         |
+| Junction Temperature (C) | 31.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.001 |        3 |       --- |             --- |
-| CLB Logic               |    <0.001 |     1130 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      345 |    117120 |            0.29 |
-|   LUT as Shift Register |    <0.001 |       65 |     57600 |            0.11 |
-|   Register              |    <0.001 |      535 |    234240 |            0.23 |
-|   Others                |     0.000 |       47 |       --- |             --- |
+| CLB Logic               |    <0.001 |     1195 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      357 |    117120 |            0.30 |
+|   LUT as Shift Register |    <0.001 |       66 |     57600 |            0.11 |
+|   Register              |    <0.001 |      568 |    234240 |            0.24 |
+|   Others                |     0.000 |       59 |       --- |             --- |
 |   F7/F8 Muxes           |     0.000 |        3 |    117120 |           <0.01 |
-| Signals                 |    <0.001 |      869 |       --- |             --- |
+| Signals                 |    <0.001 |      908 |       --- |             --- |
 | I/O                     |     0.001 |        2 |       189 |            1.06 |
-| PS8                     |     2.668 |        1 |       --- |             --- |
-| Static Power            |     0.325 |          |           |                 |
+| PS8                     |     2.608 |        1 |       --- |             --- |
+| Static Power            |     0.324 |          |           |                 |
 |   PS Static             |     0.000 |          |           |                 |
-|   PL Static             |     0.325 |          |           |                 |
-| Total                   |     2.996 |          |           |                 |
+|   PL Static             |     0.324 |          |           |                 |
+| Total                   |     2.936 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.720 |     0.092 |       0.004 |      0.089 |       NA    | Unspecified | NA         |
+| Vccint          |       0.720 |     0.092 |       0.004 |      0.088 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.036 |       0.000 |      0.036 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.075 |       0.000 |      0.075 |       NA    | Unspecified | NA         |
@@ -89,11 +89,11 @@ Table of Contents
 | Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
 | VCC_PSINTFP     |       0.850 |     0.958 |       0.958 |      0.000 |       NA    | Unspecified | NA         |
-| VCC_PSINTLP     |       0.850 |     0.277 |       0.277 |      0.000 |       NA    | Unspecified | NA         |
-| VPS_MGTRAVCC    |       0.850 |     0.173 |       0.173 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTLP     |       0.850 |     0.263 |       0.263 |      0.000 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVCC    |       0.850 |     0.134 |       0.134 |      0.000 |       NA    | Unspecified | NA         |
 | VCC_PSINTFP_DDR |       0.850 |     0.726 |       0.726 |      0.000 |       NA    | Unspecified | NA         |
 | VCC_PSPLL       |       1.200 |     0.069 |       0.069 |      0.000 |       NA    | Unspecified | NA         |
-| VPS_MGTRAVTT    |       1.800 |     0.033 |       0.033 |      0.000 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVTT    |       1.800 |     0.025 |       0.025 |      0.000 |       NA    | Unspecified | NA         |
 | VCCO_PSDDR_504  |       1.200 |     0.592 |       0.592 |      0.000 |       NA    | Unspecified | NA         |
 | VCC_PSAUX       |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | VCC_PSBATT      |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -162,12 +162,12 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| pl_design_wrapper      |     2.671 |
-|   pl_design_i          |     2.670 |
+| pl_design_wrapper      |     2.612 |
+|   pl_design_i          |     2.611 |
 |     axi_interconnect_0 |     0.002 |
 |       s00_couplers     |     0.002 |
-|     zynq_ultra_ps_e_0  |     2.668 |
-|       inst             |     2.668 |
+|     zynq_ultra_ps_e_0  |     2.608 |
+|       inst             |     2.608 |
 +------------------------+-----------+
 
 

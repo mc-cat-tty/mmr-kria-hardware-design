@@ -879,114 +879,6 @@ unsigned long psu_clock_init_data(void)
     * CLOCK CONTROL SLCR REGISTER
     */
     /*
-    * Register : GEM0_REF_CTRL @ 0XFF5E0050
-
-    * Clock active for the RX channel
-    *  PSU_CRL_APB_GEM0_REF_CTRL_RX_CLKACT                         0x1
-
-    * Clock active signal. Switch to 0 to disable the clock
-    *  PSU_CRL_APB_GEM0_REF_CTRL_CLKACT                            0x1
-
-    * 6 bit divider
-    *  PSU_CRL_APB_GEM0_REF_CTRL_DIVISOR1                          0x1
-
-    * 6 bit divider
-    *  PSU_CRL_APB_GEM0_REF_CTRL_DIVISOR0                          0x8
-
-    * 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
-    * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
-    *  usually an issue, but designers must be aware.)
-    *  PSU_CRL_APB_GEM0_REF_CTRL_SRCSEL                            0x0
-
-    * This register controls this reference clock
-    * (OFFSET, MASK, VALUE)      (0XFF5E0050, 0x063F3F07U ,0x06010800U)
-    */
-	PSU_Mask_Write(CRL_APB_GEM0_REF_CTRL_OFFSET,
-		0x063F3F07U, 0x06010800U);
-/*##################################################################### */
-
-    /*
-    * Register : GEM1_REF_CTRL @ 0XFF5E0054
-
-    * Clock active for the RX channel
-    *  PSU_CRL_APB_GEM1_REF_CTRL_RX_CLKACT                         0x1
-
-    * Clock active signal. Switch to 0 to disable the clock
-    *  PSU_CRL_APB_GEM1_REF_CTRL_CLKACT                            0x1
-
-    * 6 bit divider
-    *  PSU_CRL_APB_GEM1_REF_CTRL_DIVISOR1                          0x1
-
-    * 6 bit divider
-    *  PSU_CRL_APB_GEM1_REF_CTRL_DIVISOR0                          0x8
-
-    * 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
-    * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
-    *  usually an issue, but designers must be aware.)
-    *  PSU_CRL_APB_GEM1_REF_CTRL_SRCSEL                            0x0
-
-    * This register controls this reference clock
-    * (OFFSET, MASK, VALUE)      (0XFF5E0054, 0x063F3F07U ,0x06010800U)
-    */
-	PSU_Mask_Write(CRL_APB_GEM1_REF_CTRL_OFFSET,
-		0x063F3F07U, 0x06010800U);
-/*##################################################################### */
-
-    /*
-    * Register : GEM_CTRL @ 0XFF180360
-
-    * 00: Tie the PCS signal detect to 0 01: Tie the PCS signal detect to 1 10
-    * : Signal detect from the external optical PHY via FMIO 11: Reserved
-    *  PSU_IOU_SLCR_GEM_CTRL_GEM0_SGMII_SD                         0x01
-
-    * GEM SGMII Signal Detect control register
-    * (OFFSET, MASK, VALUE)      (0XFF180360, 0x00000003U ,0x00000001U)
-    */
-	PSU_Mask_Write(IOU_SLCR_GEM_CTRL_OFFSET, 0x00000003U, 0x00000001U);
-/*##################################################################### */
-
-    /*
-    * Register : GEM_CLK_CTRL @ 0XFF180308
-
-    * Selection of SGMII or Non SGMII mode 0: Non SGMII 1: SGMII
-    *  PSU_IOU_SLCR_GEM_CLK_CTRL_GEM0_SGMII_MODE                   0x1
-
-    * PLL or PHY source selection for gem0_ref_clk generation 0: PLL Reference
-    *  clock 1: FMIO PLL clock or GTX Clock
-    *  PSU_IOU_SLCR_GEM_CLK_CTRL_GEM0_REF_SRC_SEL                  0x1
-
-    * SoC Debug Clock Control
-    * (OFFSET, MASK, VALUE)      (0XFF180308, 0x00000006U ,0x00000006U)
-    */
-	PSU_Mask_Write(IOU_SLCR_GEM_CLK_CTRL_OFFSET,
-		0x00000006U, 0x00000006U);
-/*##################################################################### */
-
-    /*
-    * Register : GEM_TSU_REF_CTRL @ 0XFF5E0100
-
-    * 6 bit divider
-    *  PSU_CRL_APB_GEM_TSU_REF_CTRL_DIVISOR0                       0x4
-
-    * 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
-    * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
-    *  usually an issue, but designers must be aware.)
-    *  PSU_CRL_APB_GEM_TSU_REF_CTRL_SRCSEL                         0x0
-
-    * 6 bit divider
-    *  PSU_CRL_APB_GEM_TSU_REF_CTRL_DIVISOR1                       0x1
-
-    * Clock active signal. Switch to 0 to disable the clock
-    *  PSU_CRL_APB_GEM_TSU_REF_CTRL_CLKACT                         0x1
-
-    * This register controls this reference clock
-    * (OFFSET, MASK, VALUE)      (0XFF5E0100, 0x013F3F07U ,0x01010400U)
-    */
-	PSU_Mask_Write(CRL_APB_GEM_TSU_REF_CTRL_OFFSET,
-		0x013F3F07U, 0x01010400U);
-/*##################################################################### */
-
-    /*
     * Register : USB0_BUS_REF_CTRL @ 0XFF5E0060
 
     * Clock active signal. Switch to 0 to disable the clock
@@ -12792,7 +12684,7 @@ unsigned long psu_mio_init_data(void)
 
     * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_tx_
     * clk- (TX RGMII clock)
-    *  PSU_IOU_SLCR_MIO_PIN_38_L0_SEL                              1
+    *  PSU_IOU_SLCR_MIO_PIN_38_L0_SEL                              0
 
     * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
     *  PSU_IOU_SLCR_MIO_PIN_38_L1_SEL                              0
@@ -12812,9 +12704,9 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_PIN_38_L3_SEL                              0
 
     * Configures MIO Pin 38 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF180098, 0x000000FEU ,0x00000002U)
+    * (OFFSET, MASK, VALUE)      (0XFF180098, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_38_OFFSET, 0x000000FEU, 0x00000002U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_38_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -12822,7 +12714,7 @@ unsigned long psu_mio_init_data(void)
 
     * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_txd
     * [0]- (TX RGMII data)
-    *  PSU_IOU_SLCR_MIO_PIN_39_L0_SEL                              1
+    *  PSU_IOU_SLCR_MIO_PIN_39_L0_SEL                              0
 
     * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
     *  PSU_IOU_SLCR_MIO_PIN_39_L1_SEL                              0
@@ -12843,9 +12735,9 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_PIN_39_L3_SEL                              0
 
     * Configures MIO Pin 39 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF18009C, 0x000000FEU ,0x00000002U)
+    * (OFFSET, MASK, VALUE)      (0XFF18009C, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_39_OFFSET, 0x000000FEU, 0x00000002U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_39_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -12853,7 +12745,7 @@ unsigned long psu_mio_init_data(void)
 
     * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_txd
     * [1]- (TX RGMII data)
-    *  PSU_IOU_SLCR_MIO_PIN_40_L0_SEL                              1
+    *  PSU_IOU_SLCR_MIO_PIN_40_L0_SEL                              0
 
     * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
     *  PSU_IOU_SLCR_MIO_PIN_40_L1_SEL                              0
@@ -12874,9 +12766,9 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_PIN_40_L3_SEL                              0
 
     * Configures MIO Pin 40 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800A0, 0x000000FEU ,0x00000002U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800A0, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_40_OFFSET, 0x000000FEU, 0x00000002U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_40_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -12884,7 +12776,7 @@ unsigned long psu_mio_init_data(void)
 
     * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_txd
     * [2]- (TX RGMII data)
-    *  PSU_IOU_SLCR_MIO_PIN_41_L0_SEL                              1
+    *  PSU_IOU_SLCR_MIO_PIN_41_L0_SEL                              0
 
     * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
     *  PSU_IOU_SLCR_MIO_PIN_41_L1_SEL                              0
@@ -12906,9 +12798,9 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_PIN_41_L3_SEL                              0
 
     * Configures MIO Pin 41 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800A4, 0x000000FEU ,0x00000002U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800A4, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_41_OFFSET, 0x000000FEU, 0x00000002U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_41_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -12916,7 +12808,7 @@ unsigned long psu_mio_init_data(void)
 
     * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_txd
     * [3]- (TX RGMII data)
-    *  PSU_IOU_SLCR_MIO_PIN_42_L0_SEL                              1
+    *  PSU_IOU_SLCR_MIO_PIN_42_L0_SEL                              0
 
     * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
     *  PSU_IOU_SLCR_MIO_PIN_42_L1_SEL                              0
@@ -12938,9 +12830,9 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_PIN_42_L3_SEL                              0
 
     * Configures MIO Pin 42 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800A8, 0x000000FEU ,0x00000002U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800A8, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_42_OFFSET, 0x000000FEU, 0x00000002U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_42_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -12948,7 +12840,7 @@ unsigned long psu_mio_init_data(void)
 
     * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_tx_
     * ctl- (TX RGMII control)
-    *  PSU_IOU_SLCR_MIO_PIN_43_L0_SEL                              1
+    *  PSU_IOU_SLCR_MIO_PIN_43_L0_SEL                              0
 
     * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
     *  PSU_IOU_SLCR_MIO_PIN_43_L1_SEL                              0
@@ -12969,9 +12861,9 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_PIN_43_L3_SEL                              0
 
     * Configures MIO Pin 43 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800AC, 0x000000FEU ,0x00000002U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800AC, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_43_OFFSET, 0x000000FEU, 0x00000002U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_43_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -12979,7 +12871,7 @@ unsigned long psu_mio_init_data(void)
 
     * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Input, gem1_rgmii_rx_c
     * lk- (RX RGMII clock)
-    *  PSU_IOU_SLCR_MIO_PIN_44_L0_SEL                              1
+    *  PSU_IOU_SLCR_MIO_PIN_44_L0_SEL                              0
 
     * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
     *  PSU_IOU_SLCR_MIO_PIN_44_L1_SEL                              0
@@ -13000,9 +12892,9 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_PIN_44_L3_SEL                              0
 
     * Configures MIO Pin 44 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800B0, 0x000000FEU ,0x00000002U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800B0, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_44_OFFSET, 0x000000FEU, 0x00000002U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_44_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -13010,7 +12902,7 @@ unsigned long psu_mio_init_data(void)
 
     * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Input, gem1_rgmii_rxd[
     * 0]- (RX RGMII data)
-    *  PSU_IOU_SLCR_MIO_PIN_45_L0_SEL                              1
+    *  PSU_IOU_SLCR_MIO_PIN_45_L0_SEL                              0
 
     * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
     *  PSU_IOU_SLCR_MIO_PIN_45_L1_SEL                              0
@@ -13030,9 +12922,9 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_PIN_45_L3_SEL                              0
 
     * Configures MIO Pin 45 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800B4, 0x000000FEU ,0x00000002U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800B4, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_45_OFFSET, 0x000000FEU, 0x00000002U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_45_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -13040,7 +12932,7 @@ unsigned long psu_mio_init_data(void)
 
     * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Input, gem1_rgmii_rxd[
     * 1]- (RX RGMII data)
-    *  PSU_IOU_SLCR_MIO_PIN_46_L0_SEL                              1
+    *  PSU_IOU_SLCR_MIO_PIN_46_L0_SEL                              0
 
     * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
     *  PSU_IOU_SLCR_MIO_PIN_46_L1_SEL                              0
@@ -13061,9 +12953,9 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_PIN_46_L3_SEL                              0
 
     * Configures MIO Pin 46 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800B8, 0x000000FEU ,0x00000002U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800B8, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_46_OFFSET, 0x000000FEU, 0x00000002U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_46_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -13071,7 +12963,7 @@ unsigned long psu_mio_init_data(void)
 
     * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Input, gem1_rgmii_rxd[
     * 2]- (RX RGMII data)
-    *  PSU_IOU_SLCR_MIO_PIN_47_L0_SEL                              1
+    *  PSU_IOU_SLCR_MIO_PIN_47_L0_SEL                              0
 
     * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
     *  PSU_IOU_SLCR_MIO_PIN_47_L1_SEL                              0
@@ -13093,9 +12985,9 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_PIN_47_L3_SEL                              0
 
     * Configures MIO Pin 47 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800BC, 0x000000FEU ,0x00000002U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800BC, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_47_OFFSET, 0x000000FEU, 0x00000002U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_47_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -13103,7 +12995,7 @@ unsigned long psu_mio_init_data(void)
 
     * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Input, gem1_rgmii_rxd[
     * 3]- (RX RGMII data)
-    *  PSU_IOU_SLCR_MIO_PIN_48_L0_SEL                              1
+    *  PSU_IOU_SLCR_MIO_PIN_48_L0_SEL                              0
 
     * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
     *  PSU_IOU_SLCR_MIO_PIN_48_L1_SEL                              0
@@ -13125,9 +13017,9 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_PIN_48_L3_SEL                              0
 
     * Configures MIO Pin 48 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800C0, 0x000000FEU ,0x00000002U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800C0, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_48_OFFSET, 0x000000FEU, 0x00000002U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_48_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -13135,7 +13027,7 @@ unsigned long psu_mio_init_data(void)
 
     * Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Input, gem1_rgmii_rx_c
     * tl- (RX RGMII control )
-    *  PSU_IOU_SLCR_MIO_PIN_49_L0_SEL                              1
+    *  PSU_IOU_SLCR_MIO_PIN_49_L0_SEL                              0
 
     * Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
     *  PSU_IOU_SLCR_MIO_PIN_49_L1_SEL                              0
@@ -13156,9 +13048,9 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_PIN_49_L3_SEL                              0
 
     * Configures MIO Pin 49 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800C4, 0x000000FEU ,0x00000002U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800C4, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_49_OFFSET, 0x000000FEU, 0x00000002U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_49_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -13183,12 +13075,12 @@ unsigned long psu_mio_init_data(void)
     * atch Dog Timer Input clock) 4= mdio1, Output, gem1_mdc- (MDIO Clock) 5=
     * ttc2, Input, ttc2_clk_in- (TTC Clock) 6= ua0, Input, ua0_rxd- (UART rece
     * iver serial input) 7= Not Used
-    *  PSU_IOU_SLCR_MIO_PIN_50_L3_SEL                              4
+    *  PSU_IOU_SLCR_MIO_PIN_50_L3_SEL                              0
 
     * Configures MIO Pin 50 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800C8, 0x000000FEU ,0x00000080U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800C8, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_50_OFFSET, 0x000000FEU, 0x00000080U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_50_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -13213,12 +13105,12 @@ unsigned long psu_mio_init_data(void)
     * a) 4= mdio1, Output, gem1_mdio_out- (MDIO Data) 5= ttc2, Output, ttc2_wa
     * ve_out- (TTC Waveform Clock) 6= ua0, Output, ua0_txd- (UART transmitter
     * serial output) 7= Not Used
-    *  PSU_IOU_SLCR_MIO_PIN_51_L3_SEL                              4
+    *  PSU_IOU_SLCR_MIO_PIN_51_L3_SEL                              0
 
     * Configures MIO Pin 51 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800CC, 0x000000FEU ,0x00000080U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800CC, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_51_OFFSET, 0x000000FEU, 0x00000080U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_51_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -14193,22 +14085,22 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_43_TRI                        0
 
     * Master Tri-state Enable for pin 44, active high
-    *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_44_TRI                        1
+    *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_44_TRI                        0
 
     * Master Tri-state Enable for pin 45, active high
-    *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_45_TRI                        1
+    *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_45_TRI                        0
 
     * Master Tri-state Enable for pin 46, active high
-    *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_46_TRI                        1
+    *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_46_TRI                        0
 
     * Master Tri-state Enable for pin 47, active high
-    *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_47_TRI                        1
+    *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_47_TRI                        0
 
     * Master Tri-state Enable for pin 48, active high
-    *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_48_TRI                        1
+    *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_48_TRI                        0
 
     * Master Tri-state Enable for pin 49, active high
-    *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_49_TRI                        1
+    *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_49_TRI                        0
 
     * Master Tri-state Enable for pin 50, active high
     *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_50_TRI                        0
@@ -14253,10 +14145,10 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_MST_TRI1_PIN_63_TRI                        0
 
     * MIO pin Tri-state Enables, 63:32
-    * (OFFSET, MASK, VALUE)      (0XFF180208, 0xFFFFFFFFU ,0x00B3F020U)
+    * (OFFSET, MASK, VALUE)      (0XFF180208, 0xFFFFFFFFU ,0x00B00020U)
     */
 	PSU_Mask_Write(IOU_SLCR_MIO_MST_TRI1_OFFSET,
-		0xFFFFFFFFU, 0x00B3F020U);
+		0xFFFFFFFFU, 0x00B00020U);
 /*##################################################################### */
 
     /*
@@ -16078,22 +15970,6 @@ unsigned long psu_peripherals_init_data(void)
     /*
     * ENET
     */
-    /*
-    * Register : RST_LPD_IOU0 @ 0XFF5E0230
-
-    * GEM 0 reset
-    *  PSU_CRL_APB_RST_LPD_IOU0_GEM0_RESET                         0
-
-    * GEM 1 reset
-    *  PSU_CRL_APB_RST_LPD_IOU0_GEM1_RESET                         0
-
-    * Software controlled reset for the GEMs
-    * (OFFSET, MASK, VALUE)      (0XFF5E0230, 0x00000003U ,0x00000000U)
-    */
-	PSU_Mask_Write(CRL_APB_RST_LPD_IOU0_OFFSET,
-		0x00000003U, 0x00000000U);
-/*##################################################################### */
-
     /*
     * QSPI
     */
@@ -18642,22 +18518,6 @@ unsigned long psu_serdes_init_data(void)
     * GT REFERENCE CLOCK SOURCE SELECTION
     */
     /*
-    * Register : PLL_REF_SEL0 @ 0XFD410000
-
-    * PLL0 Reference Selection. 0x0 - 5MHz, 0x1 - 9.6MHz, 0x2 - 10MHz, 0x3 - 1
-    * 2MHz, 0x4 - 13MHz, 0x5 - 19.2MHz, 0x6 - 20MHz, 0x7 - 24MHz, 0x8 - 26MHz,
-    *  0x9 - 27MHz, 0xA - 38.4MHz, 0xB - 40MHz, 0xC - 52MHz, 0xD - 100MHz, 0xE
-    *  - 108MHz, 0xF - 125MHz, 0x10 - 135MHz, 0x11 - 150 MHz. 0x12 to 0x1F - R
-    * eserved
-    *  PSU_SERDES_PLL_REF_SEL0_PLLREFSEL0                          0xF
-
-    * PLL0 Reference Selection Register
-    * (OFFSET, MASK, VALUE)      (0XFD410000, 0x0000001FU ,0x0000000FU)
-    */
-	PSU_Mask_Write(SERDES_PLL_REF_SEL0_OFFSET, 0x0000001FU, 0x0000000FU);
-/*##################################################################### */
-
-    /*
     * Register : PLL_REF_SEL1 @ 0XFD410004
 
     * PLL1 Reference Selection. 0x0 - 5MHz, 0x1 - 9.6MHz, 0x2 - 10MHz, 0x3 - 1
@@ -18708,20 +18568,6 @@ unsigned long psu_serdes_init_data(void)
     /*
     * GT REFERENCE CLOCK FREQUENCY SELECTION
     */
-    /*
-    * Register : L0_L0_REF_CLK_SEL @ 0XFD402860
-
-    * Sel of lane 0 ref clock local mux. Set to 1 to select lane 0 slicer outp
-    * ut. Set to 0 to select lane0 ref clock mux output.
-    *  PSU_SERDES_L0_L0_REF_CLK_SEL_L0_REF_CLK_LCL_SEL             0x1
-
-    * Lane0 Ref Clock Selection Register
-    * (OFFSET, MASK, VALUE)      (0XFD402860, 0x00000080U ,0x00000080U)
-    */
-	PSU_Mask_Write(SERDES_L0_L0_REF_CLK_SEL_OFFSET,
-		0x00000080U, 0x00000080U);
-/*##################################################################### */
-
     /*
     * Register : L0_L1_REF_CLK_SEL @ 0XFD402864
 
@@ -19046,46 +18892,6 @@ unsigned long psu_serdes_init_data(void)
 /*##################################################################### */
 
     /*
-    * Register : L0_TM_DIG_6 @ 0XFD40106C
-
-    * Bypass 8b10b decoder
-    *  PSU_SERDES_L0_TM_DIG_6_BYPASS_DECODER                       0x1
-
-    * Enable Bypass for <3> TM_DIG_CTRL_6
-    *  PSU_SERDES_L0_TM_DIG_6_FORCE_BYPASS_DEC                     0x1
-
-    * Bypass Descrambler
-    *  PSU_SERDES_L0_TM_DIG_6_BYPASS_DESCRAM                       0x1
-
-    * Enable Bypass for <1> TM_DIG_CTRL_6
-    *  PSU_SERDES_L0_TM_DIG_6_FORCE_BYPASS_DESCRAM                 0x1
-
-    * Data path test modes in decoder and descram
-    * (OFFSET, MASK, VALUE)      (0XFD40106C, 0x0000000FU ,0x0000000FU)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_DIG_6_OFFSET, 0x0000000FU, 0x0000000FU);
-/*##################################################################### */
-
-    /*
-    * Register : L0_TX_DIG_TM_61 @ 0XFD4000F4
-
-    * Enable/disable encoder bypass signal
-    *  PSU_SERDES_L0_TX_DIG_TM_61_BYPASS_ENC                       0x1
-
-    * Bypass scrambler signal
-    *  PSU_SERDES_L0_TX_DIG_TM_61_BYPASS_SCRAM                     0x1
-
-    * Enable/disable scrambler bypass signal
-    *  PSU_SERDES_L0_TX_DIG_TM_61_FORCE_BYPASS_SCRAM               0x1
-
-    * MPHY PLL Gear and bypass scrambler
-    * (OFFSET, MASK, VALUE)      (0XFD4000F4, 0x0000000BU ,0x0000000BU)
-    */
-	PSU_Mask_Write(SERDES_L0_TX_DIG_TM_61_OFFSET,
-		0x0000000BU, 0x0000000BU);
-/*##################################################################### */
-
-    /*
     * Register : L2_TM_DIG_6 @ 0XFD40906C
 
     * Bypass Descrambler
@@ -19228,169 +19034,6 @@ unsigned long psu_serdes_init_data(void)
     /*
     * ILL SETTINGS FOR GAIN AND LOCK SETTINGS
     */
-    /*
-    * Register : L0_TM_MISC2 @ 0XFD40189C
-
-    * ILL calib counts BYPASSED with calcode bits
-    *  PSU_SERDES_L0_TM_MISC2_ILL_CAL_BYPASS_COUNTS                0x1
-
-    * sampler cal
-    * (OFFSET, MASK, VALUE)      (0XFD40189C, 0x00000080U ,0x00000080U)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_MISC2_OFFSET, 0x00000080U, 0x00000080U);
-/*##################################################################### */
-
-    /*
-    * Register : L0_TM_IQ_ILL1 @ 0XFD4018F8
-
-    * IQ ILL F0 CALCODE bypass value. MPHY : G1a, PCIE : Gen 1, SATA : Gen1 ,
-    * USB3 : SS
-    *  PSU_SERDES_L0_TM_IQ_ILL1_ILL_BYPASS_IQ_CALCODE_F0           0x7D
-
-    * iqpi cal code
-    * (OFFSET, MASK, VALUE)      (0XFD4018F8, 0x000000FFU ,0x0000007DU)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_IQ_ILL1_OFFSET,
-		0x000000FFU, 0x0000007DU);
-/*##################################################################### */
-
-    /*
-    * Register : L0_TM_IQ_ILL2 @ 0XFD4018FC
-
-    * IQ ILL F1 CALCODE bypass value. MPHY : G1b, PCIE : Gen2, SATA: Gen2
-    *  PSU_SERDES_L0_TM_IQ_ILL2_ILL_BYPASS_IQ_CALCODE_F1           0x7D
-
-    * iqpi cal code
-    * (OFFSET, MASK, VALUE)      (0XFD4018FC, 0x000000FFU ,0x0000007DU)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_IQ_ILL2_OFFSET,
-		0x000000FFU, 0x0000007DU);
-/*##################################################################### */
-
-    /*
-    * Register : L0_TM_ILL12 @ 0XFD401990
-
-    * G1A pll ctr bypass value
-    *  PSU_SERDES_L0_TM_ILL12_G1A_PLL_CTR_BYP_VAL                  0x0
-
-    * ill pll counter values
-    * (OFFSET, MASK, VALUE)      (0XFD401990, 0x000000FFU ,0x00000000U)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_ILL12_OFFSET, 0x000000FFU, 0x00000000U);
-/*##################################################################### */
-
-    /*
-    * Register : L0_TM_E_ILL1 @ 0XFD401924
-
-    * E ILL F0 CALCODE bypass value. MPHY : G1a, PCIE : Gen 1, SATA : Gen1 , U
-    * SB3 : SS
-    *  PSU_SERDES_L0_TM_E_ILL1_ILL_BYPASS_E_CALCODE_F0             0x82
-
-    * epi cal code
-    * (OFFSET, MASK, VALUE)      (0XFD401924, 0x000000FFU ,0x00000082U)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_E_ILL1_OFFSET, 0x000000FFU, 0x00000082U);
-/*##################################################################### */
-
-    /*
-    * Register : L0_TM_E_ILL2 @ 0XFD401928
-
-    * E ILL F1 CALCODE bypass value. MPHY : G1b, PCIE : Gen2, SATA: Gen2
-    *  PSU_SERDES_L0_TM_E_ILL2_ILL_BYPASS_E_CALCODE_F1             0x0
-
-    * epi cal code
-    * (OFFSET, MASK, VALUE)      (0XFD401928, 0x000000FFU ,0x00000000U)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_E_ILL2_OFFSET, 0x000000FFU, 0x00000000U);
-/*##################################################################### */
-
-    /*
-    * Register : L0_TM_IQ_ILL3 @ 0XFD401900
-
-    * IQ ILL F2CALCODE bypass value. MPHY : G2a, SATA : Gen3
-    *  PSU_SERDES_L0_TM_IQ_ILL3_ILL_BYPASS_IQ_CALCODE_F2           0x64
-
-    * iqpi cal code
-    * (OFFSET, MASK, VALUE)      (0XFD401900, 0x000000FFU ,0x00000064U)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_IQ_ILL3_OFFSET,
-		0x000000FFU, 0x00000064U);
-/*##################################################################### */
-
-    /*
-    * Register : L0_TM_E_ILL3 @ 0XFD40192C
-
-    * E ILL F2CALCODE bypass value. MPHY : G2a, SATA : Gen3
-    *  PSU_SERDES_L0_TM_E_ILL3_ILL_BYPASS_E_CALCODE_F2             0x0
-
-    * epi cal code
-    * (OFFSET, MASK, VALUE)      (0XFD40192C, 0x000000FFU ,0x00000000U)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_E_ILL3_OFFSET, 0x000000FFU, 0x00000000U);
-/*##################################################################### */
-
-    /*
-    * Register : L0_TM_ILL8 @ 0XFD401980
-
-    * ILL calibration code change wait time
-    *  PSU_SERDES_L0_TM_ILL8_ILL_CAL_ITER_WAIT                     0xFF
-
-    * ILL cal routine control
-    * (OFFSET, MASK, VALUE)      (0XFD401980, 0x000000FFU ,0x000000FFU)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_ILL8_OFFSET, 0x000000FFU, 0x000000FFU);
-/*##################################################################### */
-
-    /*
-    * Register : L0_TM_IQ_ILL8 @ 0XFD401914
-
-    * IQ ILL polytrim bypass value
-    *  PSU_SERDES_L0_TM_IQ_ILL8_ILL_BYPASS_IQ_POLYTRIM_VAL         0xFF
-
-    * iqpi polytrim
-    * (OFFSET, MASK, VALUE)      (0XFD401914, 0x000000FFU ,0x000000FFU)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_IQ_ILL8_OFFSET,
-		0x000000FFU, 0x000000FFU);
-/*##################################################################### */
-
-    /*
-    * Register : L0_TM_IQ_ILL9 @ 0XFD401918
-
-    * bypass IQ polytrim
-    *  PSU_SERDES_L0_TM_IQ_ILL9_ILL_BYPASS_IQ_POLYTIM              0x1
-
-    * enables for lf,constant gm trim and polytirm
-    * (OFFSET, MASK, VALUE)      (0XFD401918, 0x00000001U ,0x00000001U)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_IQ_ILL9_OFFSET,
-		0x00000001U, 0x00000001U);
-/*##################################################################### */
-
-    /*
-    * Register : L0_TM_E_ILL8 @ 0XFD401940
-
-    * E ILL polytrim bypass value
-    *  PSU_SERDES_L0_TM_E_ILL8_ILL_BYPASS_E_POLYTRIM_VAL           0xFF
-
-    * epi polytrim
-    * (OFFSET, MASK, VALUE)      (0XFD401940, 0x000000FFU ,0x000000FFU)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_E_ILL8_OFFSET, 0x000000FFU, 0x000000FFU);
-/*##################################################################### */
-
-    /*
-    * Register : L0_TM_E_ILL9 @ 0XFD401944
-
-    * bypass E polytrim
-    *  PSU_SERDES_L0_TM_E_ILL9_ILL_BYPASS_E_POLYTIM                0x1
-
-    * enables for lf,constant gm trim and polytirm
-    * (OFFSET, MASK, VALUE)      (0XFD401944, 0x00000001U ,0x00000001U)
-    */
-	PSU_Mask_Write(SERDES_L0_TM_E_ILL9_OFFSET, 0x00000001U, 0x00000001U);
-/*##################################################################### */
-
     /*
     * Register : L0_TM_ILL13 @ 0XFD401994
 
@@ -20100,7 +19743,7 @@ unsigned long psu_serdes_init_data(void)
     /*
     * SERDES ILL CALIB
     */
-		serdes_illcalib(3,0,3,0,4,0,5,0);
+		serdes_illcalib(3,0,3,0,4,0,0,0);
 
 /*##################################################################### */
 
@@ -20113,18 +19756,14 @@ unsigned long psu_serdes_init_data(void)
     /*
     * Register : ICM_CFG0 @ 0XFD410010
 
-    * Controls UPHY Lane 0 protocol configuration. 0 - PowerDown, 1 - PCIe .0,
-    *  2 - Sata0, 3 - USB0, 4 - DP.1, 5 - SGMII0, 6 - Unused, 7 - Unused
-    *  PSU_SERDES_ICM_CFG0_L0_ICM_CFG                              5
-
     * Controls UPHY Lane 1 protocol configuration. 0 - PowerDown, 1 - PCIe.1,
     * 2 - Sata1, 3 - USB0, 4 - DP.0, 5 - SGMII1, 6 - Unused, 7 - Unused
     *  PSU_SERDES_ICM_CFG0_L1_ICM_CFG                              4
 
     * ICM Configuration Register 0
-    * (OFFSET, MASK, VALUE)      (0XFD410010, 0x00000077U ,0x00000045U)
+    * (OFFSET, MASK, VALUE)      (0XFD410010, 0x00000070U ,0x00000040U)
     */
-	PSU_Mask_Write(SERDES_ICM_CFG0_OFFSET, 0x00000077U, 0x00000045U);
+	PSU_Mask_Write(SERDES_ICM_CFG0_OFFSET, 0x00000070U, 0x00000040U);
 /*##################################################################### */
 
     /*
@@ -20194,36 +19833,6 @@ unsigned long psu_serdes_init_data(void)
     /*
     * GEM SERDES SETTINGS
     */
-    /*
-    * Register : TX_PROT_BUS_WIDTH @ 0XFD410040
-
-    * Lane 0 Tx Data Bus Witdh. 0x0 - 10 Bits, 0x1 - 20 Bits, 0x2 - 40 Bits, 0
-    * x3 - Reserved. When external encoder is disabled, PHY works in 8/16/32 B
-    * its mode respecitively
-    *  PSU_SERDES_TX_PROT_BUS_WIDTH_L0_TX_PROT_BUSWIDTH            0x0
-
-    * Tx Data Bus Width Control Register
-    * (OFFSET, MASK, VALUE)      (0XFD410040, 0x00000003U ,0x00000000U)
-    */
-	PSU_Mask_Write(SERDES_TX_PROT_BUS_WIDTH_OFFSET,
-		0x00000003U, 0x00000000U);
-/*##################################################################### */
-
-    /*
-    * Register : RX_PROT_BUS_WIDTH @ 0XFD410044
-
-    * Lane 0 Rx Data Bus Witdh. 0x0 - 10 Bits, 0x1 - 20 Bits, 0x2 - 40 Bits, 0
-    * x3 - Reserved. When external encoder is disabled, PHY works in 8/16/32 B
-    * its mode respecitively
-    *  PSU_SERDES_RX_PROT_BUS_WIDTH_L0_RX_PROT_BUSWIDTH            0x0
-
-    * Rx Data Bus Width Control Register
-    * (OFFSET, MASK, VALUE)      (0XFD410044, 0x00000003U ,0x00000000U)
-    */
-	PSU_Mask_Write(SERDES_RX_PROT_BUS_WIDTH_OFFSET,
-		0x00000003U, 0x00000000U);
-/*##################################################################### */
-
     /*
     * ENABLE PRE EMPHAIS AND VOLTAGE SWING
     */
@@ -20384,38 +19993,6 @@ unsigned long psu_resetout_init_data(void)
     * (OFFSET, MASK, VALUE)      (0XFF5E023C, 0x00000280U ,0x00000000U)
     */
 	PSU_Mask_Write(CRL_APB_RST_LPD_TOP_OFFSET, 0x00000280U, 0x00000000U);
-/*##################################################################### */
-
-    /*
-    * PUTTING GEM0 IN RESET
-    */
-    /*
-    * Register : RST_LPD_IOU0 @ 0XFF5E0230
-
-    * GEM 0 reset
-    *  PSU_CRL_APB_RST_LPD_IOU0_GEM0_RESET                         0X0
-
-    * Software controlled reset for the GEMs
-    * (OFFSET, MASK, VALUE)      (0XFF5E0230, 0x00000001U ,0x00000000U)
-    */
-	PSU_Mask_Write(CRL_APB_RST_LPD_IOU0_OFFSET,
-		0x00000001U, 0x00000000U);
-/*##################################################################### */
-
-    /*
-    * PUTTING GEM0 IN RESET
-    */
-    /*
-    * Register : RST_LPD_IOU0 @ 0XFF5E0230
-
-    * GEM 1 reset
-    *  PSU_CRL_APB_RST_LPD_IOU0_GEM1_RESET                         0X0
-
-    * Software controlled reset for the GEMs
-    * (OFFSET, MASK, VALUE)      (0XFF5E0230, 0x00000002U ,0x00000000U)
-    */
-	PSU_Mask_Write(CRL_APB_RST_LPD_IOU0_OFFSET,
-		0x00000002U, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -20887,20 +20464,6 @@ unsigned long psu_resetout_init_data(void)
 /*##################################################################### */
 
     /*
-    * CHECK PLL LOCK FOR LANE0
-    */
-    /*
-    * Register : L0_PLL_STATUS_READ_1 @ 0XFD4023E4
-
-    * Status Read value of PLL Lock
-    *  PSU_SERDES_L0_PLL_STATUS_READ_1_PLL_LOCK_STATUS_READ        1
-    * (OFFSET, MASK, VALUE)      (0XFD4023E4, 0x00000010U ,0x00000010U)
-		*/
-	mask_poll(SERDES_L0_PLL_STATUS_READ_1_OFFSET, 0x00000010U);
-
-/*##################################################################### */
-
-    /*
     * CHECK PLL LOCK FOR LANE1
     */
     /*
@@ -20993,38 +20556,6 @@ unsigned long psu_resetin_init_data(void)
     * (OFFSET, MASK, VALUE)      (0XFF5E023C, 0x00000A80U ,0x00000A80U)
     */
 	PSU_Mask_Write(CRL_APB_RST_LPD_TOP_OFFSET, 0x00000A80U, 0x00000A80U);
-/*##################################################################### */
-
-    /*
-    * PUTTING GEM0 IN RESET
-    */
-    /*
-    * Register : RST_LPD_IOU0 @ 0XFF5E0230
-
-    * GEM 0 reset
-    *  PSU_CRL_APB_RST_LPD_IOU0_GEM0_RESET                         0X1
-
-    * Software controlled reset for the GEMs
-    * (OFFSET, MASK, VALUE)      (0XFF5E0230, 0x00000001U ,0x00000001U)
-    */
-	PSU_Mask_Write(CRL_APB_RST_LPD_IOU0_OFFSET,
-		0x00000001U, 0x00000001U);
-/*##################################################################### */
-
-    /*
-    * PUTTING GEM0 IN RESET
-    */
-    /*
-    * Register : RST_LPD_IOU0 @ 0XFF5E0230
-
-    * GEM 1 reset
-    *  PSU_CRL_APB_RST_LPD_IOU0_GEM1_RESET                         0X1
-
-    * Software controlled reset for the GEMs
-    * (OFFSET, MASK, VALUE)      (0XFF5E0230, 0x00000002U ,0x00000002U)
-    */
-	PSU_Mask_Write(CRL_APB_RST_LPD_IOU0_OFFSET,
-		0x00000002U, 0x00000002U);
 /*##################################################################### */
 
     /*

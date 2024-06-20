@@ -20,6 +20,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_a
 # IP: bd/pl_design/ip/pl_design_axi_gpio_0_1/pl_design_axi_gpio_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_axi_gpio_0_1 || ORIG_REF_NAME==pl_design_axi_gpio_0_1} -quiet] -quiet
 
+# IP: bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_proc_sys_reset_0_0 || ORIG_REF_NAME==pl_design_proc_sys_reset_0_0} -quiet] -quiet
+
 # IP: bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_auto_pc_0 || ORIG_REF_NAME==pl_design_auto_pc_0} -quiet] -quiet
 

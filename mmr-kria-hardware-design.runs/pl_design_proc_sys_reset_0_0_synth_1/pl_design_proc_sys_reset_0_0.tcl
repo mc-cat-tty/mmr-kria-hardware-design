@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_auto_pc_0_synth_1/pl_design_auto_pc_0.tcl"
+  variable script "/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1/pl_design_proc_sys_reset_0_0.tcl"
   variable category "vivado_synth"
 }
 
@@ -69,8 +69,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-OPTRACE "pl_design_auto_pc_0_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
+OPTRACE "pl_design_proc_sys_reset_0_0_synth_1" START { ROLLUP_AUTO }
 set_msg_config  -id {BD 41-237}  -string {{WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_interconnect_0/s00_couplers/auto_pc/S_AXI(0) and /axi_interconnect_0/s00_mmu/M_AXI(16)}}  -suppress 
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
@@ -92,8 +91,10 @@ set_property ip_output_repo /home/francesco/Documents/mmr-kria-hardware-design/m
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0.xci
-set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_ooc.xdc]
+read_ip -quiet /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0.xci
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -109,14 +110,14 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_auto_pc_0_synth_1 -new_name pl_design_auto_pc_0 -ip [get_ips pl_design_auto_pc_0]]
+set cacheID [config_ip_cache -export -no_bom  -dir /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1 -new_name pl_design_proc_sys_reset_0_0 -ip [get_ips pl_design_proc_sys_reset_0_0]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top pl_design_auto_pc_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+synth_design -top pl_design_proc_sys_reset_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
 OPTRACE "synth_design" END { }
 OPTRACE "Write IP Cache" START { }
 
@@ -127,24 +128,24 @@ OPTRACE "Write IP Cache" START { }
 set_param constraints.enableBinaryConstraints false
 
 catch {
- write_checkpoint -force -noxdef -rename_prefix pl_design_auto_pc_0_ pl_design_auto_pc_0.dcp
+ write_checkpoint -force -noxdef -rename_prefix pl_design_proc_sys_reset_0_0_ pl_design_proc_sys_reset_0_0.dcp
 
  set ipCachedFiles {}
- write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ pl_design_auto_pc_0_stub.v
- lappend ipCachedFiles pl_design_auto_pc_0_stub.v
+ write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ pl_design_proc_sys_reset_0_0_stub.v
+ lappend ipCachedFiles pl_design_proc_sys_reset_0_0_stub.v
 
- write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ pl_design_auto_pc_0_stub.vhdl
- lappend ipCachedFiles pl_design_auto_pc_0_stub.vhdl
+ write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ pl_design_proc_sys_reset_0_0_stub.vhdl
+ lappend ipCachedFiles pl_design_proc_sys_reset_0_0_stub.vhdl
 
- write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ pl_design_auto_pc_0_sim_netlist.v
- lappend ipCachedFiles pl_design_auto_pc_0_sim_netlist.v
+ write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ pl_design_proc_sys_reset_0_0_sim_netlist.v
+ lappend ipCachedFiles pl_design_proc_sys_reset_0_0_sim_netlist.v
 
- write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ pl_design_auto_pc_0_sim_netlist.vhdl
- lappend ipCachedFiles pl_design_auto_pc_0_sim_netlist.vhdl
+ write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ pl_design_proc_sys_reset_0_0_sim_netlist.vhdl
+ lappend ipCachedFiles pl_design_proc_sys_reset_0_0_sim_netlist.vhdl
  set TIME_taken [expr [clock seconds] - $TIME_start]
 
  if { [get_msg_config -count -severity {CRITICAL WARNING}] == 0 } {
-  config_ip_cache -add -dcp pl_design_auto_pc_0.dcp -move_files $ipCachedFiles   -synth_runtime $TIME_taken  -ip [get_ips pl_design_auto_pc_0]
+  config_ip_cache -add -dcp pl_design_proc_sys_reset_0_0.dcp -move_files $ipCachedFiles   -synth_runtime $TIME_taken  -ip [get_ips pl_design_proc_sys_reset_0_0]
  }
 OPTRACE "Write IP Cache" END { }
 }
@@ -152,44 +153,44 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
 }
 
-rename_ref -prefix_all pl_design_auto_pc_0_
+rename_ref -prefix_all pl_design_proc_sys_reset_0_0_
 
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef pl_design_auto_pc_0.dcp
+write_checkpoint -force -noxdef pl_design_proc_sys_reset_0_0.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "pl_design_auto_pc_0_synth_1_synth_report_utilization_0" "report_utilization -file pl_design_auto_pc_0_utilization_synth.rpt -pb pl_design_auto_pc_0_utilization_synth.pb"
+create_report "pl_design_proc_sys_reset_0_0_synth_1_synth_report_utilization_0" "report_utilization -file pl_design_proc_sys_reset_0_0_utilization_synth.rpt -pb pl_design_proc_sys_reset_0_0_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_auto_pc_0_synth_1/pl_design_auto_pc_0.dcp /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0.dcp
+  file copy -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1/pl_design_proc_sys_reset_0_0.dcp /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_stub.v
+  write_verilog -force -mode synth_stub /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_stub.vhdl
+  write_vhdl -force -mode synth_stub /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_sim_netlist.v
+  write_verilog -force -mode funcsim /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -199,32 +200,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_auto_pc_0_synth_1/pl_design_auto_pc_0.dcp /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0.dcp
+  file copy -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1/pl_design_proc_sys_reset_0_0.dcp /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_auto_pc_0_synth_1/pl_design_auto_pc_0_stub.v /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_stub.v
+  file rename -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1/pl_design_proc_sys_reset_0_0_stub.v /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_auto_pc_0_synth_1/pl_design_auto_pc_0_stub.vhdl /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_stub.vhdl
+  file rename -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1/pl_design_proc_sys_reset_0_0_stub.vhdl /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_auto_pc_0_synth_1/pl_design_auto_pc_0_sim_netlist.v /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_sim_netlist.v
+  file rename -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1/pl_design_proc_sys_reset_0_0_sim_netlist.v /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_auto_pc_0_synth_1/pl_design_auto_pc_0_sim_netlist.vhdl /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_sim_netlist.vhdl
+  file rename -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1/pl_design_proc_sys_reset_0_0_sim_netlist.vhdl /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -232,17 +233,17 @@ if { [catch {
 close [open .end.used_ip_cache.rst w]
 }; # end if cacheID 
 
-if {[file isdir /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.ip_user_files/ip/pl_design_auto_pc_0]} {
+if {[file isdir /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.ip_user_files/ip/pl_design_proc_sys_reset_0_0]} {
   catch { 
-    file copy -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_stub.v /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.ip_user_files/ip/pl_design_auto_pc_0
+    file copy -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_stub.v /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.ip_user_files/ip/pl_design_proc_sys_reset_0_0
   }
 }
 
-if {[file isdir /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.ip_user_files/ip/pl_design_auto_pc_0]} {
+if {[file isdir /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.ip_user_files/ip/pl_design_proc_sys_reset_0_0]} {
   catch { 
-    file copy -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_stub.vhdl /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.ip_user_files/ip/pl_design_auto_pc_0
+    file copy -force /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_stub.vhdl /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.ip_user_files/ip/pl_design_proc_sys_reset_0_0
   }
 }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
-OPTRACE "pl_design_auto_pc_0_synth_1" END { }
+OPTRACE "pl_design_proc_sys_reset_0_0_synth_1" END { }

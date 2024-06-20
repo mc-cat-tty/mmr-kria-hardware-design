@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Thu Jun 20 10:43:00 2024
+// Date        : Thu Jun 20 10:42:59 2024
 // Host        : francesco-desktop running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top pl_design_auto_pc_0 -prefix
+//               pl_design_auto_pc_0_ pl_design_auto_pc_0_stub.v
 // Design      : pl_design_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xck26-sfvc784-2LV-c

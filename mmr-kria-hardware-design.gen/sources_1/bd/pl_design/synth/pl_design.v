@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Thu Jun 20 10:39:27 2024
+//Date        : Thu Jun 20 11:03:12 2024
 //Host        : francesco-desktop running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target pl_design.bd
 //Design      : pl_design
@@ -10,16 +10,16 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "pl_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=pl_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "pl_design.hwdef" *) 
+(* CORE_GENERATION_INFO = "pl_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=pl_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "pl_design.hwdef" *) 
 module pl_design
    (fan,
     gpio_tri_i,
     gpio_tri_o,
     gpio_tri_t);
   output [0:0]fan;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio " *) input [0:0]gpio_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio " *) output [0:0]gpio_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio " *) output [0:0]gpio_tri_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio TRI_I" *) input [0:0]gpio_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio TRI_O" *) output [0:0]gpio_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio TRI_T" *) output [0:0]gpio_tri_t;
 
   wire [0:0]axi_gpio_0_GPIO_TRI_I;
   wire [0:0]axi_gpio_0_GPIO_TRI_O;
@@ -41,6 +41,7 @@ module pl_design
   wire axi_interconnect_0_M00_AXI_WREADY;
   wire [3:0]axi_interconnect_0_M00_AXI_WSTRB;
   wire axi_interconnect_0_M00_AXI_WVALID;
+  wire [0:0]proc_sys_reset_0_interconnect_aresetn;
   wire [0:0]xlslice_0_Dout;
   wire [39:0]zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARADDR;
   wire [1:0]zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARBURST;
@@ -93,7 +94,7 @@ module pl_design
         .gpio_io_t(axi_gpio_0_GPIO_TRI_T),
         .s_axi_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .s_axi_araddr(axi_interconnect_0_M00_AXI_ARADDR[8:0]),
-        .s_axi_aresetn(zynq_ultra_ps_e_0_pl_resetn0),
+        .s_axi_aresetn(proc_sys_reset_0_interconnect_aresetn),
         .s_axi_arready(axi_interconnect_0_M00_AXI_ARREADY),
         .s_axi_arvalid(axi_interconnect_0_M00_AXI_ARVALID),
         .s_axi_awaddr(axi_interconnect_0_M00_AXI_AWADDR[8:0]),
@@ -112,9 +113,9 @@ module pl_design
         .s_axi_wvalid(axi_interconnect_0_M00_AXI_WVALID));
   pl_design_axi_interconnect_0_0 axi_interconnect_0
        (.ACLK(zynq_ultra_ps_e_0_pl_clk0),
-        .ARESETN(zynq_ultra_ps_e_0_pl_resetn0),
+        .ARESETN(proc_sys_reset_0_interconnect_aresetn),
         .M00_ACLK(zynq_ultra_ps_e_0_pl_clk0),
-        .M00_ARESETN(zynq_ultra_ps_e_0_pl_resetn0),
+        .M00_ARESETN(proc_sys_reset_0_interconnect_aresetn),
         .M00_AXI_araddr(axi_interconnect_0_M00_AXI_ARADDR),
         .M00_AXI_arready(axi_interconnect_0_M00_AXI_ARREADY),
         .M00_AXI_arvalid(axi_interconnect_0_M00_AXI_ARVALID),
@@ -133,7 +134,7 @@ module pl_design
         .M00_AXI_wstrb(axi_interconnect_0_M00_AXI_WSTRB),
         .M00_AXI_wvalid(axi_interconnect_0_M00_AXI_WVALID),
         .S00_ACLK(zynq_ultra_ps_e_0_pl_clk0),
-        .S00_ARESETN(zynq_ultra_ps_e_0_pl_resetn0),
+        .S00_ARESETN(proc_sys_reset_0_interconnect_aresetn),
         .S00_AXI_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARADDR),
         .S00_AXI_arburst(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARBURST),
         .S00_AXI_arcache(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARCACHE),
@@ -171,6 +172,13 @@ module pl_design
         .S00_AXI_wready(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WREADY),
         .S00_AXI_wstrb(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WSTRB),
         .S00_AXI_wvalid(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WVALID));
+  pl_design_proc_sys_reset_0_0 proc_sys_reset_0
+       (.aux_reset_in(1'b1),
+        .dcm_locked(1'b1),
+        .ext_reset_in(zynq_ultra_ps_e_0_pl_resetn0),
+        .interconnect_aresetn(proc_sys_reset_0_interconnect_aresetn),
+        .mb_debug_sys_rst(1'b0),
+        .slowest_sync_clk(zynq_ultra_ps_e_0_pl_clk0));
   pl_design_xlslice_0_0 xlslice_0
        (.Din(zynq_ultra_ps_e_0_emio_ttc0_wave_o),
         .Dout(xlslice_0_Dout));

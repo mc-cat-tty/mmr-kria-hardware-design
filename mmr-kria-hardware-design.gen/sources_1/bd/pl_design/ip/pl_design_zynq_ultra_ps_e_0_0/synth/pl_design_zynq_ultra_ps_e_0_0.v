@@ -97,7 +97,6 @@ module pl_design_zynq_ultra_ps_e_0_0 (
   maxigp2_rready,
   maxigp2_awqos,
   maxigp2_arqos,
-  emio_enet0_enet_tsu_timer_cnt,
   emio_ttc0_wave_o,
   pl_resetn0,
   pl_clk0
@@ -186,7 +185,6 @@ output wire [3 : 0] maxigp2_awqos;
 EADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD ARQOS" *)
 output wire [3 : 0] maxigp2_arqos;
-output wire [93 : 0] emio_enet0_enet_tsu_timer_cnt;
 output wire [2 : 0] emio_ttc0_wave_o;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PL_RESETN0, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 PL_RESETN0 RST" *)
@@ -995,7 +993,7 @@ output wire pl_clk0;
     .fmio_gem_tsu_clk_to_pl_bufg(),
     .fmio_gem_tsu_clk_from_pl(1'B0),
     .emio_enet_tsu_clk(1'B0),
-    .emio_enet0_enet_tsu_timer_cnt(emio_enet0_enet_tsu_timer_cnt),
+    .emio_enet0_enet_tsu_timer_cnt(),
     .emio_enet0_ext_int_in(1'B0),
     .emio_enet1_ext_int_in(1'B0),
     .emio_enet2_ext_int_in(1'B0),

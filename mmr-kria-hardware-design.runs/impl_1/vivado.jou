@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu Jun 20 10:44:08 2024
-# Process ID: 36056
+# Start of session at: Thu Jun 20 11:08:49 2024
+# Process ID: 74080
 # Current directory: /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/impl_1
 # Command line: vivado -log pl_design_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source pl_design_wrapper.tcl -notrace
 # Log file: /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/impl_1/pl_design_wrapper.vdi
 # Journal file: /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/impl_1/vivado.jou
-# Running On: francesco-desktop, OS: Linux, CPU Frequency: 2846.834 MHz, CPU Physical cores: 16, Host memory: 16680 MB
+# Running On: francesco-desktop, OS: Linux, CPU Frequency: 3059.828 MHz, CPU Physical cores: 16, Host memory: 16680 MB
 #-----------------------------------------------------------
 source pl_design_wrapper.tcl -notrace

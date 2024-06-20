@@ -7,4 +7,4 @@
 # Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 #
 
-vivado -log pl_design_auto_pc_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pl_design_auto_pc_0.tcl
+vivado -log pl_design_proc_sys_reset_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pl_design_proc_sys_reset_0_0.tcl
