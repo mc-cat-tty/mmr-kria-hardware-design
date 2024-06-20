@@ -14,6 +14,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_z
 # IP: bd/pl_design/ip/pl_design_xlslice_0_0/pl_design_xlslice_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_xlslice_0_0 || ORIG_REF_NAME==pl_design_xlslice_0_0} -quiet] -quiet
 
+# IP: bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_auto_pc_0 || ORIG_REF_NAME==pl_design_auto_pc_0} -quiet] -quiet
+
 # IP: bd/pl_design/ip/pl_design_axi_interconnect_0_0/pl_design_axi_interconnect_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_axi_interconnect_0_0 || ORIG_REF_NAME==pl_design_axi_interconnect_0_0} -quiet] -quiet
 
@@ -22,8 +25,5 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_a
 
 # IP: bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_proc_sys_reset_0_0 || ORIG_REF_NAME==pl_design_proc_sys_reset_0_0} -quiet] -quiet
-
-# IP: bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_auto_pc_0 || ORIG_REF_NAME==pl_design_auto_pc_0} -quiet] -quiet
 
 # XDC: /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/pl_design_ooc.xdc

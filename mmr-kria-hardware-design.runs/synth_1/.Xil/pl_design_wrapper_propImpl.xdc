@@ -3,4 +3,4 @@ set_property SRC_FILE_INFO {cfile:/home/francesco/Documents/mmr-kria-hardware-de
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN A12 [get_ports {fan}]
 set_property src_info {type:XDC file:2 line:1 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN H12 [get_ports {gpio_tri_io}]
+set_property PACKAGE_PIN H12 [get_ports {gpio_tri_io[0]}]

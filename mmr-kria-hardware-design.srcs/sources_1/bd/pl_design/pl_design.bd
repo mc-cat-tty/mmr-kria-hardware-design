@@ -1753,6 +1753,21 @@
           "proc_sys_reset_0/ext_reset_in"
         ]
       }
+    },
+    "addressing": {
+      "/zynq_ultra_ps_e_0": {
+        "address_spaces": {
+          "Data": {
+            "segments": {
+              "SEG_axi_gpio_0_Reg": {
+                "address_block": "/axi_gpio_0/S_AXI/Reg",
+                "offset": "0x0080000000",
+                "range": "64K"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
