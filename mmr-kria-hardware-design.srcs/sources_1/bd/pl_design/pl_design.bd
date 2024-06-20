@@ -17,7 +17,8 @@
           "auto_pc": ""
         }
       },
-      "axi_gpio_0": ""
+      "axi_gpio_0": "",
+      "proc_sys_reset_0": ""
     },
     "interface_ports": {
       "gpio": {
@@ -1683,6 +1684,13 @@
             "value": "1"
           }
         }
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "14",
+        "xci_name": "pl_design_proc_sys_reset_0_0",
+        "xci_path": "ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0.xci",
+        "inst_hier_path": "proc_sys_reset_0"
       }
     },
     "interface_nets": {
@@ -1706,6 +1714,15 @@
       }
     },
     "nets": {
+      "proc_sys_reset_0_interconnect_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/interconnect_aresetn",
+          "axi_interconnect_0/ARESETN",
+          "axi_interconnect_0/S00_ARESETN",
+          "axi_interconnect_0/M00_ARESETN",
+          "axi_gpio_0/s_axi_aresetn"
+        ]
+      },
       "xlslice_0_Dout": {
         "ports": [
           "xlslice_0/Dout",
@@ -1725,16 +1742,14 @@
           "axi_interconnect_0/ACLK",
           "axi_interconnect_0/S00_ACLK",
           "axi_interconnect_0/M00_ACLK",
-          "zynq_ultra_ps_e_0/maxihpm0_lpd_aclk"
+          "zynq_ultra_ps_e_0/maxihpm0_lpd_aclk",
+          "proc_sys_reset_0/slowest_sync_clk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {
         "ports": [
           "zynq_ultra_ps_e_0/pl_resetn0",
-          "axi_interconnect_0/ARESETN",
-          "axi_interconnect_0/S00_ARESETN",
-          "axi_interconnect_0/M00_ARESETN",
-          "axi_gpio_0/s_axi_aresetn"
+          "proc_sys_reset_0/ext_reset_in"
         ]
       }
     }
