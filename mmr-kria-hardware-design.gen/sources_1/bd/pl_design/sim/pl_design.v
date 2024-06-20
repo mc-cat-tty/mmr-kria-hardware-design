@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Thu Jun 20 11:37:44 2024
+//Date        : Thu Jun 20 22:05:01 2024
 //Host        : francesco-desktop running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target pl_design.bd
 //Design      : pl_design
@@ -13,13 +13,13 @@
 (* CORE_GENERATION_INFO = "pl_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=pl_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "pl_design.hwdef" *) 
 module pl_design
    (fan,
-    gpio_tri_i,
-    gpio_tri_o,
-    gpio_tri_t);
+    led_uf1_tri_i,
+    led_uf1_tri_o,
+    led_uf1_tri_t);
   output [0:0]fan;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio TRI_I" *) input [0:0]gpio_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio TRI_O" *) output [0:0]gpio_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio TRI_T" *) output [0:0]gpio_tri_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf1 " *) input [0:0]led_uf1_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf1 " *) output [0:0]led_uf1_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf1 " *) output [0:0]led_uf1_tri_t;
 
   wire [0:0]axi_gpio_0_GPIO_TRI_I;
   wire [0:0]axi_gpio_0_GPIO_TRI_O;
@@ -84,10 +84,10 @@ module pl_design
   wire zynq_ultra_ps_e_0_pl_clk0;
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
-  assign axi_gpio_0_GPIO_TRI_I = gpio_tri_i[0];
+  assign axi_gpio_0_GPIO_TRI_I = led_uf1_tri_i[0];
   assign fan[0] = xlslice_0_Dout;
-  assign gpio_tri_o[0] = axi_gpio_0_GPIO_TRI_O;
-  assign gpio_tri_t[0] = axi_gpio_0_GPIO_TRI_T;
+  assign led_uf1_tri_o[0] = axi_gpio_0_GPIO_TRI_O;
+  assign led_uf1_tri_t[0] = axi_gpio_0_GPIO_TRI_T;
   pl_design_axi_gpio_0_1 axi_gpio_0
        (.gpio_io_i(axi_gpio_0_GPIO_TRI_I),
         .gpio_io_o(axi_gpio_0_GPIO_TRI_O),

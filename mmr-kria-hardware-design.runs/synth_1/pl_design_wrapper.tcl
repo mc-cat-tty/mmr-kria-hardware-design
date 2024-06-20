@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
 set_msg_config  -id {BD 41-237}  -string {{WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_interconnect_0/s00_couplers/auto_pc/S_AXI(0) and /axi_interconnect_0/s00_mmu/M_AXI(16)}}  -suppress 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
@@ -93,13 +94,13 @@ read_verilog -library xil_defaultlib /home/francesco/Documents/mmr-kria-hardware
 add_files /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/sources_1/bd/pl_design/pl_design.bd
 set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/pl_design_zynq_ultra_ps_e_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/pl_design_zynq_ultra_ps_e_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_1/pl_design_axi_gpio_0_1_board.xdc]
 set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_1/pl_design_axi_gpio_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_1/pl_design_axi_gpio_0_1.xdc]
 set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/pl_design_ooc.xdc]
 
 OPTRACE "Adding files" END { }
