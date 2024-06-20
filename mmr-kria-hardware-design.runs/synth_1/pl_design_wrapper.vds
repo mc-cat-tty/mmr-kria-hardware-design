@@ -3,52 +3,47 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu Jun 20 11:04:58 2024
-# Process ID: 56694
+# Start of session at: Thu Jun 20 11:16:59 2024
+# Process ID: 93529
 # Current directory: /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1
 # Command line: vivado -log pl_design_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pl_design_wrapper.tcl
 # Log file: /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/pl_design_wrapper.vds
 # Journal file: /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/vivado.jou
-# Running On: francesco-desktop, OS: Linux, CPU Frequency: 3147.991 MHz, CPU Physical cores: 16, Host memory: 16680 MB
+# Running On: francesco-desktop, OS: Linux, CPU Frequency: 2860.769 MHz, CPU Physical cores: 16, Host memory: 16680 MB
 #-----------------------------------------------------------
 source pl_design_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1320.000 ; gain = 0.023 ; free physical = 7441 ; free virtual = 12492
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1313.379 ; gain = 0.023 ; free physical = 4959 ; free virtual = 10138
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/francesco/Vivado/Vivado/2023.2/data/ip'.
-Command: read_checkpoint -auto_incremental -incremental /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/utils_1/imports/synth_1/pl_design_wrapper.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/utils_1/imports/synth_1/pl_design_wrapper.dcp for incremental synthesis
-INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top pl_design_wrapper -part xck26-sfvc784-2LV-c
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 56756
+INFO: [Synth 8-7075] Helper process launched with PID 93573
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2542.840 ; gain = 294.777 ; free physical = 5904 ; free virtual = 10955
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2539.258 ; gain = 292.691 ; free physical = 3376 ; free virtual = 8555
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'pl_design_wrapper' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/hdl/pl_design_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/home/francesco/Vivado/Vivado/2023.2/scripts/rt/data/unisim_comp.v:78197]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [/home/francesco/Vivado/Vivado/2023.2/scripts/rt/data/unisim_comp.v:78197]
 INFO: [Synth 8-6157] synthesizing module 'pl_design' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:13]
-INFO: [Synth 8-6157] synthesizing module 'pl_design_axi_gpio_0_1' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-56694-francesco-desktop/realtime/pl_design_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pl_design_axi_gpio_0_1' (0#1) [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-56694-francesco-desktop/realtime/pl_design_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pl_design_axi_gpio_0_1' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-93529-francesco-desktop/realtime/pl_design_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pl_design_axi_gpio_0_1' (0#1) [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-93529-francesco-desktop/realtime/pl_design_axi_gpio_0_1_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'pl_design_axi_interconnect_0_0' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:229]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1LMMZDX' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:529]
-INFO: [Synth 8-6157] synthesizing module 'pl_design_auto_pc_0' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-56694-francesco-desktop/realtime/pl_design_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pl_design_auto_pc_0' (0#1) [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-56694-francesco-desktop/realtime/pl_design_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pl_design_auto_pc_0' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-93529-francesco-desktop/realtime/pl_design_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pl_design_auto_pc_0' (0#1) [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-93529-francesco-desktop/realtime/pl_design_auto_pc_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'pl_design_auto_pc_0' is unconnected for instance 'auto_pc' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:760]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'pl_design_auto_pc_0' is unconnected for instance 'auto_pc' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:760]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'pl_design_auto_pc_0' has 60 connections declared, but only 58 given [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:760]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1LMMZDX' (0#1) [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:529]
 INFO: [Synth 8-6155] done synthesizing module 'pl_design_axi_interconnect_0_0' (0#1) [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:229]
-INFO: [Synth 8-6157] synthesizing module 'pl_design_proc_sys_reset_0_0' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-56694-francesco-desktop/realtime/pl_design_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pl_design_proc_sys_reset_0_0' (0#1) [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-56694-francesco-desktop/realtime/pl_design_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pl_design_proc_sys_reset_0_0' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-93529-francesco-desktop/realtime/pl_design_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pl_design_proc_sys_reset_0_0' (0#1) [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-93529-francesco-desktop/realtime/pl_design_proc_sys_reset_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'pl_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:175]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'pl_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:175]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'pl_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:175]
@@ -58,8 +53,8 @@ INFO: [Synth 8-6157] synthesizing module 'pl_design_xlslice_0_0' [/home/francesc
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_3_xlslice' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ipshared/217a/hdl/xlslice_v1_0_vl_rfs.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_3_xlslice' (0#1) [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ipshared/217a/hdl/xlslice_v1_0_vl_rfs.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'pl_design_xlslice_0_0' (0#1) [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_xlslice_0_0/synth/pl_design_xlslice_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'pl_design_zynq_ultra_ps_e_0_0' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-56694-francesco-desktop/realtime/pl_design_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pl_design_zynq_ultra_ps_e_0_0' (0#1) [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-56694-francesco-desktop/realtime/pl_design_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pl_design_zynq_ultra_ps_e_0_0' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-93529-francesco-desktop/realtime/pl_design_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pl_design_zynq_ultra_ps_e_0_0' (0#1) [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-93529-francesco-desktop/realtime/pl_design_zynq_ultra_ps_e_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'maxigp2_awuser' of module 'pl_design_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:185]
 WARNING: [Synth 8-7071] port 'maxigp2_aruser' of module 'pl_design_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:185]
 WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'pl_design_zynq_ultra_ps_e_0_0' has 43 connections declared, but only 41 given [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:185]
@@ -72,18 +67,18 @@ WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_1LMMZDX is eit
 WARNING: [Synth 8-7129] Port ACLK in module pl_design_axi_interconnect_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ARESETN in module pl_design_axi_interconnect_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2620.809 ; gain = 372.746 ; free physical = 5809 ; free virtual = 10860
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2618.195 ; gain = 371.629 ; free physical = 3276 ; free virtual = 8456
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2620.809 ; gain = 372.746 ; free physical = 5809 ; free virtual = 10860
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2618.195 ; gain = 371.629 ; free physical = 3276 ; free virtual = 8456
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2620.809 ; gain = 372.746 ; free physical = 5809 ; free virtual = 10860
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2618.195 ; gain = 371.629 ; free physical = 3276 ; free virtual = 8456
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2631.777 ; gain = 0.000 ; free physical = 5809 ; free virtual = 10860
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2629.164 ; gain = 0.000 ; free physical = 3275 ; free virtual = 8455
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -91,7 +86,7 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/pl_design_zynq_ultra_ps_e_0_0/pl_design_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'pl_design_i/zynq_ultra_ps_e_0'
-create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2695.809 ; gain = 0.000 ; free physical = 5795 ; free virtual = 10846
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2693.195 ; gain = 0.000 ; free physical = 3276 ; free virtual = 8455
 Finished Parsing XDC File [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/pl_design_zynq_ultra_ps_e_0_0/pl_design_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'pl_design_i/zynq_ultra_ps_e_0'
 Parsing XDC File [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0/pl_design_auto_pc_0_in_context.xdc] for cell 'pl_design_i/axi_interconnect_0/s00_couplers/auto_pc'
 Finished Parsing XDC File [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0/pl_design_auto_pc_0_in_context.xdc] for cell 'pl_design_i/axi_interconnect_0/s00_couplers/auto_pc'
@@ -111,16 +106,14 @@ Parsing XDC File [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-ha
 Finished Parsing XDC File [/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2695.809 ; gain = 0.000 ; free physical = 5795 ; free virtual = 10846
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2693.195 ; gain = 0.000 ; free physical = 3276 ; free virtual = 8455
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2695.844 ; gain = 0.000 ; free physical = 5795 ; free virtual = 10846
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2693.230 ; gain = 0.000 ; free physical = 3276 ; free virtual = 8455
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2695.844 ; gain = 447.781 ; free physical = 5796 ; free virtual = 10848
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2693.230 ; gain = 446.664 ; free physical = 3276 ; free virtual = 8455
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -128,7 +121,7 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2695.844 ; gain = 447.781 ; free physical = 5796 ; free virtual = 10848
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2693.230 ; gain = 446.664 ; free physical = 3276 ; free virtual = 8455
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -141,10 +134,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for pl_design_i/axi_interconnect_0. (
 Applied set_property KEEP_HIERARCHY = SOFT for pl_design_i/axi_gpio_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for pl_design_i/proc_sys_reset_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2695.844 ; gain = 447.781 ; free physical = 5796 ; free virtual = 10848
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2693.230 ; gain = 446.664 ; free physical = 3276 ; free virtual = 8455
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2695.844 ; gain = 447.781 ; free physical = 5796 ; free virtual = 10848
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2693.230 ; gain = 446.664 ; free physical = 3274 ; free virtual = 8455
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -173,25 +166,25 @@ WARNING: [Synth 8-7129] Port ARESETN in module pl_design_axi_interconnect_0_0 is
 WARNING: [Synth 8-7129] Port M00_ACLK in module pl_design_axi_interconnect_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M00_ARESETN in module pl_design_axi_interconnect_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2695.844 ; gain = 447.781 ; free physical = 5794 ; free virtual = 10850
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2693.230 ; gain = 446.664 ; free physical = 3272 ; free virtual = 8456
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3177.152 ; gain = 929.090 ; free physical = 5362 ; free virtual = 10418
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3177.531 ; gain = 930.965 ; free physical = 2830 ; free virtual = 8015
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3177.152 ; gain = 929.090 ; free physical = 5362 ; free virtual = 10418
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3177.531 ; gain = 930.965 ; free physical = 2830 ; free virtual = 8014
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3187.168 ; gain = 939.105 ; free physical = 5353 ; free virtual = 10409
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3187.547 ; gain = 940.980 ; free physical = 2821 ; free virtual = 8005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -209,37 +202,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.043 ; gain = 952.980 ; free physical = 5352 ; free virtual = 10408
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.422 ; gain = 954.855 ; free physical = 2820 ; free virtual = 8005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.043 ; gain = 952.980 ; free physical = 5352 ; free virtual = 10408
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.422 ; gain = 954.855 ; free physical = 2820 ; free virtual = 8005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.043 ; gain = 952.980 ; free physical = 5352 ; free virtual = 10408
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.422 ; gain = 954.855 ; free physical = 2820 ; free virtual = 8005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.043 ; gain = 952.980 ; free physical = 5352 ; free virtual = 10408
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.422 ; gain = 954.855 ; free physical = 2820 ; free virtual = 8005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.043 ; gain = 952.980 ; free physical = 5352 ; free virtual = 10408
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.422 ; gain = 954.855 ; free physical = 2820 ; free virtual = 8005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.043 ; gain = 952.980 ; free physical = 5351 ; free virtual = 10408
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.422 ; gain = 954.855 ; free physical = 2820 ; free virtual = 8005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -267,30 +260,30 @@ Report Cell Usage:
 |6     |OBUF                        |     1|
 +------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.043 ; gain = 952.980 ; free physical = 5351 ; free virtual = 10408
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.422 ; gain = 954.855 ; free physical = 2820 ; free virtual = 8005
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 3201.043 ; gain = 877.945 ; free physical = 5351 ; free virtual = 10407
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.051 ; gain = 952.980 ; free physical = 5351 ; free virtual = 10407
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 3201.422 ; gain = 879.820 ; free physical = 2820 ; free virtual = 8004
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3201.430 ; gain = 954.855 ; free physical = 2820 ; free virtual = 8004
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3201.051 ; gain = 0.000 ; free physical = 5348 ; free virtual = 10404
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3201.430 ; gain = 0.000 ; free physical = 2817 ; free virtual = 8001
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3237.730 ; gain = 0.000 ; free physical = 5592 ; free virtual = 10648
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3238.109 ; gain = 0.000 ; free physical = 3121 ; free virtual = 8306
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 1 instance 
 
 Synth Design complete | Checksum: f5c9db3
 INFO: [Common 17-83] Releasing license: Synthesis
-50 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+44 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 3237.766 ; gain = 1913.797 ; free physical = 5591 ; free virtual = 10648
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2720.281; main = 2472.686; forked = 366.319
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4123.492; main = 3237.734; forked = 976.336
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3237.766 ; gain = 0.000 ; free physical = 5591 ; free virtual = 10648
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 3238.145 ; gain = 1914.703 ; free physical = 3121 ; free virtual = 8306
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2750.403; main = 2456.063; forked = 425.803
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4156.859; main = 3238.113; forked = 1021.324
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3238.145 ; gain = 0.000 ; free physical = 3121 ; free virtual = 8306
 INFO: [Common 17-1381] The checkpoint '/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/pl_design_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file pl_design_wrapper_utilization_synth.rpt -pb pl_design_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 20 11:05:55 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 20 11:17:56 2024...

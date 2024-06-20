@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2023.2
-| Date         : Thu Jun 20 11:07:05 2024
+| Date         : Thu Jun 20 11:19:06 2024
 | Host         : francesco-desktop
 | Design       : design_1
 | Device       : xck26-sfvc784-2LV-C-
