@@ -3,9 +3,8 @@ Hardware description of MMR Kria KR260. FPGA-based design.
 
 ## Peripherals
 Up to now the following peripherals have been enabled:
- - MIO GPIO[0] with placement constraint on H12
- - EMIO TTC0[0] with placement constraint on A12 for fan control
-
+ - MIO LED_UF1 with placement constraint on F8 for user defined LED 1
+ - EMIO TTC0 with placement constraint on A12 for fan control
 
  > !! Please keep this list up-to-date in both main and development branches
 
