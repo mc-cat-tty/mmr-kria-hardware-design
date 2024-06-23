@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Thu Jun 20 22:05:01 2024
+//Date        : Sun Jun 23 10:18:33 2024
 //Host        : francesco-desktop running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target pl_design.bd
 //Design      : pl_design
@@ -17,13 +17,13 @@ module pl_design
     led_uf1_tri_o,
     led_uf1_tri_t);
   output [0:0]fan;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf1 " *) input [0:0]led_uf1_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf1 " *) output [0:0]led_uf1_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf1 " *) output [0:0]led_uf1_tri_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf1 TRI_I" *) input [1:0]led_uf1_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf1 TRI_O" *) output [1:0]led_uf1_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf1 TRI_T" *) output [1:0]led_uf1_tri_t;
 
-  wire [0:0]axi_gpio_0_GPIO_TRI_I;
-  wire [0:0]axi_gpio_0_GPIO_TRI_O;
-  wire [0:0]axi_gpio_0_GPIO_TRI_T;
+  wire [1:0]axi_gpio_0_GPIO_TRI_I;
+  wire [1:0]axi_gpio_0_GPIO_TRI_O;
+  wire [1:0]axi_gpio_0_GPIO_TRI_T;
   wire [39:0]axi_interconnect_0_M00_AXI_ARADDR;
   wire axi_interconnect_0_M00_AXI_ARREADY;
   wire axi_interconnect_0_M00_AXI_ARVALID;
@@ -84,10 +84,10 @@ module pl_design
   wire zynq_ultra_ps_e_0_pl_clk0;
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
-  assign axi_gpio_0_GPIO_TRI_I = led_uf1_tri_i[0];
+  assign axi_gpio_0_GPIO_TRI_I = led_uf1_tri_i[1:0];
   assign fan[0] = xlslice_0_Dout;
-  assign led_uf1_tri_o[0] = axi_gpio_0_GPIO_TRI_O;
-  assign led_uf1_tri_t[0] = axi_gpio_0_GPIO_TRI_T;
+  assign led_uf1_tri_o[1:0] = axi_gpio_0_GPIO_TRI_O;
+  assign led_uf1_tri_t[1:0] = axi_gpio_0_GPIO_TRI_T;
   pl_design_axi_gpio_0_1 axi_gpio_0
        (.gpio_io_i(axi_gpio_0_GPIO_TRI_I),
         .gpio_io_o(axi_gpio_0_GPIO_TRI_O),

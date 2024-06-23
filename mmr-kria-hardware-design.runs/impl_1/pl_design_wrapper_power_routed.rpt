@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date             : Thu Jun 20 22:40:18 2024
+| Date             : Sun Jun 23 10:22:36 2024
 | Host             : francesco-desktop running 64-bit Ubuntu 22.04.4 LTS
 | Command          : report_power -file pl_design_wrapper_power_routed.rpt -pb pl_design_wrapper_power_summary_routed.pb -rpx pl_design_wrapper_power_routed.rpx
 | Design           : pl_design_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.936        |
+| Total On-Chip Power (W)  | 2.937        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.612        |
+| Dynamic (W)              | 2.613        |
 | Device Static (W)        | 0.324        |
 | Effective TJA (C/W)      | 2.3          |
 | Max Ambient (C)          | 78.2         |
@@ -52,20 +52,20 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.001 |        3 |       --- |             --- |
-| CLB Logic               |    <0.001 |     1195 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      357 |    117120 |            0.30 |
+| Clocks                  |     0.002 |        3 |       --- |             --- |
+| CLB Logic               |    <0.001 |     1208 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      360 |    117120 |            0.31 |
 |   LUT as Shift Register |    <0.001 |       66 |     57600 |            0.11 |
-|   Register              |    <0.001 |      568 |    234240 |            0.24 |
+|   Register              |    <0.001 |      579 |    234240 |            0.25 |
 |   Others                |     0.000 |       59 |       --- |             --- |
 |   F7/F8 Muxes           |     0.000 |        3 |    117120 |           <0.01 |
-| Signals                 |    <0.001 |      906 |       --- |             --- |
-| I/O                     |     0.001 |        2 |       189 |            1.06 |
+| Signals                 |    <0.001 |      924 |       --- |             --- |
+| I/O                     |     0.002 |        3 |       189 |            1.59 |
 | PS8                     |     2.608 |        1 |       --- |             --- |
 | Static Power            |     0.324 |          |           |                 |
 |   PS Static             |     0.000 |          |           |                 |
 |   PL Static             |     0.324 |          |           |                 |
-| Total                   |     2.936 |          |           |                 |
+| Total                   |     2.937 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +79,7 @@ Table of Contents
 | Vccint_io       |       0.850 |     0.036 |       0.000 |      0.036 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.075 |       0.000 |      0.075 |       NA    | Unspecified | NA         |
-| Vccaux_io       |       1.800 |     0.031 |       0.000 |      0.031 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.032 |       0.000 |      0.031 |       NA    | Unspecified | NA         |
 | Vcco33          |       3.300 |     0.007 |       0.000 |      0.007 |       NA    | Unspecified | NA         |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18          |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -162,7 +162,7 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| pl_design_wrapper      |     2.612 |
+| pl_design_wrapper      |     2.613 |
 |   pl_design_i          |     2.611 |
 |     axi_interconnect_0 |     0.002 |
 |       s00_couplers     |     0.002 |

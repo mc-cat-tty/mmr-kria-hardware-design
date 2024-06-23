@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Jun 23 10:18:43 2024
+# Process ID: 143459
+# Current directory: /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_axi_gpio_0_1_synth_1
+# Command line: vivado -log pl_design_axi_gpio_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pl_design_axi_gpio_0_1.tcl
+# Log file: /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_axi_gpio_0_1_synth_1/pl_design_axi_gpio_0_1.vds
+# Journal file: /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_axi_gpio_0_1_synth_1/vivado.jou
+# Running On: francesco-desktop, OS: Linux, CPU Frequency: 1343.013 MHz, CPU Physical cores: 16, Host memory: 16680 MB
+#-----------------------------------------------------------
+source pl_design_axi_gpio_0_1.tcl -notrace

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE2D66F26300B8452",
+      "boundary_crc": "0xDAEAC4D208372FA6",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../mmr-kria-hardware-design.gen/sources_1/bd/pl_design",
       "name": "pl_design",
@@ -30,19 +30,19 @@
           "TRI_I": {
             "physical_name": "led_uf1_tri_i",
             "direction": "I",
-            "left": "0",
+            "left": "1",
             "right": "0"
           },
           "TRI_O": {
             "physical_name": "led_uf1_tri_o",
             "direction": "O",
-            "left": "0",
+            "left": "1",
             "right": "0"
           },
           "TRI_T": {
             "physical_name": "led_uf1_tri_t",
             "direction": "O",
-            "left": "0",
+            "left": "1",
             "right": "0"
           }
         }
@@ -1682,7 +1682,7 @@
         "inst_hier_path": "axi_gpio_0",
         "parameters": {
           "C_GPIO_WIDTH": {
-            "value": "1"
+            "value": "2"
           }
         }
       },
