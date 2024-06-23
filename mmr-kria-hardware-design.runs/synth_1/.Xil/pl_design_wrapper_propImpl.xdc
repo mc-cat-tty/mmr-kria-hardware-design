@@ -3,6 +3,6 @@ set_property SRC_FILE_INFO {cfile:/home/francesco/Documents/mmr-kria-hardware-de
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN A12 [get_ports {fan}]
 set_property src_info {type:XDC file:2 line:1 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN F8 [get_ports {led_uf1_tri_io[0]}]
+set_property PACKAGE_PIN F8 [get_ports {led_uf_tri_io[0]}]
 set_property src_info {type:XDC file:2 line:2 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN E8 [get_ports {led_uf1_tri_io[1]}]
+set_property PACKAGE_PIN E8 [get_ports {led_uf_tri_io[1]}]

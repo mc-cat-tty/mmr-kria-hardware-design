@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xDAEAC4D208372FA6",
+      "boundary_crc": "0xB156C1DB6FF9A0A0",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../mmr-kria-hardware-design.gen/sources_1/bd/pl_design",
       "name": "pl_design",
@@ -22,25 +22,25 @@
       "proc_sys_reset_0": ""
     },
     "interface_ports": {
-      "led_uf1": {
+      "led_uf": {
         "mode": "Master",
         "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
         "port_maps": {
           "TRI_I": {
-            "physical_name": "led_uf1_tri_i",
+            "physical_name": "led_uf_tri_i",
             "direction": "I",
             "left": "1",
             "right": "0"
           },
           "TRI_O": {
-            "physical_name": "led_uf1_tri_o",
+            "physical_name": "led_uf_tri_o",
             "direction": "O",
             "left": "1",
             "right": "0"
           },
           "TRI_T": {
-            "physical_name": "led_uf1_tri_t",
+            "physical_name": "led_uf_tri_t",
             "direction": "O",
             "left": "1",
             "right": "0"
@@ -1697,7 +1697,7 @@
     "interface_nets": {
       "axi_gpio_0_GPIO": {
         "interface_ports": [
-          "led_uf1",
+          "led_uf",
           "axi_gpio_0/GPIO"
         ]
       },

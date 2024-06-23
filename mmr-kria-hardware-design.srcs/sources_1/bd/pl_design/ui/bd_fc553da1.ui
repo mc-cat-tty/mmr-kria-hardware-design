@@ -1,11 +1,11 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.1487",
-   "Default View_TopLeft":"479,-908",
+   "Default View_TopLeft":"384,-864",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port led_uf1 -pg 1 -lvl 5 -x 1720 -y -510 -defaultsOSRD
+preplace port led_uf -pg 1 -lvl 5 -x 1720 -y -510 -defaultsOSRD
 preplace portBus fan -pg 1 -lvl 5 -x 1720 -y -330 -defaultsOSRD
 preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 1 -x 470 -y -430 -defaultsOSRD
 preplace inst xlslice_0 -pg 1 -lvl 3 -x 1320 -y -330 -defaultsOSRD
