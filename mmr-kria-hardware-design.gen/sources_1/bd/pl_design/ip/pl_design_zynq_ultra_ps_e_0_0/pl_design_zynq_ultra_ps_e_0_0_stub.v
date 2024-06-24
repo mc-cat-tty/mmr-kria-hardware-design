@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Thu Jun 20 11:04:51 2024
-// Host        : francesco-desktop running 64-bit Ubuntu 22.04.4 LTS
+// Date        : Mon Jun 24 20:54:06 2024
+// Host        : et-PC running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode synth_stub
-//               /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/pl_design_zynq_ultra_ps_e_0_0_stub.v
+//               /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/pl_design_zynq_ultra_ps_e_0_0_stub.v
 // Design      : pl_design_zynq_ultra_ps_e_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xck26-sfvc784-2LV-c
@@ -23,8 +23,8 @@ module pl_design_zynq_ultra_ps_e_0_0(maxihpm0_lpd_aclk, maxigp2_awid,
   maxigp2_arsize, maxigp2_arburst, maxigp2_arlock, maxigp2_arcache, maxigp2_arprot, 
   maxigp2_arvalid, maxigp2_aruser, maxigp2_arready, maxigp2_rid, maxigp2_rdata, 
   maxigp2_rresp, maxigp2_rlast, maxigp2_rvalid, maxigp2_rready, maxigp2_awqos, maxigp2_arqos, 
-  emio_ttc0_wave_o, pl_resetn0, pl_clk0)
-/* synthesis syn_black_box black_box_pad_pin="maxigp2_awid[15:0],maxigp2_awaddr[39:0],maxigp2_awlen[7:0],maxigp2_awsize[2:0],maxigp2_awburst[1:0],maxigp2_awlock,maxigp2_awcache[3:0],maxigp2_awprot[2:0],maxigp2_awvalid,maxigp2_awuser[15:0],maxigp2_awready,maxigp2_wdata[31:0],maxigp2_wstrb[3:0],maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid[15:0],maxigp2_bresp[1:0],maxigp2_bvalid,maxigp2_bready,maxigp2_arid[15:0],maxigp2_araddr[39:0],maxigp2_arlen[7:0],maxigp2_arsize[2:0],maxigp2_arburst[1:0],maxigp2_arlock,maxigp2_arcache[3:0],maxigp2_arprot[2:0],maxigp2_arvalid,maxigp2_aruser[15:0],maxigp2_arready,maxigp2_rid[15:0],maxigp2_rdata[31:0],maxigp2_rresp[1:0],maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos[3:0],maxigp2_arqos[3:0],emio_ttc0_wave_o[2:0],pl_resetn0" */
+  emio_can0_phy_tx, emio_can0_phy_rx, emio_ttc0_wave_o, pl_resetn0, pl_clk0)
+/* synthesis syn_black_box black_box_pad_pin="maxigp2_awid[15:0],maxigp2_awaddr[39:0],maxigp2_awlen[7:0],maxigp2_awsize[2:0],maxigp2_awburst[1:0],maxigp2_awlock,maxigp2_awcache[3:0],maxigp2_awprot[2:0],maxigp2_awvalid,maxigp2_awuser[15:0],maxigp2_awready,maxigp2_wdata[31:0],maxigp2_wstrb[3:0],maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid[15:0],maxigp2_bresp[1:0],maxigp2_bvalid,maxigp2_bready,maxigp2_arid[15:0],maxigp2_araddr[39:0],maxigp2_arlen[7:0],maxigp2_arsize[2:0],maxigp2_arburst[1:0],maxigp2_arlock,maxigp2_arcache[3:0],maxigp2_arprot[2:0],maxigp2_arvalid,maxigp2_aruser[15:0],maxigp2_arready,maxigp2_rid[15:0],maxigp2_rdata[31:0],maxigp2_rresp[1:0],maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos[3:0],maxigp2_arqos[3:0],emio_can0_phy_tx,emio_can0_phy_rx,emio_ttc0_wave_o[2:0],pl_resetn0" */
 /* synthesis syn_force_seq_prim="maxihpm0_lpd_aclk" */
 /* synthesis syn_force_seq_prim="pl_clk0" */;
   input maxihpm0_lpd_aclk /* synthesis syn_isclock = 1 */;
@@ -67,6 +67,8 @@ module pl_design_zynq_ultra_ps_e_0_0(maxihpm0_lpd_aclk, maxigp2_awid,
   output maxigp2_rready;
   output [3:0]maxigp2_awqos;
   output [3:0]maxigp2_arqos;
+  output emio_can0_phy_tx;
+  input emio_can0_phy_rx;
   output [2:0]emio_ttc0_wave_o;
   output pl_resetn0;
   output pl_clk0 /* synthesis syn_isclock = 1 */;

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/impl_1/pl_design_wrapper.tcl"
+  variable script "/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/impl_1/pl_design_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -123,8 +123,8 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 4
-  set_param runs.launchOptions { -jobs 16  }
+  set_param chipscope.maxJobs 1
+  set_param runs.launchOptions { -jobs 1  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xck26-sfvc784-2LV-c
   set_property board_part xilinx.com:kr260_som:part0:1.1 [current_project]
@@ -133,21 +133,22 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.cache/wt [current_project]
-  set_property parent.project_path /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.xpr [current_project]
-  set_property ip_output_repo /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.cache/wt [current_project]
+  set_property parent.project_path /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.xpr [current_project]
+  set_property ip_output_repo /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/pl_design_wrapper.dcp
+  add_files -quiet /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/pl_design_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/sources_1/bd/pl_design/pl_design.bd
+  add_files /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/sources_1/bd/pl_design/pl_design.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/fan.xdc
-  read_xdc /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/gpio.xdc
+  read_xdc /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/fan.xdc
+  read_xdc /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/gpio.xdc
+  read_xdc /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/can.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

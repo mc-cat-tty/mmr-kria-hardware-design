@@ -120,6 +120,8 @@ public:
   sc_core::sc_out< bool > maxigp2_rready;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_awqos;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_arqos;
+  sc_core::sc_out< bool > emio_can0_phy_tx;
+  sc_core::sc_in< bool > emio_can0_phy_rx;
   sc_core::sc_out< sc_dt::sc_bv<3> > emio_ttc0_wave_o;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
@@ -192,6 +194,8 @@ public:
   sc_core::sc_out< bool > maxigp2_rready;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_awqos;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_arqos;
+  sc_core::sc_out< bool > emio_can0_phy_tx;
+  sc_core::sc_in< bool > emio_can0_phy_rx;
   sc_core::sc_out< sc_dt::sc_bv<3> > emio_ttc0_wave_o;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
@@ -264,6 +268,8 @@ public:
   sc_core::sc_out< bool > maxigp2_rready;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_awqos;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_arqos;
+  sc_core::sc_out< bool > emio_can0_phy_tx;
+  sc_core::sc_in< bool > emio_can0_phy_rx;
   sc_core::sc_out< sc_dt::sc_bv<3> > emio_ttc0_wave_o;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
@@ -338,6 +344,8 @@ public:
   sc_core::sc_out< bool > maxigp2_rready;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_awqos;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_arqos;
+  sc_core::sc_out< bool > emio_can0_phy_tx;
+  sc_core::sc_in< bool > emio_can0_phy_rx;
   sc_core::sc_out< sc_dt::sc_bv<3> > emio_ttc0_wave_o;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
@@ -418,6 +426,8 @@ public:
   sc_core::sc_out< bool > maxigp2_rready;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_awqos;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_arqos;
+  sc_core::sc_out< bool > emio_can0_phy_tx;
+  sc_core::sc_in< bool > emio_can0_phy_rx;
   sc_core::sc_out< sc_dt::sc_bv<3> > emio_ttc0_wave_o;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;

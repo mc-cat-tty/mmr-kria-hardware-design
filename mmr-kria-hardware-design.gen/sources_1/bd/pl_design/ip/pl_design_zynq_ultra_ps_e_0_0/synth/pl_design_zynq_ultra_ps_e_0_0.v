@@ -97,6 +97,8 @@ module pl_design_zynq_ultra_ps_e_0_0 (
   maxigp2_rready,
   maxigp2_awqos,
   maxigp2_arqos,
+  emio_can0_phy_tx,
+  emio_can0_phy_rx,
   emio_ttc0_wave_o,
   pl_resetn0,
   pl_clk0
@@ -185,6 +187,10 @@ output wire [3 : 0] maxigp2_awqos;
 EADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD ARQOS" *)
 output wire [3 : 0] maxigp2_arqos;
+(* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN_0 TX" *)
+output wire emio_can0_phy_tx;
+(* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN_0 RX" *)
+input wire emio_can0_phy_rx;
 output wire [2 : 0] emio_ttc0_wave_o;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PL_RESETN0, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 PL_RESETN0 RST" *)
@@ -782,8 +788,8 @@ output wire pl_clk0;
     .sacefpd_crready(),
     .sacefpd_wack(1'B0),
     .sacefpd_rack(1'B0),
-    .emio_can0_phy_tx(),
-    .emio_can0_phy_rx(1'B0),
+    .emio_can0_phy_tx(emio_can0_phy_tx),
+    .emio_can0_phy_rx(emio_can0_phy_rx),
     .emio_can1_phy_tx(),
     .emio_can1_phy_rx(1'B0),
     .emio_enet0_gmii_rx_clk(1'B0),

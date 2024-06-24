@@ -925,6 +925,8 @@
 #define CRL_APB_I2C1_REF_CTRL_OFFSET                                               0XFF5E0124
 #undef CRL_APB_SPI1_REF_CTRL_OFFSET 
 #define CRL_APB_SPI1_REF_CTRL_OFFSET                                               0XFF5E0080
+#undef CRL_APB_CAN0_REF_CTRL_OFFSET 
+#define CRL_APB_CAN0_REF_CTRL_OFFSET                                               0XFF5E0084
 #undef CRL_APB_CPU_R5_CTRL_OFFSET 
 #define CRL_APB_CPU_R5_CTRL_OFFSET                                                 0XFF5E0090
 #undef CRL_APB_IOU_SWITCH_CTRL_OFFSET 
@@ -1273,6 +1275,48 @@
 #define CRL_APB_SPI1_REF_CTRL_SRCSEL_DEFVAL                    0x01001800
 #define CRL_APB_SPI1_REF_CTRL_SRCSEL_SHIFT                     0
 #define CRL_APB_SPI1_REF_CTRL_SRCSEL_MASK                      0x00000007U
+
+/*
+* Clock active signal. Switch to 0 to disable the clock
+*/
+#undef CRL_APB_CAN0_REF_CTRL_CLKACT_DEFVAL 
+#undef CRL_APB_CAN0_REF_CTRL_CLKACT_SHIFT 
+#undef CRL_APB_CAN0_REF_CTRL_CLKACT_MASK 
+#define CRL_APB_CAN0_REF_CTRL_CLKACT_DEFVAL                    0x01001800
+#define CRL_APB_CAN0_REF_CTRL_CLKACT_SHIFT                     24
+#define CRL_APB_CAN0_REF_CTRL_CLKACT_MASK                      0x01000000U
+
+/*
+* 6 bit divider
+*/
+#undef CRL_APB_CAN0_REF_CTRL_DIVISOR1_DEFVAL 
+#undef CRL_APB_CAN0_REF_CTRL_DIVISOR1_SHIFT 
+#undef CRL_APB_CAN0_REF_CTRL_DIVISOR1_MASK 
+#define CRL_APB_CAN0_REF_CTRL_DIVISOR1_DEFVAL                  0x01001800
+#define CRL_APB_CAN0_REF_CTRL_DIVISOR1_SHIFT                   16
+#define CRL_APB_CAN0_REF_CTRL_DIVISOR1_MASK                    0x003F0000U
+
+/*
+* 6 bit divider
+*/
+#undef CRL_APB_CAN0_REF_CTRL_DIVISOR0_DEFVAL 
+#undef CRL_APB_CAN0_REF_CTRL_DIVISOR0_SHIFT 
+#undef CRL_APB_CAN0_REF_CTRL_DIVISOR0_MASK 
+#define CRL_APB_CAN0_REF_CTRL_DIVISOR0_DEFVAL                  0x01001800
+#define CRL_APB_CAN0_REF_CTRL_DIVISOR0_SHIFT                   8
+#define CRL_APB_CAN0_REF_CTRL_DIVISOR0_MASK                    0x00003F00U
+
+/*
+* 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
+    * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
+    *  usually an issue, but designers must be aware.)
+*/
+#undef CRL_APB_CAN0_REF_CTRL_SRCSEL_DEFVAL 
+#undef CRL_APB_CAN0_REF_CTRL_SRCSEL_SHIFT 
+#undef CRL_APB_CAN0_REF_CTRL_SRCSEL_MASK 
+#define CRL_APB_CAN0_REF_CTRL_SRCSEL_DEFVAL                    0x01001800
+#define CRL_APB_CAN0_REF_CTRL_SRCSEL_SHIFT                     0
+#define CRL_APB_CAN0_REF_CTRL_SRCSEL_MASK                      0x00000007U
 
 /*
 * Turing this off will shut down the OCM, some parts of the APM, and preve
@@ -32947,6 +32991,8 @@
 #define CRL_APB_RST_LPD_IOU2_OFFSET                                                0XFF5E0238
 #undef CRL_APB_RST_LPD_IOU2_OFFSET 
 #define CRL_APB_RST_LPD_IOU2_OFFSET                                                0XFF5E0238
+#undef CRL_APB_RST_LPD_IOU2_OFFSET 
+#define CRL_APB_RST_LPD_IOU2_OFFSET                                                0XFF5E0238
 #undef UART1_BAUD_RATE_DIVIDER_REG0_OFFSET 
 #define UART1_BAUD_RATE_DIVIDER_REG0_OFFSET                                        0XFF010034
 #undef UART1_BAUD_RATE_GEN_REG0_OFFSET 
@@ -33210,6 +33256,16 @@
 #define CRL_APB_RST_LPD_TOP_USB1_APB_RESET_DEFVAL              0x00188FDF
 #define CRL_APB_RST_LPD_TOP_USB1_APB_RESET_SHIFT               11
 #define CRL_APB_RST_LPD_TOP_USB1_APB_RESET_MASK                0x00000800U
+
+/*
+* Block level reset
+*/
+#undef CRL_APB_RST_LPD_IOU2_CAN0_RESET_DEFVAL 
+#undef CRL_APB_RST_LPD_IOU2_CAN0_RESET_SHIFT 
+#undef CRL_APB_RST_LPD_IOU2_CAN0_RESET_MASK 
+#define CRL_APB_RST_LPD_IOU2_CAN0_RESET_DEFVAL                 0x0017FFFF
+#define CRL_APB_RST_LPD_IOU2_CAN0_RESET_SHIFT                  7
+#define CRL_APB_RST_LPD_IOU2_CAN0_RESET_MASK                   0x00000080U
 
 /*
 * Block level reset
