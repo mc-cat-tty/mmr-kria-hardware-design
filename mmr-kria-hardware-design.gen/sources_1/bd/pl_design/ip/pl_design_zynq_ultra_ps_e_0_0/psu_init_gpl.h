@@ -925,6 +925,10 @@
 #define CRF_APB_VPLL_TO_LPD_CTRL_DIVISOR0_DEFVAL               0x00000400
 #define CRF_APB_VPLL_TO_LPD_CTRL_DIVISOR0_SHIFT                8
 #define CRF_APB_VPLL_TO_LPD_CTRL_DIVISOR0_MASK                 0x00003F00U
+#undef CRL_APB_GEM1_REF_CTRL_OFFSET 
+#define CRL_APB_GEM1_REF_CTRL_OFFSET                                               0XFF5E0054
+#undef CRL_APB_GEM_TSU_REF_CTRL_OFFSET 
+#define CRL_APB_GEM_TSU_REF_CTRL_OFFSET                                            0XFF5E0100
 #undef CRL_APB_USB0_BUS_REF_CTRL_OFFSET 
 #define CRL_APB_USB0_BUS_REF_CTRL_OFFSET                                           0XFF5E0060
 #undef CRL_APB_USB1_BUS_REF_CTRL_OFFSET 
@@ -933,6 +937,12 @@
 #define CRL_APB_USB3_DUAL_REF_CTRL_OFFSET                                          0XFF5E004C
 #undef CRL_APB_QSPI_REF_CTRL_OFFSET 
 #define CRL_APB_QSPI_REF_CTRL_OFFSET                                               0XFF5E0068
+#undef CRL_APB_SDIO0_REF_CTRL_OFFSET 
+#define CRL_APB_SDIO0_REF_CTRL_OFFSET                                              0XFF5E006C
+#undef IOU_SLCR_SDIO_CLK_CTRL_OFFSET 
+#define IOU_SLCR_SDIO_CLK_CTRL_OFFSET                                              0XFF18030C
+#undef CRL_APB_UART0_REF_CTRL_OFFSET 
+#define CRL_APB_UART0_REF_CTRL_OFFSET                                              0XFF5E0074
 #undef CRL_APB_UART1_REF_CTRL_OFFSET 
 #define CRL_APB_UART1_REF_CTRL_OFFSET                                              0XFF5E0078
 #undef CRL_APB_I2C1_REF_CTRL_OFFSET 
@@ -995,6 +1005,100 @@
 #define IOU_SLCR_WDT_CLK_SEL_OFFSET                                                0XFF180300
 #undef LPD_SLCR_CSUPMU_WDT_CLK_SEL_OFFSET 
 #define LPD_SLCR_CSUPMU_WDT_CLK_SEL_OFFSET                                         0XFF410050
+
+/*
+* Clock active for the RX channel
+*/
+#undef CRL_APB_GEM1_REF_CTRL_RX_CLKACT_DEFVAL 
+#undef CRL_APB_GEM1_REF_CTRL_RX_CLKACT_SHIFT 
+#undef CRL_APB_GEM1_REF_CTRL_RX_CLKACT_MASK 
+#define CRL_APB_GEM1_REF_CTRL_RX_CLKACT_DEFVAL                 0x00002500
+#define CRL_APB_GEM1_REF_CTRL_RX_CLKACT_SHIFT                  26
+#define CRL_APB_GEM1_REF_CTRL_RX_CLKACT_MASK                   0x04000000U
+
+/*
+* Clock active signal. Switch to 0 to disable the clock
+*/
+#undef CRL_APB_GEM1_REF_CTRL_CLKACT_DEFVAL 
+#undef CRL_APB_GEM1_REF_CTRL_CLKACT_SHIFT 
+#undef CRL_APB_GEM1_REF_CTRL_CLKACT_MASK 
+#define CRL_APB_GEM1_REF_CTRL_CLKACT_DEFVAL                    0x00002500
+#define CRL_APB_GEM1_REF_CTRL_CLKACT_SHIFT                     25
+#define CRL_APB_GEM1_REF_CTRL_CLKACT_MASK                      0x02000000U
+
+/*
+* 6 bit divider
+*/
+#undef CRL_APB_GEM1_REF_CTRL_DIVISOR1_DEFVAL 
+#undef CRL_APB_GEM1_REF_CTRL_DIVISOR1_SHIFT 
+#undef CRL_APB_GEM1_REF_CTRL_DIVISOR1_MASK 
+#define CRL_APB_GEM1_REF_CTRL_DIVISOR1_DEFVAL                  0x00002500
+#define CRL_APB_GEM1_REF_CTRL_DIVISOR1_SHIFT                   16
+#define CRL_APB_GEM1_REF_CTRL_DIVISOR1_MASK                    0x003F0000U
+
+/*
+* 6 bit divider
+*/
+#undef CRL_APB_GEM1_REF_CTRL_DIVISOR0_DEFVAL 
+#undef CRL_APB_GEM1_REF_CTRL_DIVISOR0_SHIFT 
+#undef CRL_APB_GEM1_REF_CTRL_DIVISOR0_MASK 
+#define CRL_APB_GEM1_REF_CTRL_DIVISOR0_DEFVAL                  0x00002500
+#define CRL_APB_GEM1_REF_CTRL_DIVISOR0_SHIFT                   8
+#define CRL_APB_GEM1_REF_CTRL_DIVISOR0_MASK                    0x00003F00U
+
+/*
+* 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
+    * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
+    *  usually an issue, but designers must be aware.)
+*/
+#undef CRL_APB_GEM1_REF_CTRL_SRCSEL_DEFVAL 
+#undef CRL_APB_GEM1_REF_CTRL_SRCSEL_SHIFT 
+#undef CRL_APB_GEM1_REF_CTRL_SRCSEL_MASK 
+#define CRL_APB_GEM1_REF_CTRL_SRCSEL_DEFVAL                    0x00002500
+#define CRL_APB_GEM1_REF_CTRL_SRCSEL_SHIFT                     0
+#define CRL_APB_GEM1_REF_CTRL_SRCSEL_MASK                      0x00000007U
+
+/*
+* 6 bit divider
+*/
+#undef CRL_APB_GEM_TSU_REF_CTRL_DIVISOR0_DEFVAL 
+#undef CRL_APB_GEM_TSU_REF_CTRL_DIVISOR0_SHIFT 
+#undef CRL_APB_GEM_TSU_REF_CTRL_DIVISOR0_MASK 
+#define CRL_APB_GEM_TSU_REF_CTRL_DIVISOR0_DEFVAL               0x00051000
+#define CRL_APB_GEM_TSU_REF_CTRL_DIVISOR0_SHIFT                8
+#define CRL_APB_GEM_TSU_REF_CTRL_DIVISOR0_MASK                 0x00003F00U
+
+/*
+* 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
+    * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
+    *  usually an issue, but designers must be aware.)
+*/
+#undef CRL_APB_GEM_TSU_REF_CTRL_SRCSEL_DEFVAL 
+#undef CRL_APB_GEM_TSU_REF_CTRL_SRCSEL_SHIFT 
+#undef CRL_APB_GEM_TSU_REF_CTRL_SRCSEL_MASK 
+#define CRL_APB_GEM_TSU_REF_CTRL_SRCSEL_DEFVAL                 0x00051000
+#define CRL_APB_GEM_TSU_REF_CTRL_SRCSEL_SHIFT                  0
+#define CRL_APB_GEM_TSU_REF_CTRL_SRCSEL_MASK                   0x00000007U
+
+/*
+* 6 bit divider
+*/
+#undef CRL_APB_GEM_TSU_REF_CTRL_DIVISOR1_DEFVAL 
+#undef CRL_APB_GEM_TSU_REF_CTRL_DIVISOR1_SHIFT 
+#undef CRL_APB_GEM_TSU_REF_CTRL_DIVISOR1_MASK 
+#define CRL_APB_GEM_TSU_REF_CTRL_DIVISOR1_DEFVAL               0x00051000
+#define CRL_APB_GEM_TSU_REF_CTRL_DIVISOR1_SHIFT                16
+#define CRL_APB_GEM_TSU_REF_CTRL_DIVISOR1_MASK                 0x003F0000U
+
+/*
+* Clock active signal. Switch to 0 to disable the clock
+*/
+#undef CRL_APB_GEM_TSU_REF_CTRL_CLKACT_DEFVAL 
+#undef CRL_APB_GEM_TSU_REF_CTRL_CLKACT_SHIFT 
+#undef CRL_APB_GEM_TSU_REF_CTRL_CLKACT_MASK 
+#define CRL_APB_GEM_TSU_REF_CTRL_CLKACT_DEFVAL                 0x00051000
+#define CRL_APB_GEM_TSU_REF_CTRL_CLKACT_SHIFT                  24
+#define CRL_APB_GEM_TSU_REF_CTRL_CLKACT_MASK                   0x01000000U
 
 /*
 * Clock active signal. Switch to 0 to disable the clock
@@ -1163,6 +1267,101 @@
 #define CRL_APB_QSPI_REF_CTRL_SRCSEL_DEFVAL                    0x01000800
 #define CRL_APB_QSPI_REF_CTRL_SRCSEL_SHIFT                     0
 #define CRL_APB_QSPI_REF_CTRL_SRCSEL_MASK                      0x00000007U
+
+/*
+* Clock active signal. Switch to 0 to disable the clock
+*/
+#undef CRL_APB_SDIO0_REF_CTRL_CLKACT_DEFVAL 
+#undef CRL_APB_SDIO0_REF_CTRL_CLKACT_SHIFT 
+#undef CRL_APB_SDIO0_REF_CTRL_CLKACT_MASK 
+#define CRL_APB_SDIO0_REF_CTRL_CLKACT_DEFVAL                   0x01000F00
+#define CRL_APB_SDIO0_REF_CTRL_CLKACT_SHIFT                    24
+#define CRL_APB_SDIO0_REF_CTRL_CLKACT_MASK                     0x01000000U
+
+/*
+* 6 bit divider
+*/
+#undef CRL_APB_SDIO0_REF_CTRL_DIVISOR1_DEFVAL 
+#undef CRL_APB_SDIO0_REF_CTRL_DIVISOR1_SHIFT 
+#undef CRL_APB_SDIO0_REF_CTRL_DIVISOR1_MASK 
+#define CRL_APB_SDIO0_REF_CTRL_DIVISOR1_DEFVAL                 0x01000F00
+#define CRL_APB_SDIO0_REF_CTRL_DIVISOR1_SHIFT                  16
+#define CRL_APB_SDIO0_REF_CTRL_DIVISOR1_MASK                   0x003F0000U
+
+/*
+* 6 bit divider
+*/
+#undef CRL_APB_SDIO0_REF_CTRL_DIVISOR0_DEFVAL 
+#undef CRL_APB_SDIO0_REF_CTRL_DIVISOR0_SHIFT 
+#undef CRL_APB_SDIO0_REF_CTRL_DIVISOR0_MASK 
+#define CRL_APB_SDIO0_REF_CTRL_DIVISOR0_DEFVAL                 0x01000F00
+#define CRL_APB_SDIO0_REF_CTRL_DIVISOR0_SHIFT                  8
+#define CRL_APB_SDIO0_REF_CTRL_DIVISOR0_MASK                   0x00003F00U
+
+/*
+* 000 = IOPLL; 010 = RPLL; 011 = VPLL; (This signal may only be toggled af
+    * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
+    *  usually an issue, but designers must be aware.)
+*/
+#undef CRL_APB_SDIO0_REF_CTRL_SRCSEL_DEFVAL 
+#undef CRL_APB_SDIO0_REF_CTRL_SRCSEL_SHIFT 
+#undef CRL_APB_SDIO0_REF_CTRL_SRCSEL_MASK 
+#define CRL_APB_SDIO0_REF_CTRL_SRCSEL_DEFVAL                   0x01000F00
+#define CRL_APB_SDIO0_REF_CTRL_SRCSEL_SHIFT                    0
+#define CRL_APB_SDIO0_REF_CTRL_SRCSEL_MASK                     0x00000007U
+
+/*
+* MIO pad selection for sdio0_rx_clk (feedback clock from the PAD) 00: MIO
+    *  [22] 01: MIO [38] 10: MIO [64] 11: MIO [64]
+*/
+#undef IOU_SLCR_SDIO_CLK_CTRL_SDIO0_RX_SRC_SEL_DEFVAL 
+#undef IOU_SLCR_SDIO_CLK_CTRL_SDIO0_RX_SRC_SEL_SHIFT 
+#undef IOU_SLCR_SDIO_CLK_CTRL_SDIO0_RX_SRC_SEL_MASK 
+#define IOU_SLCR_SDIO_CLK_CTRL_SDIO0_RX_SRC_SEL_DEFVAL         0x00000000
+#define IOU_SLCR_SDIO_CLK_CTRL_SDIO0_RX_SRC_SEL_SHIFT          0
+#define IOU_SLCR_SDIO_CLK_CTRL_SDIO0_RX_SRC_SEL_MASK           0x00000003U
+
+/*
+* Clock active signal. Switch to 0 to disable the clock
+*/
+#undef CRL_APB_UART0_REF_CTRL_CLKACT_DEFVAL 
+#undef CRL_APB_UART0_REF_CTRL_CLKACT_SHIFT 
+#undef CRL_APB_UART0_REF_CTRL_CLKACT_MASK 
+#define CRL_APB_UART0_REF_CTRL_CLKACT_DEFVAL                   0x01001800
+#define CRL_APB_UART0_REF_CTRL_CLKACT_SHIFT                    24
+#define CRL_APB_UART0_REF_CTRL_CLKACT_MASK                     0x01000000U
+
+/*
+* 6 bit divider
+*/
+#undef CRL_APB_UART0_REF_CTRL_DIVISOR1_DEFVAL 
+#undef CRL_APB_UART0_REF_CTRL_DIVISOR1_SHIFT 
+#undef CRL_APB_UART0_REF_CTRL_DIVISOR1_MASK 
+#define CRL_APB_UART0_REF_CTRL_DIVISOR1_DEFVAL                 0x01001800
+#define CRL_APB_UART0_REF_CTRL_DIVISOR1_SHIFT                  16
+#define CRL_APB_UART0_REF_CTRL_DIVISOR1_MASK                   0x003F0000U
+
+/*
+* 6 bit divider
+*/
+#undef CRL_APB_UART0_REF_CTRL_DIVISOR0_DEFVAL 
+#undef CRL_APB_UART0_REF_CTRL_DIVISOR0_SHIFT 
+#undef CRL_APB_UART0_REF_CTRL_DIVISOR0_MASK 
+#define CRL_APB_UART0_REF_CTRL_DIVISOR0_DEFVAL                 0x01001800
+#define CRL_APB_UART0_REF_CTRL_DIVISOR0_SHIFT                  8
+#define CRL_APB_UART0_REF_CTRL_DIVISOR0_MASK                   0x00003F00U
+
+/*
+* 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
+    * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
+    *  usually an issue, but designers must be aware.)
+*/
+#undef CRL_APB_UART0_REF_CTRL_SRCSEL_DEFVAL 
+#undef CRL_APB_UART0_REF_CTRL_SRCSEL_SHIFT 
+#undef CRL_APB_UART0_REF_CTRL_SRCSEL_MASK 
+#define CRL_APB_UART0_REF_CTRL_SRCSEL_DEFVAL                   0x01001800
+#define CRL_APB_UART0_REF_CTRL_SRCSEL_SHIFT                    0
+#define CRL_APB_UART0_REF_CTRL_SRCSEL_MASK                     0x00000007U
 
 /*
 * Clock active signal. Switch to 0 to disable the clock
@@ -32989,6 +33188,8 @@
 #define CRL_APB_RST_LPD_IOU2_OFFSET                                                0XFF5E0238
 #undef CRL_APB_RST_LPD_TOP_OFFSET 
 #define CRL_APB_RST_LPD_TOP_OFFSET                                                 0XFF5E023C
+#undef CRL_APB_RST_LPD_IOU0_OFFSET 
+#define CRL_APB_RST_LPD_IOU0_OFFSET                                                0XFF5E0230
 #undef CRL_APB_RST_LPD_IOU2_OFFSET 
 #define CRL_APB_RST_LPD_IOU2_OFFSET                                                0XFF5E0238
 #undef IOU_SLCR_IOU_TAPDLY_BYPASS_OFFSET 
@@ -32997,6 +33198,16 @@
 #define CRL_APB_RST_LPD_TOP_OFFSET                                                 0XFF5E023C
 #undef CRL_APB_RST_LPD_IOU2_OFFSET 
 #define CRL_APB_RST_LPD_IOU2_OFFSET                                                0XFF5E0238
+#undef IOU_SLCR_CTRL_REG_SD_OFFSET 
+#define IOU_SLCR_CTRL_REG_SD_OFFSET                                                0XFF180310
+#undef IOU_SLCR_SD_CONFIG_REG2_OFFSET 
+#define IOU_SLCR_SD_CONFIG_REG2_OFFSET                                             0XFF180320
+#undef IOU_SLCR_SD_CONFIG_REG1_OFFSET 
+#define IOU_SLCR_SD_CONFIG_REG1_OFFSET                                             0XFF18031C
+#undef IOU_SLCR_SD_DLL_CTRL_OFFSET 
+#define IOU_SLCR_SD_DLL_CTRL_OFFSET                                                0XFF180358
+#undef IOU_SLCR_SD_CONFIG_REG3_OFFSET 
+#define IOU_SLCR_SD_CONFIG_REG3_OFFSET                                             0XFF180324
 #undef CRL_APB_RST_LPD_IOU2_OFFSET 
 #define CRL_APB_RST_LPD_IOU2_OFFSET                                                0XFF5E0238
 #undef CRL_APB_RST_LPD_IOU2_OFFSET 
@@ -33007,6 +33218,16 @@
 #define CRL_APB_RST_LPD_IOU2_OFFSET                                                0XFF5E0238
 #undef CRL_APB_RST_LPD_IOU2_OFFSET 
 #define CRL_APB_RST_LPD_IOU2_OFFSET                                                0XFF5E0238
+#undef CRL_APB_RST_LPD_IOU2_OFFSET 
+#define CRL_APB_RST_LPD_IOU2_OFFSET                                                0XFF5E0238
+#undef UART0_BAUD_RATE_DIVIDER_REG0_OFFSET 
+#define UART0_BAUD_RATE_DIVIDER_REG0_OFFSET                                        0XFF000034
+#undef UART0_BAUD_RATE_GEN_REG0_OFFSET 
+#define UART0_BAUD_RATE_GEN_REG0_OFFSET                                            0XFF000018
+#undef UART0_CONTROL_REG0_OFFSET 
+#define UART0_CONTROL_REG0_OFFSET                                                  0XFF000000
+#undef UART0_MODE_REG0_OFFSET 
+#define UART0_MODE_REG0_OFFSET                                                     0XFF000004
 #undef UART1_BAUD_RATE_DIVIDER_REG0_OFFSET 
 #define UART1_BAUD_RATE_DIVIDER_REG0_OFFSET                                        0XFF010034
 #undef UART1_BAUD_RATE_GEN_REG0_OFFSET 
@@ -33231,6 +33452,16 @@
 #define CRL_APB_RST_LPD_TOP_OCM_RESET_MASK                     0x00000008U
 
 /*
+* GEM 1 reset
+*/
+#undef CRL_APB_RST_LPD_IOU0_GEM1_RESET_DEFVAL 
+#undef CRL_APB_RST_LPD_IOU0_GEM1_RESET_SHIFT 
+#undef CRL_APB_RST_LPD_IOU0_GEM1_RESET_MASK 
+#define CRL_APB_RST_LPD_IOU0_GEM1_RESET_DEFVAL                 0x0000000F
+#define CRL_APB_RST_LPD_IOU0_GEM1_RESET_SHIFT                  1
+#define CRL_APB_RST_LPD_IOU0_GEM1_RESET_MASK                   0x00000002U
+
+/*
 * Block level reset
 */
 #undef CRL_APB_RST_LPD_IOU2_QSPI_RESET_DEFVAL 
@@ -33270,6 +33501,122 @@
 #define CRL_APB_RST_LPD_TOP_USB1_APB_RESET_DEFVAL              0x00188FDF
 #define CRL_APB_RST_LPD_TOP_USB1_APB_RESET_SHIFT               11
 #define CRL_APB_RST_LPD_TOP_USB1_APB_RESET_MASK                0x00000800U
+
+/*
+* Block level reset
+*/
+#undef CRL_APB_RST_LPD_IOU2_SDIO0_RESET_DEFVAL 
+#undef CRL_APB_RST_LPD_IOU2_SDIO0_RESET_SHIFT 
+#undef CRL_APB_RST_LPD_IOU2_SDIO0_RESET_MASK 
+#define CRL_APB_RST_LPD_IOU2_SDIO0_RESET_DEFVAL                0x0017FFFF
+#define CRL_APB_RST_LPD_IOU2_SDIO0_RESET_SHIFT                 5
+#define CRL_APB_RST_LPD_IOU2_SDIO0_RESET_MASK                  0x00000020U
+
+/*
+* SD or eMMC selection on SDIO0 0: SD enabled 1: eMMC enabled
+*/
+#undef IOU_SLCR_CTRL_REG_SD_SD0_EMMC_SEL_DEFVAL 
+#undef IOU_SLCR_CTRL_REG_SD_SD0_EMMC_SEL_SHIFT 
+#undef IOU_SLCR_CTRL_REG_SD_SD0_EMMC_SEL_MASK 
+#define IOU_SLCR_CTRL_REG_SD_SD0_EMMC_SEL_DEFVAL               0x00000000
+#define IOU_SLCR_CTRL_REG_SD_SD0_EMMC_SEL_SHIFT                0
+#define IOU_SLCR_CTRL_REG_SD_SD0_EMMC_SEL_MASK                 0x00000001U
+
+/*
+* Should be set based on the final product usage 00 - Removable SCard Slot
+    *  01 - Embedded Slot for One Device 10 - Shared Bus Slot 11 - Reserved
+*/
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_SLOTTYPE_DEFVAL 
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_SLOTTYPE_SHIFT 
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_SLOTTYPE_MASK 
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_SLOTTYPE_DEFVAL            0x0FFC0FFC
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_SLOTTYPE_SHIFT             12
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_SLOTTYPE_MASK              0x00003000U
+
+/*
+* 8-bit Support for Embedded Device 1: The Core supports 8-bit Interface 0
+    * : Supports only 4-bit SD Interface
+*/
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_8BIT_DEFVAL 
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_8BIT_SHIFT 
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_8BIT_MASK 
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_8BIT_DEFVAL                0x0FFC0FFC
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_8BIT_SHIFT                 2
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_8BIT_MASK                  0x00000004U
+
+/*
+* 1.8V Support 1: 1.8V supported 0: 1.8V not supported support
+*/
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_1P8V_DEFVAL 
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_1P8V_SHIFT 
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_1P8V_MASK 
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_1P8V_DEFVAL                0x0FFC0FFC
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_1P8V_SHIFT                 9
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_1P8V_MASK                  0x00000200U
+
+/*
+* 3.0V Support 1: 3.0V supported 0: 3.0V not supported support
+*/
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_3P0V_DEFVAL 
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_3P0V_SHIFT 
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_3P0V_MASK 
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_3P0V_DEFVAL                0x0FFC0FFC
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_3P0V_SHIFT                 8
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_3P0V_MASK                  0x00000100U
+
+/*
+* 3.3V Support 1: 3.3V supported 0: 3.3V not supported support
+*/
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_3P3V_DEFVAL 
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_3P3V_SHIFT 
+#undef IOU_SLCR_SD_CONFIG_REG2_SD0_3P3V_MASK 
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_3P3V_DEFVAL                0x0FFC0FFC
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_3P3V_SHIFT                 7
+#define IOU_SLCR_SD_CONFIG_REG2_SD0_3P3V_MASK                  0x00000080U
+
+/*
+* Base Clock Frequency for SD Clock. This is the frequency of the xin_clk.
+*/
+#undef IOU_SLCR_SD_CONFIG_REG1_SD0_BASECLK_DEFVAL 
+#undef IOU_SLCR_SD_CONFIG_REG1_SD0_BASECLK_SHIFT 
+#undef IOU_SLCR_SD_CONFIG_REG1_SD0_BASECLK_MASK 
+#define IOU_SLCR_SD_CONFIG_REG1_SD0_BASECLK_DEFVAL             0x32403240
+#define IOU_SLCR_SD_CONFIG_REG1_SD0_BASECLK_SHIFT              7
+#define IOU_SLCR_SD_CONFIG_REG1_SD0_BASECLK_MASK               0x00007F80U
+
+/*
+* Configures the Number of Taps (Phases) of the rxclk_in that is supported
+    *  for auto tuning mode
+*/
+#undef IOU_SLCR_SD_CONFIG_REG1_SD0_TUNIGCOUNT_DEFVAL 
+#undef IOU_SLCR_SD_CONFIG_REG1_SD0_TUNIGCOUNT_SHIFT 
+#undef IOU_SLCR_SD_CONFIG_REG1_SD0_TUNIGCOUNT_MASK 
+#define IOU_SLCR_SD_CONFIG_REG1_SD0_TUNIGCOUNT_DEFVAL          0x32403240
+#define IOU_SLCR_SD_CONFIG_REG1_SD0_TUNIGCOUNT_SHIFT           1
+#define IOU_SLCR_SD_CONFIG_REG1_SD0_TUNIGCOUNT_MASK            0x0000007EU
+
+/*
+* Reserved.
+*/
+#undef IOU_SLCR_SD_DLL_CTRL_RESERVED_2_DEFVAL 
+#undef IOU_SLCR_SD_DLL_CTRL_RESERVED_2_SHIFT 
+#undef IOU_SLCR_SD_DLL_CTRL_RESERVED_2_MASK 
+#define IOU_SLCR_SD_DLL_CTRL_RESERVED_2_DEFVAL                 0x00080008
+#define IOU_SLCR_SD_DLL_CTRL_RESERVED_2_SHIFT                  19
+#define IOU_SLCR_SD_DLL_CTRL_RESERVED_2_MASK                   0x00080000U
+
+/*
+* This is the Timer Count for Re-Tuning Timer for Re-Tuning Mode 1 to 3. S
+    * etting to 4'b0 disables Re-Tuning Timer. 0h - Get information via other
+    * source 1h = 1 seconds 2h = 2 seconds 3h = 4 seconds 4h = 8 seconds -- n
+    * = 2(n-1) seconds -- Bh = 1024 seconds Fh - Ch = Reserved
+*/
+#undef IOU_SLCR_SD_CONFIG_REG3_SD0_RETUNETMR_DEFVAL 
+#undef IOU_SLCR_SD_CONFIG_REG3_SD0_RETUNETMR_SHIFT 
+#undef IOU_SLCR_SD_CONFIG_REG3_SD0_RETUNETMR_MASK 
+#define IOU_SLCR_SD_CONFIG_REG3_SD0_RETUNETMR_DEFVAL           0x06070607
+#define IOU_SLCR_SD_CONFIG_REG3_SD0_RETUNETMR_SHIFT            6
+#define IOU_SLCR_SD_CONFIG_REG3_SD0_RETUNETMR_MASK             0x000003C0U
 
 /*
 * Block level reset
@@ -33354,12 +33701,204 @@
 /*
 * Block level reset
 */
+#undef CRL_APB_RST_LPD_IOU2_UART0_RESET_DEFVAL 
+#undef CRL_APB_RST_LPD_IOU2_UART0_RESET_SHIFT 
+#undef CRL_APB_RST_LPD_IOU2_UART0_RESET_MASK 
+#define CRL_APB_RST_LPD_IOU2_UART0_RESET_DEFVAL                0x0017FFFF
+#define CRL_APB_RST_LPD_IOU2_UART0_RESET_SHIFT                 1
+#define CRL_APB_RST_LPD_IOU2_UART0_RESET_MASK                  0x00000002U
+
+/*
+* Block level reset
+*/
 #undef CRL_APB_RST_LPD_IOU2_UART1_RESET_DEFVAL 
 #undef CRL_APB_RST_LPD_IOU2_UART1_RESET_SHIFT 
 #undef CRL_APB_RST_LPD_IOU2_UART1_RESET_MASK 
 #define CRL_APB_RST_LPD_IOU2_UART1_RESET_DEFVAL                0x0017FFFF
 #define CRL_APB_RST_LPD_IOU2_UART1_RESET_SHIFT                 2
 #define CRL_APB_RST_LPD_IOU2_UART1_RESET_MASK                  0x00000004U
+
+/*
+* Baud rate divider value: 0 - 3: ignored 4 - 255: Baud rate
+*/
+#undef UART0_BAUD_RATE_DIVIDER_REG0_BDIV_DEFVAL 
+#undef UART0_BAUD_RATE_DIVIDER_REG0_BDIV_SHIFT 
+#undef UART0_BAUD_RATE_DIVIDER_REG0_BDIV_MASK 
+#define UART0_BAUD_RATE_DIVIDER_REG0_BDIV_DEFVAL               0x0000000F
+#define UART0_BAUD_RATE_DIVIDER_REG0_BDIV_SHIFT                0
+#define UART0_BAUD_RATE_DIVIDER_REG0_BDIV_MASK                 0x000000FFU
+
+/*
+* Baud Rate Clock Divisor Value: 0: Disables baud_sample 1: Clock divisor
+    * bypass (baud_sample = sel_clk) 2 - 65535: baud_sample
+*/
+#undef UART0_BAUD_RATE_GEN_REG0_CD_DEFVAL 
+#undef UART0_BAUD_RATE_GEN_REG0_CD_SHIFT 
+#undef UART0_BAUD_RATE_GEN_REG0_CD_MASK 
+#define UART0_BAUD_RATE_GEN_REG0_CD_DEFVAL                     0x0000028B
+#define UART0_BAUD_RATE_GEN_REG0_CD_SHIFT                      0
+#define UART0_BAUD_RATE_GEN_REG0_CD_MASK                       0x0000FFFFU
+
+/*
+* Stop transmitter break: 0: no affect 1: stop transmission of the break a
+    * fter a minimum of one character length and transmit a high level during
+    * 12 bit periods. It can be set regardless of the value of STTBRK.
+*/
+#undef UART0_CONTROL_REG0_STPBRK_DEFVAL 
+#undef UART0_CONTROL_REG0_STPBRK_SHIFT 
+#undef UART0_CONTROL_REG0_STPBRK_MASK 
+#define UART0_CONTROL_REG0_STPBRK_DEFVAL                       0x00000128
+#define UART0_CONTROL_REG0_STPBRK_SHIFT                        8
+#define UART0_CONTROL_REG0_STPBRK_MASK                         0x00000100U
+
+/*
+* Start transmitter break: 0: no affect 1: start to transmit a break after
+    *  the characters currently present in the FIFO and the transmit shift reg
+    * ister have been transmitted. It can only be set if STPBRK (Stop transmit
+    * ter break) is not high.
+*/
+#undef UART0_CONTROL_REG0_STTBRK_DEFVAL 
+#undef UART0_CONTROL_REG0_STTBRK_SHIFT 
+#undef UART0_CONTROL_REG0_STTBRK_MASK 
+#define UART0_CONTROL_REG0_STTBRK_DEFVAL                       0x00000128
+#define UART0_CONTROL_REG0_STTBRK_SHIFT                        7
+#define UART0_CONTROL_REG0_STTBRK_MASK                         0x00000080U
+
+/*
+* Restart receiver timeout counter: 1: receiver timeout counter is restart
+    * ed. This bit is self clearing once the restart has completed.
+*/
+#undef UART0_CONTROL_REG0_RSTTO_DEFVAL 
+#undef UART0_CONTROL_REG0_RSTTO_SHIFT 
+#undef UART0_CONTROL_REG0_RSTTO_MASK 
+#define UART0_CONTROL_REG0_RSTTO_DEFVAL                        0x00000128
+#define UART0_CONTROL_REG0_RSTTO_SHIFT                         6
+#define UART0_CONTROL_REG0_RSTTO_MASK                          0x00000040U
+
+/*
+* Transmit disable: 0: enable transmitter 1: disable transmitter
+*/
+#undef UART0_CONTROL_REG0_TXDIS_DEFVAL 
+#undef UART0_CONTROL_REG0_TXDIS_SHIFT 
+#undef UART0_CONTROL_REG0_TXDIS_MASK 
+#define UART0_CONTROL_REG0_TXDIS_DEFVAL                        0x00000128
+#define UART0_CONTROL_REG0_TXDIS_SHIFT                         5
+#define UART0_CONTROL_REG0_TXDIS_MASK                          0x00000020U
+
+/*
+* Transmit enable: 0: disable transmitter 1: enable transmitter, provided
+    * the TXDIS field is set to 0.
+*/
+#undef UART0_CONTROL_REG0_TXEN_DEFVAL 
+#undef UART0_CONTROL_REG0_TXEN_SHIFT 
+#undef UART0_CONTROL_REG0_TXEN_MASK 
+#define UART0_CONTROL_REG0_TXEN_DEFVAL                         0x00000128
+#define UART0_CONTROL_REG0_TXEN_SHIFT                          4
+#define UART0_CONTROL_REG0_TXEN_MASK                           0x00000010U
+
+/*
+* Receive disable: 0: enable 1: disable, regardless of the value of RXEN
+*/
+#undef UART0_CONTROL_REG0_RXDIS_DEFVAL 
+#undef UART0_CONTROL_REG0_RXDIS_SHIFT 
+#undef UART0_CONTROL_REG0_RXDIS_MASK 
+#define UART0_CONTROL_REG0_RXDIS_DEFVAL                        0x00000128
+#define UART0_CONTROL_REG0_RXDIS_SHIFT                         3
+#define UART0_CONTROL_REG0_RXDIS_MASK                          0x00000008U
+
+/*
+* Receive enable: 0: disable 1: enable When set to one, the receiver logic
+    *  is enabled, provided the RXDIS field is set to zero.
+*/
+#undef UART0_CONTROL_REG0_RXEN_DEFVAL 
+#undef UART0_CONTROL_REG0_RXEN_SHIFT 
+#undef UART0_CONTROL_REG0_RXEN_MASK 
+#define UART0_CONTROL_REG0_RXEN_DEFVAL                         0x00000128
+#define UART0_CONTROL_REG0_RXEN_SHIFT                          2
+#define UART0_CONTROL_REG0_RXEN_MASK                           0x00000004U
+
+/*
+* Software reset for Tx data path: 0: no affect 1: transmitter logic is re
+    * set and all pending transmitter data is discarded This bit is self clear
+    * ing once the reset has completed.
+*/
+#undef UART0_CONTROL_REG0_TXRES_DEFVAL 
+#undef UART0_CONTROL_REG0_TXRES_SHIFT 
+#undef UART0_CONTROL_REG0_TXRES_MASK 
+#define UART0_CONTROL_REG0_TXRES_DEFVAL                        0x00000128
+#define UART0_CONTROL_REG0_TXRES_SHIFT                         1
+#define UART0_CONTROL_REG0_TXRES_MASK                          0x00000002U
+
+/*
+* Software reset for Rx data path: 0: no affect 1: receiver logic is reset
+    *  and all pending receiver data is discarded. This bit is self clearing o
+    * nce the reset has completed.
+*/
+#undef UART0_CONTROL_REG0_RXRES_DEFVAL 
+#undef UART0_CONTROL_REG0_RXRES_SHIFT 
+#undef UART0_CONTROL_REG0_RXRES_MASK 
+#define UART0_CONTROL_REG0_RXRES_DEFVAL                        0x00000128
+#define UART0_CONTROL_REG0_RXRES_SHIFT                         0
+#define UART0_CONTROL_REG0_RXRES_MASK                          0x00000001U
+
+/*
+* Channel mode: Defines the mode of operation of the UART. 00: normal 01:
+    * automatic echo 10: local loopback 11: remote loopback
+*/
+#undef UART0_MODE_REG0_CHMODE_DEFVAL 
+#undef UART0_MODE_REG0_CHMODE_SHIFT 
+#undef UART0_MODE_REG0_CHMODE_MASK 
+#define UART0_MODE_REG0_CHMODE_DEFVAL                          0x00000000
+#define UART0_MODE_REG0_CHMODE_SHIFT                           8
+#define UART0_MODE_REG0_CHMODE_MASK                            0x00000300U
+
+/*
+* Number of stop bits: Defines the number of stop bits to detect on receiv
+    * e and to generate on transmit. 00: 1 stop bit 01: 1.5 stop bits 10: 2 st
+    * op bits 11: reserved
+*/
+#undef UART0_MODE_REG0_NBSTOP_DEFVAL 
+#undef UART0_MODE_REG0_NBSTOP_SHIFT 
+#undef UART0_MODE_REG0_NBSTOP_MASK 
+#define UART0_MODE_REG0_NBSTOP_DEFVAL                          0x00000000
+#define UART0_MODE_REG0_NBSTOP_SHIFT                           6
+#define UART0_MODE_REG0_NBSTOP_MASK                            0x000000C0U
+
+/*
+* Parity type select: Defines the expected parity to check on receive and
+    * the parity to generate on transmit. 000: even parity 001: odd parity 010
+    * : forced to 0 parity (space) 011: forced to 1 parity (mark) 1xx: no pari
+    * ty
+*/
+#undef UART0_MODE_REG0_PAR_DEFVAL 
+#undef UART0_MODE_REG0_PAR_SHIFT 
+#undef UART0_MODE_REG0_PAR_MASK 
+#define UART0_MODE_REG0_PAR_DEFVAL                             0x00000000
+#define UART0_MODE_REG0_PAR_SHIFT                              3
+#define UART0_MODE_REG0_PAR_MASK                               0x00000038U
+
+/*
+* Character length select: Defines the number of bits in each character. 1
+    * 1: 6 bits 10: 7 bits 0x: 8 bits
+*/
+#undef UART0_MODE_REG0_CHRL_DEFVAL 
+#undef UART0_MODE_REG0_CHRL_SHIFT 
+#undef UART0_MODE_REG0_CHRL_MASK 
+#define UART0_MODE_REG0_CHRL_DEFVAL                            0x00000000
+#define UART0_MODE_REG0_CHRL_SHIFT                             1
+#define UART0_MODE_REG0_CHRL_MASK                              0x00000006U
+
+/*
+* Clock source select: This field defines whether a pre-scalar of 8 is app
+    * lied to the baud rate generator input clock. 0: clock source is uart_ref
+    * _clk 1: clock source is uart_ref_clk/8
+*/
+#undef UART0_MODE_REG0_CLKS_DEFVAL 
+#undef UART0_MODE_REG0_CLKS_SHIFT 
+#undef UART0_MODE_REG0_CLKS_MASK 
+#define UART0_MODE_REG0_CLKS_DEFVAL                            0x00000000
+#define UART0_MODE_REG0_CLKS_SHIFT                             0
+#define UART0_MODE_REG0_CLKS_MASK                              0x00000001U
 
 /*
 * Baud rate divider value: 0 - 3: ignored 4 - 255: Baud rate
@@ -35794,6 +36333,8 @@
 #define USB3_1_FPD_PIPE_CLK_OFFSET                                                 0XFF9E007C
 #undef CRL_APB_RST_LPD_TOP_OFFSET 
 #define CRL_APB_RST_LPD_TOP_OFFSET                                                 0XFF5E023C
+#undef CRL_APB_RST_LPD_IOU0_OFFSET 
+#define CRL_APB_RST_LPD_IOU0_OFFSET                                                0XFF5E0230
 #undef CRF_APB_RST_FPD_TOP_OFFSET 
 #define CRF_APB_RST_FPD_TOP_OFFSET                                                 0XFD1A0100
 #undef DP_DP_PHY_RESET_OFFSET 
@@ -35920,6 +36461,16 @@
 #define CRL_APB_RST_LPD_TOP_USB1_CORERESET_DEFVAL              0x00188FDF
 #define CRL_APB_RST_LPD_TOP_USB1_CORERESET_SHIFT               7
 #define CRL_APB_RST_LPD_TOP_USB1_CORERESET_MASK                0x00000080U
+
+/*
+* GEM 1 reset
+*/
+#undef CRL_APB_RST_LPD_IOU0_GEM1_RESET_DEFVAL 
+#undef CRL_APB_RST_LPD_IOU0_GEM1_RESET_SHIFT 
+#undef CRL_APB_RST_LPD_IOU0_GEM1_RESET_MASK 
+#define CRL_APB_RST_LPD_IOU0_GEM1_RESET_DEFVAL                 0x0000000F
+#define CRL_APB_RST_LPD_IOU0_GEM1_RESET_SHIFT                  1
+#define CRL_APB_RST_LPD_IOU0_GEM1_RESET_MASK                   0x00000002U
 
 /*
 * Display Port block level reset (includes DPDMA)
@@ -36501,6 +37052,8 @@
 #define CRL_APB_RST_LPD_TOP_OFFSET                                                 0XFF5E023C
 #undef CRL_APB_RST_LPD_TOP_OFFSET 
 #define CRL_APB_RST_LPD_TOP_OFFSET                                                 0XFF5E023C
+#undef CRL_APB_RST_LPD_IOU0_OFFSET 
+#define CRL_APB_RST_LPD_IOU0_OFFSET                                                0XFF5E0230
 #undef DP_DP_TX_PHY_POWER_DOWN_OFFSET 
 #define DP_DP_TX_PHY_POWER_DOWN_OFFSET                                             0XFD4A0238
 #undef DP_DP_PHY_RESET_OFFSET 
@@ -36567,6 +37120,16 @@
 #define CRL_APB_RST_LPD_TOP_USB1_CORERESET_DEFVAL              0x00188FDF
 #define CRL_APB_RST_LPD_TOP_USB1_CORERESET_SHIFT               7
 #define CRL_APB_RST_LPD_TOP_USB1_CORERESET_MASK                0x00000080U
+
+/*
+* GEM 1 reset
+*/
+#undef CRL_APB_RST_LPD_IOU0_GEM1_RESET_DEFVAL 
+#undef CRL_APB_RST_LPD_IOU0_GEM1_RESET_SHIFT 
+#undef CRL_APB_RST_LPD_IOU0_GEM1_RESET_MASK 
+#define CRL_APB_RST_LPD_IOU0_GEM1_RESET_DEFVAL                 0x0000000F
+#define CRL_APB_RST_LPD_IOU0_GEM1_RESET_SHIFT                  1
+#define CRL_APB_RST_LPD_IOU0_GEM1_RESET_MASK                   0x00000002U
 
 /*
 * Two bits per lane. When set to 11, moves the GT to power down mode. When

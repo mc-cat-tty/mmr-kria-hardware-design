@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Mon Jun 24 21:31:23 2024
+//Date        : Thu Jun 27 15:09:47 2024
 //Host        : et-PC running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target pl_design.bd
 //Design      : pl_design
@@ -276,8 +276,10 @@ endmodule
 
 (* CORE_GENERATION_INFO = "pl_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=pl_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "pl_design.hwdef" *) 
 module pl_design
-   (CAN_rx,
-    CAN_tx,
+   (CAN_0_0_rx,
+    CAN_0_0_tx,
+    UART_0_0_rxd,
+    UART_0_0_txd,
     fan,
     led_uf_tri_i,
     led_uf_tri_o,
@@ -285,15 +287,17 @@ module pl_design
     rpi_tri_i,
     rpi_tri_o,
     rpi_tri_t);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN " *) input CAN_rx;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN " *) output CAN_tx;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN_0_0 RX" *) input CAN_0_0_rx;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN_0_0 TX" *) output CAN_0_0_tx;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0_0 RxD" *) input UART_0_0_rxd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0_0 TxD" *) output UART_0_0_txd;
   output [0:0]fan;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf TRI_I" *) input [1:0]led_uf_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf TRI_O" *) output [1:0]led_uf_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf TRI_T" *) output [1:0]led_uf_tri_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rpi " *) input [0:0]rpi_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rpi " *) output [0:0]rpi_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rpi " *) output [0:0]rpi_tri_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rpi TRI_I" *) input [0:0]rpi_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rpi TRI_O" *) output [0:0]rpi_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rpi TRI_T" *) output [0:0]rpi_tri_t;
 
   wire [1:0]axi_gpio_0_GPIO_TRI_I;
   wire [1:0]axi_gpio_0_GPIO_TRI_O;
@@ -376,11 +380,14 @@ module pl_design
   wire zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WREADY;
   wire [3:0]zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WSTRB;
   wire zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WVALID;
+  wire zynq_ultra_ps_e_0_UART_0_RxD;
+  wire zynq_ultra_ps_e_0_UART_0_TxD;
   wire [2:0]zynq_ultra_ps_e_0_emio_ttc0_wave_o;
   wire zynq_ultra_ps_e_0_pl_clk0;
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
-  assign CAN_tx = zynq_ultra_ps_e_0_CAN_0_TX;
+  assign CAN_0_0_tx = zynq_ultra_ps_e_0_CAN_0_TX;
+  assign UART_0_0_txd = zynq_ultra_ps_e_0_UART_0_TxD;
   assign axi_gpio_0_GPIO_TRI_I = led_uf_tri_i[1:0];
   assign axi_gpio_rpi_GPIO_TRI_I = rpi_tri_i[0];
   assign fan[0] = xlslice_0_Dout;
@@ -388,7 +395,8 @@ module pl_design
   assign led_uf_tri_t[1:0] = axi_gpio_0_GPIO_TRI_T;
   assign rpi_tri_o[0] = axi_gpio_rpi_GPIO_TRI_O;
   assign rpi_tri_t[0] = axi_gpio_rpi_GPIO_TRI_T;
-  assign zynq_ultra_ps_e_0_CAN_0_RX = CAN_rx;
+  assign zynq_ultra_ps_e_0_CAN_0_RX = CAN_0_0_rx;
+  assign zynq_ultra_ps_e_0_UART_0_RxD = UART_0_0_rxd;
   pl_design_axi_gpio_0_1 axi_gpio_leds
        (.gpio_io_i(axi_gpio_0_GPIO_TRI_I),
         .gpio_io_o(axi_gpio_0_GPIO_TRI_O),
@@ -529,6 +537,8 @@ module pl_design
        (.emio_can0_phy_rx(zynq_ultra_ps_e_0_CAN_0_RX),
         .emio_can0_phy_tx(zynq_ultra_ps_e_0_CAN_0_TX),
         .emio_ttc0_wave_o(zynq_ultra_ps_e_0_emio_ttc0_wave_o),
+        .emio_uart0_rxd(zynq_ultra_ps_e_0_UART_0_RxD),
+        .emio_uart0_txd(zynq_ultra_ps_e_0_UART_0_TxD),
         .maxigp2_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARADDR),
         .maxigp2_arburst(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARBURST),
         .maxigp2_arcache(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARCACHE),

@@ -70,6 +70,11 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "pl_design_zynq_ultra_ps_e_0_0_synth_1" START { ROLLUP_AUTO }
+set_param power.enableCarry8RouteBelPower 1
+set_param chipscope.maxJobs 1
+set_param power.BramSDPPropagationFix 1
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param power.enableLutRouteBelPower 1
 set_msg_config  -id {BD 41-237}  -string {{WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_interconnect_0/s00_couplers/auto_pc/S_AXI(0) and /axi_interconnect_0/s00_mmu/M_AXI(16)}}  -suppress 
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run

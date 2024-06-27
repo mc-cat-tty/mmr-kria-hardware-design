@@ -7,6 +7,8 @@
 
 # XDC: new/can.xdc
 
+# XDC: new/uart.xdc
+
 # Block Designs: bd/pl_design/pl_design.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design || ORIG_REF_NAME==pl_design} -quiet] -quiet
 
@@ -16,6 +18,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_z
 # IP: bd/pl_design/ip/pl_design_xlslice_0_0/pl_design_xlslice_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_xlslice_0_0 || ORIG_REF_NAME==pl_design_xlslice_0_0} -quiet] -quiet
 
+# IP: bd/pl_design/ip/pl_design_xbar_0/pl_design_xbar_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_xbar_0 || ORIG_REF_NAME==pl_design_xbar_0} -quiet] -quiet
+
 # IP: bd/pl_design/ip/pl_design_axi_interconnect_0_0/pl_design_axi_interconnect_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_axi_interconnect_0_0 || ORIG_REF_NAME==pl_design_axi_interconnect_0_0} -quiet] -quiet
 
@@ -24,9 +29,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_a
 
 # IP: bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_proc_sys_reset_0_0 || ORIG_REF_NAME==pl_design_proc_sys_reset_0_0} -quiet] -quiet
-
-# IP: bd/pl_design/ip/pl_design_xbar_0/pl_design_xbar_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_xbar_0 || ORIG_REF_NAME==pl_design_xbar_0} -quiet] -quiet
 
 # IP: bd/pl_design/ip/pl_design_axi_gpio_0_2/pl_design_axi_gpio_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_axi_gpio_0_2 || ORIG_REF_NAME==pl_design_axi_gpio_0_2} -quiet] -quiet

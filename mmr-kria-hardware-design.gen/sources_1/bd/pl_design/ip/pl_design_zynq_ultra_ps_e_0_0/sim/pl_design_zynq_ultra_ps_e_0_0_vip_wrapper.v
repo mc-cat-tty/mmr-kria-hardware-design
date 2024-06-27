@@ -100,6 +100,8 @@ maxigp2_awqos,
 maxigp2_arqos, 
 emio_can0_phy_tx, 
 emio_can0_phy_rx, 
+emio_uart0_txd, 
+emio_uart0_rxd, 
 emio_ttc0_wave_o, 
 pl_resetn0, 
 pl_clk0 
@@ -146,6 +148,8 @@ output [3 : 0] maxigp2_awqos;
 output [3 : 0] maxigp2_arqos;
 output emio_can0_phy_tx;
 input emio_can0_phy_rx;
+output emio_uart0_txd;
+input emio_uart0_rxd;
 output [2 : 0] emio_ttc0_wave_o;
 output pl_resetn0;
 output pl_clk0;
