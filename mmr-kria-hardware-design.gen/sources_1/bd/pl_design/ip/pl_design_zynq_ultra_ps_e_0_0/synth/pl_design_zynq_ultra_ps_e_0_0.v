@@ -99,8 +99,23 @@ module pl_design_zynq_ultra_ps_e_0_0 (
   maxigp2_arqos,
   emio_can0_phy_tx,
   emio_can0_phy_rx,
+  emio_can1_phy_tx,
+  emio_can1_phy_rx,
   emio_uart0_txd,
   emio_uart0_rxd,
+  emio_spi0_sclk_i,
+  emio_spi0_sclk_o,
+  emio_spi0_sclk_t,
+  emio_spi0_m_i,
+  emio_spi0_m_o,
+  emio_spi0_mo_t,
+  emio_spi0_s_i,
+  emio_spi0_s_o,
+  emio_spi0_so_t,
+  emio_spi0_ss_i_n,
+  emio_spi0_ss_o_n,
+  emio_spi0_ss1_o_n,
+  emio_spi0_ss_n_t,
   emio_ttc0_wave_o,
   pl_resetn0,
   pl_clk0
@@ -193,10 +208,40 @@ output wire [3 : 0] maxigp2_arqos;
 output wire emio_can0_phy_tx;
 (* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN_0 RX" *)
 input wire emio_can0_phy_rx;
+(* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN_1 TX" *)
+output wire emio_can1_phy_tx;
+(* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN_1 RX" *)
+input wire emio_can1_phy_rx;
 (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 TxD" *)
 output wire emio_uart0_txd;
 (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 RxD" *)
 input wire emio_uart0_rxd;
+(* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SCK_I" *)
+input wire emio_spi0_sclk_i;
+(* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SCK_O" *)
+output wire emio_spi0_sclk_o;
+(* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SCK_T" *)
+output wire emio_spi0_sclk_t;
+(* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 IO1_I" *)
+input wire emio_spi0_m_i;
+(* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 IO0_O" *)
+output wire emio_spi0_m_o;
+(* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 IO0_T" *)
+output wire emio_spi0_mo_t;
+(* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 IO0_I" *)
+input wire emio_spi0_s_i;
+(* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 IO1_O" *)
+output wire emio_spi0_s_o;
+(* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 IO1_T" *)
+output wire emio_spi0_so_t;
+(* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS_I" *)
+input wire emio_spi0_ss_i_n;
+(* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS_O" *)
+output wire emio_spi0_ss_o_n;
+(* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS1_O" *)
+output wire emio_spi0_ss1_o_n;
+(* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS_T" *)
+output wire emio_spi0_ss_n_t;
 output wire [2 : 0] emio_ttc0_wave_o;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PL_RESETN0, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 PL_RESETN0 RST" *)
@@ -796,8 +841,8 @@ output wire pl_clk0;
     .sacefpd_rack(1'B0),
     .emio_can0_phy_tx(emio_can0_phy_tx),
     .emio_can0_phy_rx(emio_can0_phy_rx),
-    .emio_can1_phy_tx(),
-    .emio_can1_phy_rx(1'B0),
+    .emio_can1_phy_tx(emio_can1_phy_tx),
+    .emio_can1_phy_rx(emio_can1_phy_rx),
     .emio_enet0_gmii_rx_clk(1'B0),
     .emio_enet0_speed_mode(),
     .emio_enet0_gmii_crs(1'B0),
@@ -1071,20 +1116,20 @@ output wire pl_clk0;
     .emio_sdio1_ledcontrol(),
     .emio_sdio1_buspower(),
     .emio_sdio1_bus_volt(),
-    .emio_spi0_sclk_i(1'B0),
-    .emio_spi0_sclk_o(),
-    .emio_spi0_sclk_t(),
-    .emio_spi0_m_i(1'B0),
-    .emio_spi0_m_o(),
-    .emio_spi0_mo_t(),
-    .emio_spi0_s_i(1'B0),
-    .emio_spi0_s_o(),
-    .emio_spi0_so_t(),
-    .emio_spi0_ss_i_n(1'B1),
-    .emio_spi0_ss_o_n(),
-    .emio_spi0_ss1_o_n(),
+    .emio_spi0_sclk_i(emio_spi0_sclk_i),
+    .emio_spi0_sclk_o(emio_spi0_sclk_o),
+    .emio_spi0_sclk_t(emio_spi0_sclk_t),
+    .emio_spi0_m_i(emio_spi0_m_i),
+    .emio_spi0_m_o(emio_spi0_m_o),
+    .emio_spi0_mo_t(emio_spi0_mo_t),
+    .emio_spi0_s_i(emio_spi0_s_i),
+    .emio_spi0_s_o(emio_spi0_s_o),
+    .emio_spi0_so_t(emio_spi0_so_t),
+    .emio_spi0_ss_i_n(emio_spi0_ss_i_n),
+    .emio_spi0_ss_o_n(emio_spi0_ss_o_n),
+    .emio_spi0_ss1_o_n(emio_spi0_ss1_o_n),
     .emio_spi0_ss2_o_n(),
-    .emio_spi0_ss_n_t(),
+    .emio_spi0_ss_n_t(emio_spi0_ss_n_t),
     .emio_spi1_sclk_i(1'B0),
     .emio_spi1_sclk_o(),
     .emio_spi1_sclk_t(),

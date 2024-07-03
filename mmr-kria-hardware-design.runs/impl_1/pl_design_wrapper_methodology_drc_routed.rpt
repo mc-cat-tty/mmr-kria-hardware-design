@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Thu Jun 27 15:13:09 2024
+| Date         : Wed Jul  3 16:17:40 2024
 | Host         : et-PC running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_methodology -file pl_design_wrapper_methodology_drc_routed.rpt -pb pl_design_wrapper_methodology_drc_routed.pb -rpx pl_design_wrapper_methodology_drc_routed.rpx
 | Design       : pl_design_wrapper
@@ -23,15 +23,27 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 6
-+-----------+----------+-------------------------------+------------+
-| Rule      | Severity | Description                   | Violations |
-+-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 6          |
-+-----------+----------+-------------------------------+------------+
+             Violations found: 8
++-----------+------------------+------------------------------------------------------------------+------------+
+| Rule      | Severity         | Description                                                      | Violations |
++-----------+------------------+------------------------------------------------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 1          |
+| CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
+| TIMING-18 | Warning          | Missing input or output delay                                    | 6          |
++-----------+------------------+------------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin pl_design_i/zynq_ultra_ps_e_0/inst/PS8_i/EMIOSPI0SCLKI is not reached by a timing clock
+Related violations: <none>
+
+CKLD-2#1 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net SPI_0_0_sck_iobuf/O is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): SPI_0_0_sck_iobuf/IO
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on led_uf_tri_io[0] relative to the rising and/or falling clock edge(s) of clk_pl_0.

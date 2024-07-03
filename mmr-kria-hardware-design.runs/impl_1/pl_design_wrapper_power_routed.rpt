@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date             : Thu Jun 27 15:13:10 2024
+| Date             : Wed Jul  3 16:17:41 2024
 | Host             : et-PC running 64-bit Ubuntu 22.04.4 LTS
 | Command          : report_power -file pl_design_wrapper_power_routed.rpt -pb pl_design_wrapper_power_summary_routed.pb -rpx pl_design_wrapper_power_routed.rpx
 | Design           : pl_design_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.068        |
+| Total On-Chip Power (W)  | 3.072        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.743        |
+| Dynamic (W)              | 2.747        |
 | Device Static (W)        | 0.325        |
 | Effective TJA (C/W)      | 2.3          |
 | Max Ambient (C)          | 77.9         |
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.002 |        3 |       --- |             --- |
-| CLB Logic               |    <0.001 |     1724 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      527 |    117120 |            0.45 |
+| CLB Logic               |    <0.001 |     1728 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      529 |    117120 |            0.45 |
 |   LUT as Shift Register |    <0.001 |       70 |     57600 |            0.12 |
 |   Register              |    <0.001 |      850 |    234240 |            0.36 |
 |   Others                |     0.000 |       77 |       --- |             --- |
 |   F7/F8 Muxes           |     0.000 |        3 |    117120 |           <0.01 |
-| Signals                 |    <0.001 |     1344 |       --- |             --- |
-| I/O                     |     0.003 |        8 |       189 |            4.23 |
+| Signals                 |    <0.001 |     1354 |       --- |             --- |
+| I/O                     |     0.008 |       15 |       189 |            7.94 |
 | PS8                     |     2.736 |        1 |       --- |             --- |
 | Static Power            |     0.325 |          |           |                 |
 |   PS Static             |     0.000 |          |           |                 |
 |   PL Static             |     0.325 |          |           |                 |
-| Total                   |     3.068 |          |           |                 |
+| Total                   |     3.072 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,8 +79,8 @@ Table of Contents
 | Vccint_io       |       0.850 |     0.037 |       0.000 |      0.037 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.075 |       0.000 |      0.075 |       NA    | Unspecified | NA         |
-| Vccaux_io       |       1.800 |     0.032 |       0.000 |      0.031 |       NA    | Unspecified | NA         |
-| Vcco33          |       3.300 |     0.008 |       0.001 |      0.007 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.032 |       0.001 |      0.031 |       NA    | Unspecified | NA         |
+| Vcco33          |       3.300 |     0.009 |       0.002 |      0.007 |       NA    | Unspecified | NA         |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18          |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -162,7 +162,7 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| pl_design_wrapper      |     2.743 |
+| pl_design_wrapper      |     2.747 |
 |   pl_design_i          |     2.739 |
 |     axi_interconnect_0 |     0.003 |
 |       s00_couplers     |     0.002 |

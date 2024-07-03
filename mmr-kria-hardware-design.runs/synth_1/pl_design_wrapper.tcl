@@ -70,11 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param power.enableCarry8RouteBelPower 1
-set_param chipscope.maxJobs 1
-set_param power.BramSDPPropagationFix 1
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param power.enableLutRouteBelPower 1
 set_msg_config  -id {BD 41-237}  -string {{WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_interconnect_0/s00_couplers/auto_pc/S_AXI(0) and /axi_interconnect_0/s00_mmu/M_AXI(16)}}  -suppress 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
@@ -131,6 +126,9 @@ set_property used_in_implementation false [get_files /home/etorrini/GitHub/MMR/m
 
 read_xdc /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/uart.xdc
 set_property used_in_implementation false [get_files /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/uart.xdc]
+
+read_xdc /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/spi.xdc
+set_property used_in_implementation false [get_files /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/spi.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

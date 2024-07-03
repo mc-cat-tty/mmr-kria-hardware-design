@@ -741,6 +741,25 @@ set psu_clock_init_data {
 		# This register controls this reference clock
 		#(OFFSET, MASK, VALUE)      (0XFF5E0124, 0x013F3F07U ,0x01010F00U)  */
     mask_write 0XFF5E0124 0x013F3F07 0x01010F00
+		# Register : SPI0_REF_CTRL @ 0XFF5E007C</p>
+
+		# Clock active signal. Switch to 0 to disable the clock
+		# PSU_CRL_APB_SPI0_REF_CTRL_CLKACT                                                0x1
+
+		# 6 bit divider
+		# PSU_CRL_APB_SPI0_REF_CTRL_DIVISOR1                                              0x1
+
+		# 6 bit divider
+		# PSU_CRL_APB_SPI0_REF_CTRL_DIVISOR0                                              0x5
+
+		# 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
+    # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
+    #  usually an issue, but designers must be aware.)
+		# PSU_CRL_APB_SPI0_REF_CTRL_SRCSEL                                                0x2
+
+		# This register controls this reference clock
+		#(OFFSET, MASK, VALUE)      (0XFF5E007C, 0x013F3F07U ,0x01010502U)  */
+    mask_write 0XFF5E007C 0x013F3F07 0x01010502
 		# Register : SPI1_REF_CTRL @ 0XFF5E0080</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
@@ -779,6 +798,25 @@ set psu_clock_init_data {
 		# This register controls this reference clock
 		#(OFFSET, MASK, VALUE)      (0XFF5E0084, 0x013F3F07U ,0x01010403U)  */
     mask_write 0XFF5E0084 0x013F3F07 0x01010403
+		# Register : CAN1_REF_CTRL @ 0XFF5E0088</p>
+
+		# Clock active signal. Switch to 0 to disable the clock
+		# PSU_CRL_APB_CAN1_REF_CTRL_CLKACT                                                0x1
+
+		# 6 bit divider
+		# PSU_CRL_APB_CAN1_REF_CTRL_DIVISOR1                                              0x1
+
+		# 6 bit divider
+		# PSU_CRL_APB_CAN1_REF_CTRL_DIVISOR0                                              0xf
+
+		# 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
+    # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
+    #  usually an issue, but designers must be aware.)
+		# PSU_CRL_APB_CAN1_REF_CTRL_SRCSEL                                                0x0
+
+		# This register controls this reference clock
+		#(OFFSET, MASK, VALUE)      (0XFF5E0088, 0x013F3F07U ,0x01010F00U)  */
+    mask_write 0XFF5E0088 0x013F3F07 0x01010F00
 		# Register : CPU_R5_CTRL @ 0XFF5E0090</p>
 
 		# Turing this off will shut down the OCM, some parts of the APM, and preve
@@ -14100,10 +14138,13 @@ set psu_peripherals_init_data {
 		# Block level reset
 		# PSU_CRL_APB_RST_LPD_IOU2_CAN0_RESET                                             0
 
+		# Block level reset
+		# PSU_CRL_APB_RST_LPD_IOU2_CAN1_RESET                                             0
+
 		# Software control register for the IOU block. Each bit will cause a singl
     # erperipheral or part of the peripheral to be reset.
-		#(OFFSET, MASK, VALUE)      (0XFF5E0238, 0x00000080U ,0x00000000U)  */
-    mask_write 0XFF5E0238 0x00000080 0x00000000
+		#(OFFSET, MASK, VALUE)      (0XFF5E0238, 0x00000180U ,0x00000000U)  */
+    mask_write 0XFF5E0238 0x00000180 0x00000000
 		# : I2C
 		# Register : RST_LPD_IOU2 @ 0XFF5E0238</p>
 
@@ -14128,12 +14169,15 @@ set psu_peripherals_init_data {
 		# Register : RST_LPD_IOU2 @ 0XFF5E0238</p>
 
 		# Block level reset
+		# PSU_CRL_APB_RST_LPD_IOU2_SPI0_RESET                                             0
+
+		# Block level reset
 		# PSU_CRL_APB_RST_LPD_IOU2_SPI1_RESET                                             0
 
 		# Software control register for the IOU block. Each bit will cause a singl
     # erperipheral or part of the peripheral to be reset.
-		#(OFFSET, MASK, VALUE)      (0XFF5E0238, 0x00000010U ,0x00000000U)  */
-    mask_write 0XFF5E0238 0x00000010 0x00000000
+		#(OFFSET, MASK, VALUE)      (0XFF5E0238, 0x00000018U ,0x00000000U)  */
+    mask_write 0XFF5E0238 0x00000018 0x00000000
 		# : TTC
 		# Register : RST_LPD_IOU2 @ 0XFF5E0238</p>
 

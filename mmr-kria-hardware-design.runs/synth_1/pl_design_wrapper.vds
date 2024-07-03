@@ -3,13 +3,13 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu Jun 27 15:11:32 2024
-# Process ID: 639281
+# Start of session at: Wed Jul  3 16:16:03 2024
+# Process ID: 1899528
 # Current directory: /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1
 # Command line: vivado -log pl_design_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pl_design_wrapper.tcl
 # Log file: /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/pl_design_wrapper.vds
 # Journal file: /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/vivado.jou
-# Running On: et-PC, OS: Linux, CPU Frequency: 1980.210 MHz, CPU Physical cores: 16, Host memory: 15981 MB
+# Running On: et-PC, OS: Linux, CPU Frequency: 2040.045 MHz, CPU Physical cores: 16, Host memory: 15981 MB
 #-----------------------------------------------------------
 source pl_design_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -22,49 +22,49 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 639305
+INFO: [Synth 8-7075] Helper process launched with PID 1899598
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2546.395 ; gain = 292.777 ; free physical = 2629 ; free virtual = 8279
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2546.426 ; gain = 292.777 ; free physical = 1722 ; free virtual = 4721
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'pl_design_wrapper' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/hdl/pl_design_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/home/etorrini/Program/Vivado/2023.2/scripts/rt/data/unisim_comp.v:78197]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [/home/etorrini/Program/Vivado/2023.2/scripts/rt/data/unisim_comp.v:78197]
 INFO: [Synth 8-6157] synthesizing module 'pl_design' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:277]
-INFO: [Synth 8-6157] synthesizing module 'pl_design_axi_gpio_0_1' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-639281-et-PC/realtime/pl_design_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pl_design_axi_gpio_0_1' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-639281-et-PC/realtime/pl_design_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'pl_design_axi_gpio_0_2' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-639281-et-PC/realtime/pl_design_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pl_design_axi_gpio_0_2' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-639281-et-PC/realtime/pl_design_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'pl_design_axi_interconnect_0_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:584]
+INFO: [Synth 8-6157] synthesizing module 'pl_design_axi_gpio_0_1' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-1899528-et-PC/realtime/pl_design_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pl_design_axi_gpio_0_1' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-1899528-et-PC/realtime/pl_design_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pl_design_axi_gpio_0_2' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-1899528-et-PC/realtime/pl_design_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pl_design_axi_gpio_0_2' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-1899528-et-PC/realtime/pl_design_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pl_design_axi_interconnect_0_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:659]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_OB0IK9' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_OB0IK9' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:13]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_ZND0V5' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:145]
 INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_ZND0V5' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:145]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1LMMZDX' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:1124]
-INFO: [Synth 8-6157] synthesizing module 'pl_design_auto_pc_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-639281-et-PC/realtime/pl_design_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pl_design_auto_pc_0' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-639281-et-PC/realtime/pl_design_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1LMMZDX' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:1124]
-INFO: [Synth 8-6157] synthesizing module 'pl_design_xbar_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-639281-et-PC/realtime/pl_design_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pl_design_xbar_0' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-639281-et-PC/realtime/pl_design_xbar_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'pl_design_xbar_0' is unconnected for instance 'xbar' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:1083]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'pl_design_xbar_0' is unconnected for instance 'xbar' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:1083]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'pl_design_xbar_0' has 40 connections declared, but only 38 given [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:1083]
-INFO: [Synth 8-6155] done synthesizing module 'pl_design_axi_interconnect_0_0' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:584]
-INFO: [Synth 8-6157] synthesizing module 'pl_design_proc_sys_reset_0_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-639281-et-PC/realtime/pl_design_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pl_design_proc_sys_reset_0_0' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-639281-et-PC/realtime/pl_design_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'pl_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:526]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'pl_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:526]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'pl_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:526]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'pl_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:526]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'pl_design_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:526]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1LMMZDX' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:1199]
+INFO: [Synth 8-6157] synthesizing module 'pl_design_auto_pc_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-1899528-et-PC/realtime/pl_design_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pl_design_auto_pc_0' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-1899528-et-PC/realtime/pl_design_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1LMMZDX' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:1199]
+INFO: [Synth 8-6157] synthesizing module 'pl_design_xbar_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-1899528-et-PC/realtime/pl_design_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pl_design_xbar_0' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-1899528-et-PC/realtime/pl_design_xbar_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'pl_design_xbar_0' is unconnected for instance 'xbar' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:1158]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'pl_design_xbar_0' is unconnected for instance 'xbar' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:1158]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'pl_design_xbar_0' has 40 connections declared, but only 38 given [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:1158]
+INFO: [Synth 8-6155] done synthesizing module 'pl_design_axi_interconnect_0_0' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:659]
+INFO: [Synth 8-6157] synthesizing module 'pl_design_proc_sys_reset_0_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-1899528-et-PC/realtime/pl_design_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pl_design_proc_sys_reset_0_0' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-1899528-et-PC/realtime/pl_design_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'pl_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:586]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'pl_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:586]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'pl_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:586]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'pl_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:586]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'pl_design_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:586]
 INFO: [Synth 8-6157] synthesizing module 'pl_design_xlslice_0_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_xlslice_0_0/synth/pl_design_xlslice_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_3_xlslice' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ipshared/217a/hdl/xlslice_v1_0_vl_rfs.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_3_xlslice' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ipshared/217a/hdl/xlslice_v1_0_vl_rfs.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'pl_design_xlslice_0_0' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_xlslice_0_0/synth/pl_design_xlslice_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'pl_design_zynq_ultra_ps_e_0_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-639281-et-PC/realtime/pl_design_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pl_design_zynq_ultra_ps_e_0_0' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-639281-et-PC/realtime/pl_design_zynq_ultra_ps_e_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'maxigp2_awuser' of module 'pl_design_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:536]
-WARNING: [Synth 8-7071] port 'maxigp2_aruser' of module 'pl_design_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:536]
-WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'pl_design_zynq_ultra_ps_e_0_0' has 47 connections declared, but only 45 given [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:536]
+INFO: [Synth 8-6157] synthesizing module 'pl_design_zynq_ultra_ps_e_0_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-1899528-et-PC/realtime/pl_design_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pl_design_zynq_ultra_ps_e_0_0' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/.Xil/Vivado-1899528-et-PC/realtime/pl_design_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'maxigp2_awuser' of module 'pl_design_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:596]
+WARNING: [Synth 8-7071] port 'maxigp2_aruser' of module 'pl_design_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:596]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'pl_design_zynq_ultra_ps_e_0_0' has 62 connections declared, but only 60 given [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:596]
 INFO: [Synth 8-6155] done synthesizing module 'pl_design' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/synth/pl_design.v:277]
 INFO: [Synth 8-6155] done synthesizing module 'pl_design_wrapper' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/hdl/pl_design_wrapper.v:13]
 WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_3_xlslice is either unconnected or has no load
@@ -86,19 +86,19 @@ WARNING: [Synth 8-7129] Port M01_ARESETN in module pl_design_axi_interconnect_0_
 WARNING: [Synth 8-7129] Port S00_ACLK in module pl_design_axi_interconnect_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module pl_design_axi_interconnect_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2626.363 ; gain = 372.746 ; free physical = 2527 ; free virtual = 8177
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2626.395 ; gain = 372.746 ; free physical = 1620 ; free virtual = 4619
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2632.301 ; gain = 378.684 ; free physical = 2527 ; free virtual = 8177
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2632.332 ; gain = 378.684 ; free physical = 1619 ; free virtual = 4619
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2632.301 ; gain = 378.684 ; free physical = 2527 ; free virtual = 8177
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2632.332 ; gain = 378.684 ; free physical = 1619 ; free virtual = 4619
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2640.301 ; gain = 0.000 ; free physical = 2527 ; free virtual = 8177
-INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2640.332 ; gain = 0.000 ; free physical = 1608 ; free virtual = 4608
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -132,18 +132,22 @@ Parsing XDC File [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-ha
 Finished Parsing XDC File [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/uart.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/uart.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pl_design_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/pl_design_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/spi.xdc]
+Finished Parsing XDC File [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/spi.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/spi.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pl_design_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/pl_design_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2711.270 ; gain = 0.000 ; free physical = 2512 ; free virtual = 8163
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2722.207 ; gain = 0.000 ; free physical = 1575 ; free virtual = 4576
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 3 instances were transformed.
-  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 3 instances
+  A total of 7 instances were transformed.
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 7 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2711.305 ; gain = 0.000 ; free physical = 2512 ; free virtual = 8163
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2722.242 ; gain = 0.000 ; free physical = 1575 ; free virtual = 4575
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2711.305 ; gain = 457.688 ; free physical = 2508 ; free virtual = 8159
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2722.242 ; gain = 468.594 ; free physical = 1574 ; free virtual = 4575
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -151,7 +155,7 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2711.305 ; gain = 457.688 ; free physical = 2508 ; free virtual = 8159
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2722.242 ; gain = 468.594 ; free physical = 1574 ; free virtual = 4575
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -166,10 +170,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for pl_design_i/axi_gpio_leds. (const
 Applied set_property KEEP_HIERARCHY = SOFT for pl_design_i/proc_sys_reset_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for pl_design_i/axi_gpio_rpi. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2711.305 ; gain = 457.688 ; free physical = 2508 ; free virtual = 8159
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2722.242 ; gain = 468.594 ; free physical = 1574 ; free virtual = 4575
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2711.305 ; gain = 457.688 ; free physical = 2506 ; free virtual = 8158
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2722.242 ; gain = 468.594 ; free physical = 1572 ; free virtual = 4574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -200,25 +204,25 @@ WARNING: [Synth 8-7129] Port M01_ARESETN in module pl_design_axi_interconnect_0_
 WARNING: [Synth 8-7129] Port S00_ACLK in module pl_design_axi_interconnect_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module pl_design_axi_interconnect_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2711.305 ; gain = 457.688 ; free physical = 2504 ; free virtual = 8160
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2722.242 ; gain = 468.594 ; free physical = 1562 ; free virtual = 4567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3183.668 ; gain = 930.051 ; free physical = 2079 ; free virtual = 7735
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3183.605 ; gain = 929.957 ; free physical = 1137 ; free virtual = 4142
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3183.668 ; gain = 930.051 ; free physical = 2079 ; free virtual = 7735
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3183.605 ; gain = 929.957 ; free physical = 1137 ; free virtual = 4142
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3193.684 ; gain = 940.066 ; free physical = 2070 ; free virtual = 7726
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3193.621 ; gain = 939.973 ; free physical = 1128 ; free virtual = 4134
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -236,37 +240,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3208.559 ; gain = 954.941 ; free physical = 2070 ; free virtual = 7726
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3208.496 ; gain = 954.848 ; free physical = 1119 ; free virtual = 4125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3208.559 ; gain = 954.941 ; free physical = 2070 ; free virtual = 7726
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3208.496 ; gain = 954.848 ; free physical = 1119 ; free virtual = 4125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3208.559 ; gain = 954.941 ; free physical = 2070 ; free virtual = 7726
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3208.496 ; gain = 954.848 ; free physical = 1119 ; free virtual = 4125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3208.559 ; gain = 954.941 ; free physical = 2070 ; free virtual = 7726
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3208.496 ; gain = 954.848 ; free physical = 1119 ; free virtual = 4125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3208.559 ; gain = 954.941 ; free physical = 2070 ; free virtual = 7726
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3208.496 ; gain = 954.848 ; free physical = 1119 ; free virtual = 4125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3208.559 ; gain = 954.941 ; free physical = 2070 ; free virtual = 7726
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3208.496 ; gain = 954.848 ; free physical = 1119 ; free virtual = 4125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -293,36 +297,36 @@ Report Cell Usage:
 |4     |pl_design_proc_sys_reset_0  |     1|
 |5     |pl_design_xbar              |     1|
 |6     |pl_design_zynq_ultra_ps_e_0 |     1|
-|7     |IBUF                        |     2|
-|8     |IOBUF                       |     3|
-|9     |OBUF                        |     3|
+|7     |IBUF                        |     3|
+|8     |IOBUF                       |     7|
+|9     |OBUF                        |     5|
 +------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3208.559 ; gain = 954.941 ; free physical = 2070 ; free virtual = 7726
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3208.496 ; gain = 954.848 ; free physical = 1119 ; free virtual = 4125
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3208.559 ; gain = 875.938 ; free physical = 2070 ; free virtual = 7726
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3208.566 ; gain = 954.941 ; free physical = 2070 ; free virtual = 7726
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3208.496 ; gain = 864.938 ; free physical = 1118 ; free virtual = 4124
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3208.504 ; gain = 954.848 ; free physical = 1119 ; free virtual = 4125
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3208.566 ; gain = 0.000 ; free physical = 2086 ; free virtual = 7742
-INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3211.465 ; gain = 0.000 ; free physical = 1119 ; free virtual = 4125
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3245.246 ; gain = 0.000 ; free physical = 2327 ; free virtual = 7983
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3246.152 ; gain = 0.000 ; free physical = 1371 ; free virtual = 4377
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 5 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
-  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 3 instances
+  A total of 10 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 7 instances
 
-Synth Design complete | Checksum: a3864ff5
+Synth Design complete | Checksum: 3c68131f
 INFO: [Common 17-83] Releasing license: Synthesis
-54 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
+55 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 3245.281 ; gain = 1920.805 ; free physical = 2326 ; free virtual = 7982
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2640.431; main = 2640.431; forked = 417.162
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3669.496; main = 3245.250; forked = 990.238
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3245.281 ; gain = 0.000 ; free physical = 2326 ; free virtual = 7982
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:24 . Memory (MB): peak = 3246.188 ; gain = 1921.711 ; free physical = 1371 ; free virtual = 4377
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2783.565; main = 2486.130; forked = 379.799
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4183.867; main = 3246.156; forked = 990.242
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3246.188 ; gain = 0.000 ; free physical = 1370 ; free virtual = 4376
 INFO: [Common 17-1381] The checkpoint '/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/pl_design_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file pl_design_wrapper_utilization_synth.rpt -pb pl_design_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 27 15:12:02 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Jul  3 16:16:34 2024...

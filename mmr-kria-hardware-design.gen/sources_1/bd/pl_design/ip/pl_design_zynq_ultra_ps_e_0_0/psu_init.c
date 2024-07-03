@@ -1127,6 +1127,30 @@ unsigned long psu_clock_init_data(void)
 /*##################################################################### */
 
     /*
+    * Register : SPI0_REF_CTRL @ 0XFF5E007C
+
+    * Clock active signal. Switch to 0 to disable the clock
+    *  PSU_CRL_APB_SPI0_REF_CTRL_CLKACT                            0x1
+
+    * 6 bit divider
+    *  PSU_CRL_APB_SPI0_REF_CTRL_DIVISOR1                          0x1
+
+    * 6 bit divider
+    *  PSU_CRL_APB_SPI0_REF_CTRL_DIVISOR0                          0x5
+
+    * 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
+    * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
+    *  usually an issue, but designers must be aware.)
+    *  PSU_CRL_APB_SPI0_REF_CTRL_SRCSEL                            0x2
+
+    * This register controls this reference clock
+    * (OFFSET, MASK, VALUE)      (0XFF5E007C, 0x013F3F07U ,0x01010502U)
+    */
+	PSU_Mask_Write(CRL_APB_SPI0_REF_CTRL_OFFSET,
+		0x013F3F07U, 0x01010502U);
+/*##################################################################### */
+
+    /*
     * Register : SPI1_REF_CTRL @ 0XFF5E0080
 
     * Clock active signal. Switch to 0 to disable the clock
@@ -1172,6 +1196,30 @@ unsigned long psu_clock_init_data(void)
     */
 	PSU_Mask_Write(CRL_APB_CAN0_REF_CTRL_OFFSET,
 		0x013F3F07U, 0x01010403U);
+/*##################################################################### */
+
+    /*
+    * Register : CAN1_REF_CTRL @ 0XFF5E0088
+
+    * Clock active signal. Switch to 0 to disable the clock
+    *  PSU_CRL_APB_CAN1_REF_CTRL_CLKACT                            0x1
+
+    * 6 bit divider
+    *  PSU_CRL_APB_CAN1_REF_CTRL_DIVISOR1                          0x1
+
+    * 6 bit divider
+    *  PSU_CRL_APB_CAN1_REF_CTRL_DIVISOR0                          0xf
+
+    * 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
+    * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
+    *  usually an issue, but designers must be aware.)
+    *  PSU_CRL_APB_CAN1_REF_CTRL_SRCSEL                            0x0
+
+    * This register controls this reference clock
+    * (OFFSET, MASK, VALUE)      (0XFF5E0088, 0x013F3F07U ,0x01010F00U)
+    */
+	PSU_Mask_Write(CRL_APB_CAN1_REF_CTRL_OFFSET,
+		0x013F3F07U, 0x01010F00U);
 /*##################################################################### */
 
     /*
@@ -16284,12 +16332,15 @@ unsigned long psu_peripherals_init_data(void)
     * Block level reset
     *  PSU_CRL_APB_RST_LPD_IOU2_CAN0_RESET                         0
 
+    * Block level reset
+    *  PSU_CRL_APB_RST_LPD_IOU2_CAN1_RESET                         0
+
     * Software control register for the IOU block. Each bit will cause a singl
     * erperipheral or part of the peripheral to be reset.
-    * (OFFSET, MASK, VALUE)      (0XFF5E0238, 0x00000080U ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFF5E0238, 0x00000180U ,0x00000000U)
     */
 	PSU_Mask_Write(CRL_APB_RST_LPD_IOU2_OFFSET,
-		0x00000080U, 0x00000000U);
+		0x00000180U, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -16333,14 +16384,17 @@ unsigned long psu_peripherals_init_data(void)
     * Register : RST_LPD_IOU2 @ 0XFF5E0238
 
     * Block level reset
+    *  PSU_CRL_APB_RST_LPD_IOU2_SPI0_RESET                         0
+
+    * Block level reset
     *  PSU_CRL_APB_RST_LPD_IOU2_SPI1_RESET                         0
 
     * Software control register for the IOU block. Each bit will cause a singl
     * erperipheral or part of the peripheral to be reset.
-    * (OFFSET, MASK, VALUE)      (0XFF5E0238, 0x00000010U ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFF5E0238, 0x00000018U ,0x00000000U)
     */
 	PSU_Mask_Write(CRL_APB_RST_LPD_IOU2_OFFSET,
-		0x00000010U, 0x00000000U);
+		0x00000018U, 0x00000000U);
 /*##################################################################### */
 
     /*

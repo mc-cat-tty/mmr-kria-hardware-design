@@ -123,11 +123,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param power.enableCarry8RouteBelPower 1
   set_param chipscope.maxJobs 1
-  set_param power.BramSDPPropagationFix 1
-  set_param power.enableUnconnectedCarry8PinPower 1
-  set_param power.enableLutRouteBelPower 1
   set_param runs.launchOptions { -jobs 1  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xck26-sfvc784-2LV-c
@@ -154,6 +150,7 @@ OPTRACE "read constraints: implementation" START { }
   read_xdc /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/gpio.xdc
   read_xdc /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/can.xdc
   read_xdc /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/uart.xdc
+  read_xdc /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/spi.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

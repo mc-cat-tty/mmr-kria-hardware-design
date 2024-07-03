@@ -9,6 +9,8 @@
 
 # XDC: new/uart.xdc
 
+# XDC: new/spi.xdc
+
 # Block Designs: bd/pl_design/pl_design.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design || ORIG_REF_NAME==pl_design} -quiet] -quiet
 

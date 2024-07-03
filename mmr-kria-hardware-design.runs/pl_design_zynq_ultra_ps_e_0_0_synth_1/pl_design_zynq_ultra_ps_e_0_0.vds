@@ -3,13 +3,13 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu Jun 27 15:10:11 2024
-# Process ID: 638848
+# Start of session at: Wed Jul  3 16:14:41 2024
+# Process ID: 1898852
 # Current directory: /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_zynq_ultra_ps_e_0_0_synth_1
 # Command line: vivado -log pl_design_zynq_ultra_ps_e_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pl_design_zynq_ultra_ps_e_0_0.tcl
 # Log file: /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_zynq_ultra_ps_e_0_0_synth_1/pl_design_zynq_ultra_ps_e_0_0.vds
 # Journal file: /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_zynq_ultra_ps_e_0_0_synth_1/vivado.jou
-# Running On: et-PC, OS: Linux, CPU Frequency: 4740.097 MHz, CPU Physical cores: 16, Host memory: 15981 MB
+# Running On: et-PC, OS: Linux, CPU Frequency: 1450.761 MHz, CPU Physical cores: 16, Host memory: 15981 MB
 #-----------------------------------------------------------
 source pl_design_zynq_ultra_ps_e_0_0.tcl -notrace
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: pl_design_zynq_ultra_ps_e_0_0
@@ -20,9 +20,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 638885
+INFO: [Synth 8-7075] Helper process launched with PID 1898929
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2538.906 ; gain = 292.777 ; free physical = 2714 ; free virtual = 8275
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2539.344 ; gain = 293.777 ; free physical = 249 ; free virtual = 4552
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'dp_audi_ref_clk', assumed default net type 'wire' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_1.v:2513]
 INFO: [Synth 8-6157] synthesizing module 'pl_design_zynq_ultra_ps_e_0_0' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/synth/pl_design_zynq_ultra_ps_e_0_0.v:53]
@@ -93,11 +93,11 @@ WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP2IN' of module 'PS8' is unco
 WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_1.v:3888]
 WARNING: [Synth 8-7023] instance 'PS8_i' of module 'PS8' has 1015 connections declared, but only 957 given [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_1.v:3888]
 INFO: [Synth 8-6155] done synthesizing module 'zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_1.v:68]
-WARNING: [Synth 8-7071] port 'emio_enet0_signal_detect' of module 'zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/synth/pl_design_zynq_ultra_ps_e_0_0.v:246]
-WARNING: [Synth 8-7071] port 'emio_enet1_signal_detect' of module 'zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/synth/pl_design_zynq_ultra_ps_e_0_0.v:246]
-WARNING: [Synth 8-7071] port 'emio_enet2_signal_detect' of module 'zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/synth/pl_design_zynq_ultra_ps_e_0_0.v:246]
-WARNING: [Synth 8-7071] port 'emio_enet3_signal_detect' of module 'zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/synth/pl_design_zynq_ultra_ps_e_0_0.v:246]
-WARNING: [Synth 8-7023] instance 'inst' of module 'zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e' has 1491 connections declared, but only 1487 given [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/synth/pl_design_zynq_ultra_ps_e_0_0.v:246]
+WARNING: [Synth 8-7071] port 'emio_enet0_signal_detect' of module 'zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/synth/pl_design_zynq_ultra_ps_e_0_0.v:291]
+WARNING: [Synth 8-7071] port 'emio_enet1_signal_detect' of module 'zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/synth/pl_design_zynq_ultra_ps_e_0_0.v:291]
+WARNING: [Synth 8-7071] port 'emio_enet2_signal_detect' of module 'zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/synth/pl_design_zynq_ultra_ps_e_0_0.v:291]
+WARNING: [Synth 8-7071] port 'emio_enet3_signal_detect' of module 'zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/synth/pl_design_zynq_ultra_ps_e_0_0.v:291]
+WARNING: [Synth 8-7023] instance 'inst' of module 'zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e' has 1491 connections declared, but only 1487 given [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/synth/pl_design_zynq_ultra_ps_e_0_0.v:291]
 INFO: [Synth 8-6155] done synthesizing module 'pl_design_zynq_ultra_ps_e_0_0' (0#1) [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/synth/pl_design_zynq_ultra_ps_e_0_0.v:53]
 WARNING: [Synth 8-3848] Net dp_audio_ref_clk in module/entity zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e does not have driver. [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_1.v:387]
 WARNING: [Synth 8-3848] Net irq_ipi_pl_0 in module/entity zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e does not have driver. [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_1.v:1407]
@@ -206,18 +206,18 @@ WARNING: [Synth 8-7129] Port test_adc2_in[8] in module zynq_ultra_ps_e_v3_5_1_zy
 WARNING: [Synth 8-7129] Port test_adc2_in[7] in module zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2625.875 ; gain = 379.746 ; free physical = 2600 ; free virtual = 8164
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2626.312 ; gain = 380.746 ; free physical = 234 ; free virtual = 4439
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2625.875 ; gain = 379.746 ; free physical = 2600 ; free virtual = 8164
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2626.312 ; gain = 380.746 ; free physical = 233 ; free virtual = 4439
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2625.875 ; gain = 379.746 ; free physical = 2600 ; free virtual = 8164
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2626.312 ; gain = 380.746 ; free physical = 233 ; free virtual = 4439
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2633.875 ; gain = 0.000 ; free physical = 2600 ; free virtual = 8164
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2634.312 ; gain = 0.000 ; free physical = 233 ; free virtual = 4438
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -230,14 +230,14 @@ Parsing XDC File [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-ha
 Finished Parsing XDC File [/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_zynq_ultra_ps_e_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2697.906 ; gain = 0.000 ; free physical = 2585 ; free virtual = 8159
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2698.344 ; gain = 0.000 ; free physical = 216 ; free virtual = 4433
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2697.941 ; gain = 0.000 ; free physical = 2585 ; free virtual = 8159
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2698.379 ; gain = 0.000 ; free physical = 216 ; free virtual = 4434
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2697.941 ; gain = 451.812 ; free physical = 2582 ; free virtual = 8156
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2698.379 ; gain = 452.812 ; free physical = 210 ; free virtual = 4428
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -245,7 +245,7 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2697.941 ; gain = 451.812 ; free physical = 2582 ; free virtual = 8156
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2698.379 ; gain = 452.812 ; free physical = 209 ; free virtual = 4427
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -253,10 +253,10 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for inst/PS8_i. (constraint file  /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/pl_design_zynq_ultra_ps_e_0_0.xdc, line 25).
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_zynq_ultra_ps_e_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2697.941 ; gain = 451.812 ; free physical = 2582 ; free virtual = 8156
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2698.379 ; gain = 452.812 ; free physical = 209 ; free virtual = 4427
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2697.941 ; gain = 451.812 ; free physical = 2580 ; free virtual = 8156
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2698.379 ; gain = 452.812 ; free physical = 209 ; free virtual = 4428
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -281,25 +281,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2697.941 ; gain = 451.812 ; free physical = 2580 ; free virtual = 8156
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2698.379 ; gain = 452.812 ; free physical = 207 ; free virtual = 4426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4291.273 ; gain = 2045.145 ; free physical = 1051 ; free virtual = 6651
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4301.680 ; gain = 2056.113 ; free physical = 177 ; free virtual = 3150
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4316.281 ; gain = 2070.152 ; free physical = 1025 ; free virtual = 6626
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4326.688 ; gain = 2081.121 ; free physical = 158 ; free virtual = 3125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4324.289 ; gain = 2078.160 ; free physical = 1017 ; free virtual = 6618
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4334.695 ; gain = 2089.129 ; free physical = 172 ; free virtual = 3120
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -418,37 +418,37 @@ INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[5] to co
 INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[4] to constant 0
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 4335.195 ; gain = 2089.066 ; free physical = 1017 ; free virtual = 6618
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 4345.602 ; gain = 2100.035 ; free physical = 160 ; free virtual = 3108
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 4335.195 ; gain = 2089.066 ; free physical = 1017 ; free virtual = 6618
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 4345.602 ; gain = 2100.035 ; free physical = 160 ; free virtual = 3108
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 4335.195 ; gain = 2089.066 ; free physical = 1017 ; free virtual = 6618
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 4345.602 ; gain = 2100.035 ; free physical = 160 ; free virtual = 3108
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 4335.195 ; gain = 2089.066 ; free physical = 1017 ; free virtual = 6618
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 4345.602 ; gain = 2100.035 ; free physical = 160 ; free virtual = 3108
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 4335.195 ; gain = 2089.066 ; free physical = 1017 ; free virtual = 6618
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 4345.602 ; gain = 2100.035 ; free physical = 160 ; free virtual = 3108
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 4335.195 ; gain = 2089.066 ; free physical = 1017 ; free virtual = 6618
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 4345.602 ; gain = 2100.035 ; free physical = 160 ; free virtual = 3108
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -465,32 +465,32 @@ Report Cell Usage:
 |      |Cell    |Count |
 +------+--------+------+
 |1     |BUFG_PS |     1|
-|2     |LUT1    |   264|
+|2     |LUT1    |   268|
 |3     |PS8     |     1|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 4335.195 ; gain = 2089.066 ; free physical = 1017 ; free virtual = 6618
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 4345.602 ; gain = 2100.035 ; free physical = 160 ; free virtual = 3108
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 570 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4335.195 ; gain = 2017.000 ; free physical = 1017 ; free virtual = 6618
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 4335.203 ; gain = 2089.066 ; free physical = 1017 ; free virtual = 6618
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4345.602 ; gain = 2027.969 ; free physical = 160 ; free virtual = 3108
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 4345.609 ; gain = 2100.035 ; free physical = 159 ; free virtual = 3107
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4335.203 ; gain = 0.000 ; free physical = 1304 ; free virtual = 6907
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4345.609 ; gain = 0.000 ; free physical = 439 ; free virtual = 3389
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4370.883 ; gain = 0.000 ; free physical = 1278 ; free virtual = 6882
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4382.289 ; gain = 0.000 ; free physical = 412 ; free virtual = 3363
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 7d89f80b
+Synth Design complete | Checksum: 8d5613a3
 INFO: [Common 17-83] Releasing license: Synthesis
 126 Infos, 172 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 4370.918 ; gain = 3043.883 ; free physical = 1278 ; free virtual = 6882
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 3976.699; main = 3703.766; forked = 419.579
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 5313.535; main = 4370.887; forked = 989.242
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 4382.324 ; gain = 3054.883 ; free physical = 411 ; free virtual = 3363
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 3872.723; main = 3572.046; forked = 378.608
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 5323.941; main = 4382.293; forked = 989.242
 INFO: [Common 17-1381] The checkpoint '/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_zynq_ultra_ps_e_0_0_synth_1/pl_design_zynq_ultra_ps_e_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP pl_design_zynq_ultra_ps_e_0_0, cache-ID = 3f113dfa59354ae1
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP pl_design_zynq_ultra_ps_e_0_0, cache-ID = c3834e007ee69052
 INFO: [Common 17-1381] The checkpoint '/home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_zynq_ultra_ps_e_0_0_synth_1/pl_design_zynq_ultra_ps_e_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file pl_design_zynq_ultra_ps_e_0_0_utilization_synth.rpt -pb pl_design_zynq_ultra_ps_e_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 27 15:10:46 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Jul  3 16:15:16 2024...

@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Thu Jun 27 15:09:48 2024
+//Date        : Wed Jul  3 16:14:15 2024
 //Host        : et-PC running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target pl_design.bd
 //Design      : pl_design
@@ -278,6 +278,21 @@ endmodule
 module pl_design
    (CAN_0_0_rx,
     CAN_0_0_tx,
+    CAN_1_0_rx,
+    CAN_1_0_tx,
+    SPI_0_0_io0_i,
+    SPI_0_0_io0_o,
+    SPI_0_0_io0_t,
+    SPI_0_0_io1_i,
+    SPI_0_0_io1_o,
+    SPI_0_0_io1_t,
+    SPI_0_0_sck_i,
+    SPI_0_0_sck_o,
+    SPI_0_0_sck_t,
+    SPI_0_0_ss1_o,
+    SPI_0_0_ss_i,
+    SPI_0_0_ss_o,
+    SPI_0_0_ss_t,
     UART_0_0_rxd,
     UART_0_0_txd,
     fan,
@@ -289,6 +304,21 @@ module pl_design
     rpi_tri_t);
   (* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN_0_0 RX" *) input CAN_0_0_rx;
   (* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN_0_0 TX" *) output CAN_0_0_tx;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN_1_0 RX" *) input CAN_1_0_rx;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN_1_0 TX" *) output CAN_1_0_tx;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0_0 IO0_I" *) input SPI_0_0_io0_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0_0 IO0_O" *) output SPI_0_0_io0_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0_0 IO0_T" *) output SPI_0_0_io0_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0_0 IO1_I" *) input SPI_0_0_io1_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0_0 IO1_O" *) output SPI_0_0_io1_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0_0 IO1_T" *) output SPI_0_0_io1_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0_0 SCK_I" *) input SPI_0_0_sck_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0_0 SCK_O" *) output SPI_0_0_sck_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0_0 SCK_T" *) output SPI_0_0_sck_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0_0 SS1_O" *) output SPI_0_0_ss1_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0_0 SS_I" *) input SPI_0_0_ss_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0_0 SS_O" *) output SPI_0_0_ss_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0_0 SS_T" *) output SPI_0_0_ss_t;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0_0 RxD" *) input UART_0_0_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0_0 TxD" *) output UART_0_0_txd;
   output [0:0]fan;
@@ -343,6 +373,8 @@ module pl_design
   wire [0:0]xlslice_0_Dout;
   wire zynq_ultra_ps_e_0_CAN_0_RX;
   wire zynq_ultra_ps_e_0_CAN_0_TX;
+  wire zynq_ultra_ps_e_0_CAN_1_RX;
+  wire zynq_ultra_ps_e_0_CAN_1_TX;
   wire [39:0]zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARADDR;
   wire [1:0]zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARBURST;
   wire [3:0]zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARCACHE;
@@ -380,6 +412,19 @@ module pl_design
   wire zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WREADY;
   wire [3:0]zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WSTRB;
   wire zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WVALID;
+  wire zynq_ultra_ps_e_0_SPI_0_IO0_I;
+  wire zynq_ultra_ps_e_0_SPI_0_IO0_O;
+  wire zynq_ultra_ps_e_0_SPI_0_IO0_T;
+  wire zynq_ultra_ps_e_0_SPI_0_IO1_I;
+  wire zynq_ultra_ps_e_0_SPI_0_IO1_O;
+  wire zynq_ultra_ps_e_0_SPI_0_IO1_T;
+  wire zynq_ultra_ps_e_0_SPI_0_SCK_I;
+  wire zynq_ultra_ps_e_0_SPI_0_SCK_O;
+  wire zynq_ultra_ps_e_0_SPI_0_SCK_T;
+  wire zynq_ultra_ps_e_0_SPI_0_SS1_O;
+  wire zynq_ultra_ps_e_0_SPI_0_SS_I;
+  wire zynq_ultra_ps_e_0_SPI_0_SS_O;
+  wire zynq_ultra_ps_e_0_SPI_0_SS_T;
   wire zynq_ultra_ps_e_0_UART_0_RxD;
   wire zynq_ultra_ps_e_0_UART_0_TxD;
   wire [2:0]zynq_ultra_ps_e_0_emio_ttc0_wave_o;
@@ -387,6 +432,16 @@ module pl_design
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
   assign CAN_0_0_tx = zynq_ultra_ps_e_0_CAN_0_TX;
+  assign CAN_1_0_tx = zynq_ultra_ps_e_0_CAN_1_TX;
+  assign SPI_0_0_io0_o = zynq_ultra_ps_e_0_SPI_0_IO0_O;
+  assign SPI_0_0_io0_t = zynq_ultra_ps_e_0_SPI_0_IO0_T;
+  assign SPI_0_0_io1_o = zynq_ultra_ps_e_0_SPI_0_IO1_O;
+  assign SPI_0_0_io1_t = zynq_ultra_ps_e_0_SPI_0_IO1_T;
+  assign SPI_0_0_sck_o = zynq_ultra_ps_e_0_SPI_0_SCK_O;
+  assign SPI_0_0_sck_t = zynq_ultra_ps_e_0_SPI_0_SCK_T;
+  assign SPI_0_0_ss1_o = zynq_ultra_ps_e_0_SPI_0_SS1_O;
+  assign SPI_0_0_ss_o = zynq_ultra_ps_e_0_SPI_0_SS_O;
+  assign SPI_0_0_ss_t = zynq_ultra_ps_e_0_SPI_0_SS_T;
   assign UART_0_0_txd = zynq_ultra_ps_e_0_UART_0_TxD;
   assign axi_gpio_0_GPIO_TRI_I = led_uf_tri_i[1:0];
   assign axi_gpio_rpi_GPIO_TRI_I = rpi_tri_i[0];
@@ -396,6 +451,11 @@ module pl_design
   assign rpi_tri_o[0] = axi_gpio_rpi_GPIO_TRI_O;
   assign rpi_tri_t[0] = axi_gpio_rpi_GPIO_TRI_T;
   assign zynq_ultra_ps_e_0_CAN_0_RX = CAN_0_0_rx;
+  assign zynq_ultra_ps_e_0_CAN_1_RX = CAN_1_0_rx;
+  assign zynq_ultra_ps_e_0_SPI_0_IO0_I = SPI_0_0_io0_i;
+  assign zynq_ultra_ps_e_0_SPI_0_IO1_I = SPI_0_0_io1_i;
+  assign zynq_ultra_ps_e_0_SPI_0_SCK_I = SPI_0_0_sck_i;
+  assign zynq_ultra_ps_e_0_SPI_0_SS_I = SPI_0_0_ss_i;
   assign zynq_ultra_ps_e_0_UART_0_RxD = UART_0_0_rxd;
   pl_design_axi_gpio_0_1 axi_gpio_leds
        (.gpio_io_i(axi_gpio_0_GPIO_TRI_I),
@@ -536,6 +596,21 @@ module pl_design
   pl_design_zynq_ultra_ps_e_0_0 zynq_ultra_ps_e_0
        (.emio_can0_phy_rx(zynq_ultra_ps_e_0_CAN_0_RX),
         .emio_can0_phy_tx(zynq_ultra_ps_e_0_CAN_0_TX),
+        .emio_can1_phy_rx(zynq_ultra_ps_e_0_CAN_1_RX),
+        .emio_can1_phy_tx(zynq_ultra_ps_e_0_CAN_1_TX),
+        .emio_spi0_m_i(zynq_ultra_ps_e_0_SPI_0_IO1_I),
+        .emio_spi0_m_o(zynq_ultra_ps_e_0_SPI_0_IO0_O),
+        .emio_spi0_mo_t(zynq_ultra_ps_e_0_SPI_0_IO0_T),
+        .emio_spi0_s_i(zynq_ultra_ps_e_0_SPI_0_IO0_I),
+        .emio_spi0_s_o(zynq_ultra_ps_e_0_SPI_0_IO1_O),
+        .emio_spi0_sclk_i(zynq_ultra_ps_e_0_SPI_0_SCK_I),
+        .emio_spi0_sclk_o(zynq_ultra_ps_e_0_SPI_0_SCK_O),
+        .emio_spi0_sclk_t(zynq_ultra_ps_e_0_SPI_0_SCK_T),
+        .emio_spi0_so_t(zynq_ultra_ps_e_0_SPI_0_IO1_T),
+        .emio_spi0_ss1_o_n(zynq_ultra_ps_e_0_SPI_0_SS1_O),
+        .emio_spi0_ss_i_n(zynq_ultra_ps_e_0_SPI_0_SS_I),
+        .emio_spi0_ss_n_t(zynq_ultra_ps_e_0_SPI_0_SS_T),
+        .emio_spi0_ss_o_n(zynq_ultra_ps_e_0_SPI_0_SS_O),
         .emio_ttc0_wave_o(zynq_ultra_ps_e_0_emio_ttc0_wave_o),
         .emio_uart0_rxd(zynq_ultra_ps_e_0_UART_0_RxD),
         .emio_uart0_txd(zynq_ultra_ps_e_0_UART_0_TxD),
