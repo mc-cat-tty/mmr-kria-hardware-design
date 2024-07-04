@@ -101,6 +101,7 @@ module pl_design_zynq_ultra_ps_e_0_0 (
   emio_can0_phy_rx,
   emio_can1_phy_tx,
   emio_can1_phy_rx,
+  emio_enet0_enet_tsu_timer_cnt,
   emio_uart0_txd,
   emio_uart0_rxd,
   emio_spi0_sclk_i,
@@ -212,6 +213,7 @@ input wire emio_can0_phy_rx;
 output wire emio_can1_phy_tx;
 (* X_INTERFACE_INFO = "xilinx.com:interface:can:1.0 CAN_1 RX" *)
 input wire emio_can1_phy_rx;
+output wire [93 : 0] emio_enet0_enet_tsu_timer_cnt;
 (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 TxD" *)
 output wire emio_uart0_txd;
 (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 RxD" *)
@@ -1050,7 +1052,7 @@ output wire pl_clk0;
     .fmio_gem_tsu_clk_to_pl_bufg(),
     .fmio_gem_tsu_clk_from_pl(1'B0),
     .emio_enet_tsu_clk(1'B0),
-    .emio_enet0_enet_tsu_timer_cnt(),
+    .emio_enet0_enet_tsu_timer_cnt(emio_enet0_enet_tsu_timer_cnt),
     .emio_enet0_ext_int_in(1'B0),
     .emio_enet1_ext_int_in(1'B0),
     .emio_enet2_ext_int_in(1'B0),

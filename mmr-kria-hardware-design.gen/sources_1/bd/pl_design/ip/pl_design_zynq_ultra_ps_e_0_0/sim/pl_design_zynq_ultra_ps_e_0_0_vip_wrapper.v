@@ -102,6 +102,7 @@ emio_can0_phy_tx,
 emio_can0_phy_rx, 
 emio_can1_phy_tx, 
 emio_can1_phy_rx, 
+emio_enet0_enet_tsu_timer_cnt, 
 emio_uart0_txd, 
 emio_uart0_rxd, 
 emio_spi0_sclk_i, 
@@ -165,6 +166,7 @@ output emio_can0_phy_tx;
 input emio_can0_phy_rx;
 output emio_can1_phy_tx;
 input emio_can1_phy_rx;
+output [93 : 0] emio_enet0_enet_tsu_timer_cnt;
 output emio_uart0_txd;
 input emio_uart0_rxd;
 input emio_spi0_sclk_i;

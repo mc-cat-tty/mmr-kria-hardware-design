@@ -137,6 +137,7 @@ class zynq_ultra_ps_e_tlm : public sc_core::sc_module   {
     sc_core::sc_in<bool> emio_can0_phy_rx;
     sc_core::sc_out<bool> emio_can1_phy_tx;
     sc_core::sc_in<bool> emio_can1_phy_rx;
+    sc_core::sc_out<sc_dt::sc_bv<94> >  emio_enet0_enet_tsu_timer_cnt;
     sc_core::sc_out<bool> emio_uart0_txd;
     sc_core::sc_in<bool> emio_uart0_rxd;
     sc_core::sc_in<bool> emio_spi0_sclk_i;
