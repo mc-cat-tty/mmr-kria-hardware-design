@@ -8,6 +8,7 @@ Hardware description of MMR Kria KR260. FPGA-based design.
  - EMIO TTC0 for fan control
  - EMIO SPI0 placed on the RPI header for APPS ADC
  - EMIO CAN0 and CAN1 placed on the RPI header
+ - EMIO UART PS0 placed on the RPI header as a debug link
 
  > !! Please keep this list up-to-date in both main and development branches
 
