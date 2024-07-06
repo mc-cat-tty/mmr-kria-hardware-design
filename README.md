@@ -2,7 +2,12 @@
 Hardware description of MMR Kria KR260. FPGA-based design.
 
 ## Peripherals
-See [pinout](PINOUT).
+ - GEM0 and GEM1
+ - MIO GPIOS placeced on LED_UF1 and LED_UF2
+ - MIO GPIOS placed on RPI header
+ - EMIO TTC0 for fan control
+ - EMIO SPI0 placed on the RPI header for APPS ADC
+ - EMIO CAN0 and CAN1 placed on the RPI header
 
  > !! Please keep this list up-to-date in both main and development branches
 
