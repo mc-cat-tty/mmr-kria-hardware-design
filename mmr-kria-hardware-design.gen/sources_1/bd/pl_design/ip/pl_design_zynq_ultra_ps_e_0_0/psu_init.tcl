@@ -850,16 +850,16 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_CAN1_REF_CTRL_DIVISOR1                                              0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_CAN1_REF_CTRL_DIVISOR0                                              0xf
+		# PSU_CRL_APB_CAN1_REF_CTRL_DIVISOR0                                              0x4
 
 		# 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
     #  usually an issue, but designers must be aware.)
-		# PSU_CRL_APB_CAN1_REF_CTRL_SRCSEL                                                0x0
+		# PSU_CRL_APB_CAN1_REF_CTRL_SRCSEL                                                0x3
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E0088, 0x013F3F07U ,0x01010F00U)  */
-    mask_write 0XFF5E0088 0x013F3F07 0x01010F00
+		#(OFFSET, MASK, VALUE)      (0XFF5E0088, 0x013F3F07U ,0x01010403U)  */
+    mask_write 0XFF5E0088 0x013F3F07 0x01010403
 		# Register : CPU_R5_CTRL @ 0XFF5E0090</p>
 
 		# Turing this off will shut down the OCM, some parts of the APM, and preve

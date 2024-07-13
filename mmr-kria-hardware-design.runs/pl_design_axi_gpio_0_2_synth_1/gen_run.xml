@@ -9,6 +9,7 @@
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/pl_design_axi_gpio_0_2" RelGenDir="$PGENDIR/pl_design_axi_gpio_0_2">
     <File Path="$PSRCDIR/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_2/pl_design_axi_gpio_0_2.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

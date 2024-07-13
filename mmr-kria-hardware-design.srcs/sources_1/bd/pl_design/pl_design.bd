@@ -812,6 +812,9 @@
           "PSU__CRL_APB__CAN1_REF_CTRL__ACT_FREQMHZ": {
             "value": "99.999001"
           },
+          "PSU__CRL_APB__CAN1_REF_CTRL__SRCSEL": {
+            "value": "DPLL"
+          },
           "PSU__CRL_APB__CPU_R5_CTRL__ACT_FREQMHZ": {
             "value": "499.994995"
           },
