@@ -7,8 +7,7 @@
       "name": "pl_design",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2",
-      "validated": "true"
+      "tool_version": "2023.2"
     },
     "design_tree": {
       "zynq_ultra_ps_e_0": "",
@@ -2132,7 +2131,7 @@
         "inst_hier_path": "axi_gpio_rpi",
         "parameters": {
           "C_GPIO_WIDTH": {
-            "value": "1"
+            "value": "9"
           }
         }
       }
