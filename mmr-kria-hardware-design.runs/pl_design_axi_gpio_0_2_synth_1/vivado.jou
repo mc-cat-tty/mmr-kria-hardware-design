@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sat Jul 20 11:28:52 2024
-# Process ID: 132151
+# Start of session at: Mon Jul 22 10:37:17 2024
+# Process ID: 30601
 # Current directory: /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_axi_gpio_0_2_synth_1
 # Command line: vivado -log pl_design_axi_gpio_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pl_design_axi_gpio_0_2.tcl
 # Log file: /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_axi_gpio_0_2_synth_1/pl_design_axi_gpio_0_2.vds
 # Journal file: /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_axi_gpio_0_2_synth_1/vivado.jou
-# Running On: cristian-ubuntu, OS: Linux, CPU Frequency: 1994.012 MHz, CPU Physical cores: 16, Host memory: 15447 MB
+# Running On: cristian-ubuntu, OS: Linux, CPU Frequency: 2394.321 MHz, CPU Physical cores: 16, Host memory: 15447 MB
 #-----------------------------------------------------------
 source pl_design_axi_gpio_0_2.tcl -notrace

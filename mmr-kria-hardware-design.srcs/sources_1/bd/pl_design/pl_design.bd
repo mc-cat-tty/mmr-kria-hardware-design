@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xEFA6578B7D57EC2E",
+      "boundary_crc": "0x7AE06AF1E811D154",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../mmr-kria-hardware-design.gen/sources_1/bd/pl_design",
       "name": "pl_design",
@@ -59,19 +59,19 @@
           "TRI_I": {
             "physical_name": "rpi_tri_i",
             "direction": "I",
-            "left": "0",
+            "left": "6",
             "right": "0"
           },
           "TRI_O": {
             "physical_name": "rpi_tri_o",
             "direction": "O",
-            "left": "0",
+            "left": "6",
             "right": "0"
           },
           "TRI_T": {
             "physical_name": "rpi_tri_t",
             "direction": "O",
-            "left": "0",
+            "left": "6",
             "right": "0"
           }
         }
@@ -2132,7 +2132,7 @@
         "inst_hier_path": "axi_gpio_rpi",
         "parameters": {
           "C_GPIO_WIDTH": {
-            "value": "1"
+            "value": "7"
           }
         }
       }
