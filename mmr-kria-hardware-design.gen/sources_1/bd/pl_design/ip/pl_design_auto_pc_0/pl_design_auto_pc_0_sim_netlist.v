@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Mon Jul 22 01:29:11 2024
-// Host        : cristian-ubuntu running 64-bit Ubuntu 22.04.4 LTS
+// Date        : Mon Jul 22 15:15:10 2024
+// Host        : francesco-desktop running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_sim_netlist.v
+//               /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_sim_netlist.v
 // Design      : pl_design_auto_pc_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

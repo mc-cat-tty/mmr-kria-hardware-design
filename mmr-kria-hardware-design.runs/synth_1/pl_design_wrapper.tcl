@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/pl_design_wrapper.tcl"
+  variable script "/home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/synth_1/pl_design_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
 set_msg_config  -id {BD 41-237}  -string {{WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_interconnect_0/s00_couplers/auto_pc/S_AXI(0) and /axi_interconnect_0/s00_mmu/M_AXI(16)}}  -suppress 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
@@ -79,33 +78,33 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.cache/wt [current_project]
-set_property parent.project_path /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.xpr [current_project]
+set_property webtalk.parent_dir /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.cache/wt [current_project]
+set_property parent.project_path /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:kr260_som:part0:1.1 [current_project]
 set_property board_connections {som240_1_connector xilinx.com:kr260_carrier:som240_1_connector:1.0 som240_2_connector xilinx.com:kr260_carrier:som240_2_connector:1.0} [current_project]
-set_property ip_output_repo /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.cache/ip [current_project]
+set_property ip_output_repo /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/hdl/pl_design_wrapper.v
-add_files /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/sources_1/bd/pl_design/pl_design.bd
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/pl_design_zynq_ultra_ps_e_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/pl_design_zynq_ultra_ps_e_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_xbar_0/pl_design_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_1/pl_design_axi_gpio_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_1/pl_design_axi_gpio_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_1/pl_design_axi_gpio_0_1.xdc]
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_2/pl_design_axi_gpio_0_2_board.xdc]
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_2/pl_design_axi_gpio_0_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_2/pl_design_axi_gpio_0_2.xdc]
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/pl_design_ooc.xdc]
+read_verilog -library xil_defaultlib /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/hdl/pl_design_wrapper.v
+add_files /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/sources_1/bd/pl_design/pl_design.bd
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/pl_design_zynq_ultra_ps_e_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/pl_design_zynq_ultra_ps_e_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_xbar_0/pl_design_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_1/pl_design_axi_gpio_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_1/pl_design_axi_gpio_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_1/pl_design_axi_gpio_0_1.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_proc_sys_reset_0_0/pl_design_proc_sys_reset_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_2/pl_design_axi_gpio_0_2_board.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_2/pl_design_axi_gpio_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_axi_gpio_0_2/pl_design_axi_gpio_0_2.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/pl_design_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -116,20 +115,20 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/fan.xdc
-set_property used_in_implementation false [get_files /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/fan.xdc]
+read_xdc /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/fan.xdc
+set_property used_in_implementation false [get_files /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/fan.xdc]
 
-read_xdc /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/gpio.xdc
-set_property used_in_implementation false [get_files /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/gpio.xdc]
+read_xdc /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/gpio.xdc
+set_property used_in_implementation false [get_files /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/gpio.xdc]
 
-read_xdc /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/can.xdc
-set_property used_in_implementation false [get_files /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/can.xdc]
+read_xdc /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/can.xdc
+set_property used_in_implementation false [get_files /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/can.xdc]
 
-read_xdc /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/uart.xdc
-set_property used_in_implementation false [get_files /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/uart.xdc]
+read_xdc /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/uart.xdc
+set_property used_in_implementation false [get_files /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/uart.xdc]
 
-read_xdc /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/spi.xdc
-set_property used_in_implementation false [get_files /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/spi.xdc]
+read_xdc /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/spi.xdc
+set_property used_in_implementation false [get_files /home/francesco/Documents/mmr-kria-hardware-design/mmr-kria-hardware-design.srcs/constrs_1/new/spi.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

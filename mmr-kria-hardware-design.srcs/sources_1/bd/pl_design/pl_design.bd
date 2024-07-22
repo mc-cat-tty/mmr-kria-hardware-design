@@ -1,13 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xEFA6578B7D57EC2E",
+      "boundary_crc": "0x4EF000ADDC01BB08",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../mmr-kria-hardware-design.gen/sources_1/bd/pl_design",
       "name": "pl_design",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2"
+      "tool_version": "2023.2",
+      "validated": "true"
     },
     "design_tree": {
       "zynq_ultra_ps_e_0": "",
@@ -58,19 +59,19 @@
           "TRI_I": {
             "physical_name": "rpi_tri_i",
             "direction": "I",
-            "left": "0",
+            "left": "8",
             "right": "0"
           },
           "TRI_O": {
             "physical_name": "rpi_tri_o",
             "direction": "O",
-            "left": "0",
+            "left": "8",
             "right": "0"
           },
           "TRI_T": {
             "physical_name": "rpi_tri_t",
             "direction": "O",
-            "left": "0",
+            "left": "8",
             "right": "0"
           }
         }
