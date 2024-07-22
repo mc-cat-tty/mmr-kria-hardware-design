@@ -38,4 +38,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_a
 # IP: bd/pl_design/ip/pl_design_auto_pc_0/pl_design_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pl_design_auto_pc_0 || ORIG_REF_NAME==pl_design_auto_pc_0} -quiet] -quiet
 
-# XDC: /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/pl_design_ooc.xdc
+# XDC: /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.gen/sources_1/bd/pl_design/pl_design_ooc.xdc

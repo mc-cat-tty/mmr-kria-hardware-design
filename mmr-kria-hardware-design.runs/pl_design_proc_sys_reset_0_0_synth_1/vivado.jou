@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sat Jul 13 00:57:25 2024
-# Process ID: 738230
-# Current directory: /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1
+# Start of session at: Sat Jul 20 11:28:52 2024
+# Process ID: 132150
+# Current directory: /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1
 # Command line: vivado -log pl_design_proc_sys_reset_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pl_design_proc_sys_reset_0_0.tcl
-# Log file: /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1/pl_design_proc_sys_reset_0_0.vds
-# Journal file: /home/etorrini/GitHub/MMR/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1/vivado.jou
-# Running On: et-PC, OS: Linux, CPU Frequency: 2797.720 MHz, CPU Physical cores: 16, Host memory: 15981 MB
+# Log file: /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1/pl_design_proc_sys_reset_0_0.vds
+# Journal file: /home/cristian/Desktop/formula/mmr-kria-hardware-design/mmr-kria-hardware-design.runs/pl_design_proc_sys_reset_0_0_synth_1/vivado.jou
+# Running On: cristian-ubuntu, OS: Linux, CPU Frequency: 4486.942 MHz, CPU Physical cores: 16, Host memory: 15447 MB
 #-----------------------------------------------------------
 source pl_design_proc_sys_reset_0_0.tcl -notrace

@@ -1,0 +1,11 @@
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ipshared/ec67/hdl" --include "../../../../mmr-kria-hardware-design.gen/sources_1/bd/pl_design/ipshared/2fcd/hdl" \
+"../../../bd/pl_design/ip/pl_design_zynq_ultra_ps_e_0_0/sim/pl_design_zynq_ultra_ps_e_0_0_vip_wrapper.v" \
+"../../../bd/pl_design/ip/pl_design_xlslice_0_0/sim/pl_design_xlslice_0_0.v" \
+"../../../bd/pl_design/ip/pl_design_xbar_0/sim/pl_design_xbar_0.v" \
+"../../../bd/pl_design/ip/pl_design_auto_pc_0/sim/pl_design_auto_pc_0.v" \
+"../../../bd/pl_design/sim/pl_design.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
