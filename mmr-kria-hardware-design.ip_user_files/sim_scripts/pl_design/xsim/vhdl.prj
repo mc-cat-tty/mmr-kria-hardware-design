@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../bd/pl_design/ip/pl_design_axi_gpio_0_1/sim/pl_design_axi_gpio_0_1.vhd" \
+"../../../bd/pl_design/ip/pl_design_proc_sys_reset_0_0/sim/pl_design_proc_sys_reset_0_0.vhd" \
+"../../../bd/pl_design/ip/pl_design_axi_gpio_0_2/sim/pl_design_axi_gpio_0_2.vhd" \
+
+# Do not sort compile order
+nosort

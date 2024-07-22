@@ -2,8 +2,8 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Sat Jul 13 00:58:34 2024
-// Host        : et-PC running 64-bit Ubuntu 22.04.4 LTS
+// Date        : Sat Jul 20 11:29:22 2024
+// Host        : cristian-ubuntu running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ pl_design_axi_gpio_0_1_stub.v
 // Design      : pl_design_axi_gpio_0_1

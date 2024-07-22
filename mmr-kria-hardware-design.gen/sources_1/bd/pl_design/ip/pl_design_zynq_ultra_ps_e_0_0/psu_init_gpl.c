@@ -891,18 +891,18 @@ unsigned long psu_clock_init_data(void)
     *  PSU_CRL_APB_GEM0_REF_CTRL_DIVISOR1                          0x1
 
     * 6 bit divider
-    *  PSU_CRL_APB_GEM0_REF_CTRL_DIVISOR0                          0xc
+    *  PSU_CRL_APB_GEM0_REF_CTRL_DIVISOR0                          0x8
 
     * 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
     * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
     *  usually an issue, but designers must be aware.)
-    *  PSU_CRL_APB_GEM0_REF_CTRL_SRCSEL                            0x0
+    *  PSU_CRL_APB_GEM0_REF_CTRL_SRCSEL                            0x2
 
     * This register controls this reference clock
-    * (OFFSET, MASK, VALUE)      (0XFF5E0050, 0x063F3F07U ,0x06010C00U)
+    * (OFFSET, MASK, VALUE)      (0XFF5E0050, 0x063F3F07U ,0x06010802U)
     */
 	PSU_Mask_Write(CRL_APB_GEM0_REF_CTRL_OFFSET,
-		0x063F3F07U, 0x06010C00U);
+		0x063F3F07U, 0x06010802U);
 /*##################################################################### */
 
     /*
@@ -19068,17 +19068,13 @@ unsigned long psu_serdes_init_data(void)
 
     * Sel of lane 0 ref clock local mux. Set to 1 to select lane 0 slicer outp
     * ut. Set to 0 to select lane0 ref clock mux output.
-    *  PSU_SERDES_L0_L0_REF_CLK_SEL_L0_REF_CLK_LCL_SEL             0x0
-
-    * Bit 1 of lane 0 ref clock mux one hot sel. Set to 1 to select lane 1 sli
-    * cer output from ref clock network
-    *  PSU_SERDES_L0_L0_REF_CLK_SEL_L0_REF_CLK_SEL_1               0x1
+    *  PSU_SERDES_L0_L0_REF_CLK_SEL_L0_REF_CLK_LCL_SEL             0x1
 
     * Lane0 Ref Clock Selection Register
-    * (OFFSET, MASK, VALUE)      (0XFD402860, 0x00000082U ,0x00000002U)
+    * (OFFSET, MASK, VALUE)      (0XFD402860, 0x00000080U ,0x00000080U)
     */
 	PSU_Mask_Write(SERDES_L0_L0_REF_CLK_SEL_OFFSET,
-		0x00000082U, 0x00000002U);
+		0x00000080U, 0x00000080U);
 /*##################################################################### */
 
     /*

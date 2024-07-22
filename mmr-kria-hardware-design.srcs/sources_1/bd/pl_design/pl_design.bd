@@ -843,7 +843,7 @@
             "value": "125"
           },
           "PSU__CRL_APB__GEM0_REF_CTRL__SRCSEL": {
-            "value": "IOPLL"
+            "value": "RPLL"
           },
           "PSU__CRL_APB__GEM1_REF_CTRL__ACT_FREQMHZ": {
             "value": "124.998749"
@@ -1209,7 +1209,7 @@
             "value": "125"
           },
           "PSU__GEM0__REF_CLK_SEL": {
-            "value": "Ref Clk1"
+            "value": "Ref Clk0"
           },
           "PSU__GEM1_COHERENCY": {
             "value": "0"

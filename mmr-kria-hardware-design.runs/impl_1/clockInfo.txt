@@ -1,7 +1,7 @@
 -------------------------------------
 | Tool Version : Vivado v.2023.2
-| Date         : Sat Jul 13 01:12:18 2024
-| Host         : et-PC
+| Date         : Mon Jul 22 01:31:31 2024
+| Host         : cristian-ubuntu
 | Design       : design_1
 | Device       : xck26-sfvc784-2LV-C-
 -------------------------------------
