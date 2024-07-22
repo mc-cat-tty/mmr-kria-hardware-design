@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Mon Jul 22 10:37:11 2024
+//Date        : Mon Jul 22 10:59:25 2024
 //Host        : cristian-ubuntu running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target pl_design.bd
 //Design      : pl_design
@@ -325,16 +325,16 @@ module pl_design
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf TRI_I" *) input [1:0]led_uf_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf TRI_O" *) output [1:0]led_uf_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_uf TRI_T" *) output [1:0]led_uf_tri_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rpi TRI_I" *) input [6:0]rpi_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rpi TRI_O" *) output [6:0]rpi_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rpi TRI_T" *) output [6:0]rpi_tri_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rpi TRI_I" *) input [8:0]rpi_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rpi TRI_O" *) output [8:0]rpi_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rpi TRI_T" *) output [8:0]rpi_tri_t;
 
   wire [1:0]axi_gpio_0_GPIO_TRI_I;
   wire [1:0]axi_gpio_0_GPIO_TRI_O;
   wire [1:0]axi_gpio_0_GPIO_TRI_T;
-  wire [6:0]axi_gpio_rpi_GPIO_TRI_I;
-  wire [6:0]axi_gpio_rpi_GPIO_TRI_O;
-  wire [6:0]axi_gpio_rpi_GPIO_TRI_T;
+  wire [8:0]axi_gpio_rpi_GPIO_TRI_I;
+  wire [8:0]axi_gpio_rpi_GPIO_TRI_O;
+  wire [8:0]axi_gpio_rpi_GPIO_TRI_T;
   wire [39:0]axi_interconnect_0_M00_AXI_ARADDR;
   wire axi_interconnect_0_M00_AXI_ARREADY;
   wire axi_interconnect_0_M00_AXI_ARVALID;
@@ -444,12 +444,12 @@ module pl_design
   assign SPI_0_0_ss_t = zynq_ultra_ps_e_0_SPI_0_SS_T;
   assign UART_0_0_txd = zynq_ultra_ps_e_0_UART_0_TxD;
   assign axi_gpio_0_GPIO_TRI_I = led_uf_tri_i[1:0];
-  assign axi_gpio_rpi_GPIO_TRI_I = rpi_tri_i[6:0];
+  assign axi_gpio_rpi_GPIO_TRI_I = rpi_tri_i[8:0];
   assign fan[0] = xlslice_0_Dout;
   assign led_uf_tri_o[1:0] = axi_gpio_0_GPIO_TRI_O;
   assign led_uf_tri_t[1:0] = axi_gpio_0_GPIO_TRI_T;
-  assign rpi_tri_o[6:0] = axi_gpio_rpi_GPIO_TRI_O;
-  assign rpi_tri_t[6:0] = axi_gpio_rpi_GPIO_TRI_T;
+  assign rpi_tri_o[8:0] = axi_gpio_rpi_GPIO_TRI_O;
+  assign rpi_tri_t[8:0] = axi_gpio_rpi_GPIO_TRI_T;
   assign zynq_ultra_ps_e_0_CAN_0_RX = CAN_0_0_rx;
   assign zynq_ultra_ps_e_0_CAN_1_RX = CAN_1_0_rx;
   assign zynq_ultra_ps_e_0_SPI_0_IO0_I = SPI_0_0_io0_i;

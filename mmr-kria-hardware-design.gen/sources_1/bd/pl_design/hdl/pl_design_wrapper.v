@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Mon Jul 22 10:37:11 2024
+//Date        : Mon Jul 22 10:59:25 2024
 //Host        : cristian-ubuntu running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target pl_design_wrapper.bd
 //Design      : pl_design_wrapper
@@ -38,7 +38,7 @@ module pl_design_wrapper
   output UART_0_0_txd;
   output [0:0]fan;
   inout [1:0]led_uf_tri_io;
-  inout [6:0]rpi_tri_io;
+  inout [8:0]rpi_tri_io;
 
   wire CAN_0_0_rx;
   wire CAN_0_0_tx;
@@ -79,6 +79,8 @@ module pl_design_wrapper
   wire [4:4]rpi_tri_i_4;
   wire [5:5]rpi_tri_i_5;
   wire [6:6]rpi_tri_i_6;
+  wire [7:7]rpi_tri_i_7;
+  wire [8:8]rpi_tri_i_8;
   wire [0:0]rpi_tri_io_0;
   wire [1:1]rpi_tri_io_1;
   wire [2:2]rpi_tri_io_2;
@@ -86,6 +88,8 @@ module pl_design_wrapper
   wire [4:4]rpi_tri_io_4;
   wire [5:5]rpi_tri_io_5;
   wire [6:6]rpi_tri_io_6;
+  wire [7:7]rpi_tri_io_7;
+  wire [8:8]rpi_tri_io_8;
   wire [0:0]rpi_tri_o_0;
   wire [1:1]rpi_tri_o_1;
   wire [2:2]rpi_tri_o_2;
@@ -93,6 +97,8 @@ module pl_design_wrapper
   wire [4:4]rpi_tri_o_4;
   wire [5:5]rpi_tri_o_5;
   wire [6:6]rpi_tri_o_6;
+  wire [7:7]rpi_tri_o_7;
+  wire [8:8]rpi_tri_o_8;
   wire [0:0]rpi_tri_t_0;
   wire [1:1]rpi_tri_t_1;
   wire [2:2]rpi_tri_t_2;
@@ -100,6 +106,8 @@ module pl_design_wrapper
   wire [4:4]rpi_tri_t_4;
   wire [5:5]rpi_tri_t_5;
   wire [6:6]rpi_tri_t_6;
+  wire [7:7]rpi_tri_t_7;
+  wire [8:8]rpi_tri_t_8;
 
   IOBUF SPI_0_0_io0_iobuf
        (.I(SPI_0_0_io0_o),
@@ -155,9 +163,9 @@ module pl_design_wrapper
         .led_uf_tri_i({led_uf_tri_i_1,led_uf_tri_i_0}),
         .led_uf_tri_o({led_uf_tri_o_1,led_uf_tri_o_0}),
         .led_uf_tri_t({led_uf_tri_t_1,led_uf_tri_t_0}),
-        .rpi_tri_i({rpi_tri_i_6,rpi_tri_i_5,rpi_tri_i_4,rpi_tri_i_3,rpi_tri_i_2,rpi_tri_i_1,rpi_tri_i_0}),
-        .rpi_tri_o({rpi_tri_o_6,rpi_tri_o_5,rpi_tri_o_4,rpi_tri_o_3,rpi_tri_o_2,rpi_tri_o_1,rpi_tri_o_0}),
-        .rpi_tri_t({rpi_tri_t_6,rpi_tri_t_5,rpi_tri_t_4,rpi_tri_t_3,rpi_tri_t_2,rpi_tri_t_1,rpi_tri_t_0}));
+        .rpi_tri_i({rpi_tri_i_8,rpi_tri_i_7,rpi_tri_i_6,rpi_tri_i_5,rpi_tri_i_4,rpi_tri_i_3,rpi_tri_i_2,rpi_tri_i_1,rpi_tri_i_0}),
+        .rpi_tri_o({rpi_tri_o_8,rpi_tri_o_7,rpi_tri_o_6,rpi_tri_o_5,rpi_tri_o_4,rpi_tri_o_3,rpi_tri_o_2,rpi_tri_o_1,rpi_tri_o_0}),
+        .rpi_tri_t({rpi_tri_t_8,rpi_tri_t_7,rpi_tri_t_6,rpi_tri_t_5,rpi_tri_t_4,rpi_tri_t_3,rpi_tri_t_2,rpi_tri_t_1,rpi_tri_t_0}));
   IOBUF rpi_tri_iobuf_0
        (.I(rpi_tri_o_0),
         .IO(rpi_tri_io[0]),
@@ -193,4 +201,14 @@ module pl_design_wrapper
         .IO(rpi_tri_io[6]),
         .O(rpi_tri_i_6),
         .T(rpi_tri_t_6));
+  IOBUF rpi_tri_iobuf_7
+       (.I(rpi_tri_o_7),
+        .IO(rpi_tri_io[7]),
+        .O(rpi_tri_i_7),
+        .T(rpi_tri_t_7));
+  IOBUF rpi_tri_iobuf_8
+       (.I(rpi_tri_o_8),
+        .IO(rpi_tri_io[8]),
+        .O(rpi_tri_i_8),
+        .T(rpi_tri_t_8));
 endmodule
